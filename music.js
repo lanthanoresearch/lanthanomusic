@@ -2,6 +2,10 @@ document.addEventListener("DOMContentLoaded", async () => {
   const musicGrid = document.getElementById("musicGrid");
   const latestWrap = document.getElementById("latestRelease");
 
+  const statTracks = document.getElementById("statTracks");
+  const statVideos = document.getElementById("statVideos");
+  const statUpdated = document.getElementById("statUpdated");
+
   if (!musicGrid) return;
 
   try {
@@ -14,11 +18,17 @@ document.addEventListener("DOMContentLoaded", async () => {
       if (latestWrap) {
         latestWrap.innerHTML = `<p class="empty-state">No latest release available yet.</p>`;
       }
+      if (statTracks) statTracks.textContent = "0";
+      if (statVideos) statVideos.textContent = "0";
+      if (statUpdated) statUpdated.textContent = "—";
       return;
     }
 
-    // newest first
     items.sort((a, b) => new Date(b.published) - new Date(a.published));
+
+    if (statTracks) statTracks.textContent = String(items.length);
+    if (statVideos) statVideos.textContent = String(items.length);
+    if (statUpdated) statUpdated.textContent = formatShortDate(data.updated);
 
     const latest = items[0];
 
@@ -29,9 +39,12 @@ document.addEventListener("DOMContentLoaded", async () => {
             <img class="latest-thumb" src="${latest.thumbnail}" alt="${escapeHtml(latest.title)}">
           </div>
           <div class="latest-content">
-            <div class="section-eyebrow">Latest Release</div>
+            <div class="section-eyebrow" style="text-align:left; margin-bottom:8px;">Latest Release</div>
             <h3>${escapeHtml(latest.title)}</h3>
             <p class="release-date">${formatDate(latest.published)}</p>
+            <p class="release-desc">
+              Latest Lanthano upload pulled automatically from YouTube.
+            </p>
             <span class="watch-button">Watch on YouTube</span>
           </div>
         </a>
@@ -54,6 +67,9 @@ document.addEventListener("DOMContentLoaded", async () => {
     if (latestWrap) {
       latestWrap.innerHTML = `<p class="empty-state">Could not load latest release.</p>`;
     }
+    if (statTracks) statTracks.textContent = "—";
+    if (statVideos) statVideos.textContent = "—";
+    if (statUpdated) statUpdated.textContent = "—";
   }
 });
 
@@ -64,6 +80,16 @@ function formatDate(dateString) {
   return d.toLocaleDateString("en-US", {
     year: "numeric",
     month: "long",
+    day: "numeric"
+  });
+}
+
+function formatShortDate(dateString) {
+  if (!dateString) return "—";
+  const d = new Date(dateString);
+  if (isNaN(d)) return "—";
+  return d.toLocaleDateString("en-US", {
+    month: "short",
     day: "numeric"
   });
 }
