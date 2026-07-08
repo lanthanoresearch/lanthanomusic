@@ -8,6 +8,10 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   if (!musicGrid) return;
 
+  const PAGE_SIZE = 24;
+  let shownCount = 0;
+  let allItems = [];
+
   try {
     const res = await fetch("music.json", { cache: "no-store" });
     const data = await res.json();
@@ -24,19 +28,18 @@ document.addEventListener("DOMContentLoaded", async () => {
       return;
     }
 
-    // Decode titles coming from YouTube / JSON before sorting/rendering
-    const cleanedItems = items.map(item => ({
+    allItems = items.map(item => ({
       ...item,
       title: decodeHtmlEntities(item.title || "")
     }));
 
-    cleanedItems.sort((a, b) => new Date(b.published) - new Date(a.published));
+    allItems.sort((a, b) => new Date(b.published) - new Date(a.published));
 
-    if (statTracks) statTracks.textContent = String(cleanedItems.length);
-    if (statVideos) statVideos.textContent = String(cleanedItems.length);
+    if (statTracks) statTracks.textContent = String(allItems.length);
+    if (statVideos) statVideos.textContent = String(allItems.length);
     if (statUpdated) statUpdated.textContent = formatShortDate(data.updated);
 
-    const latest = cleanedItems[0];
+    const latest = allItems[0];
 
     if (latestWrap) {
       latestWrap.innerHTML = `
@@ -56,15 +59,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       `;
     }
 
-    musicGrid.innerHTML = cleanedItems.map(item => `
-      <a class="music-card" href="${item.url}" target="_blank" rel="noopener noreferrer">
-        <img class="music-thumb" src="${item.thumbnail}" alt="${escapeHtml(item.title)}">
-        <div class="music-meta">
-          <h3>${escapeHtml(item.title)}</h3>
-          <p>${formatDate(item.published)}</p>
-        </div>
-      </a>
-    `).join("");
+    renderNextBatch();
 
   } catch (err) {
     console.error("Error loading music.json:", err);
@@ -75,6 +70,43 @@ document.addEventListener("DOMContentLoaded", async () => {
     if (statTracks) statTracks.textContent = "—";
     if (statVideos) statVideos.textContent = "—";
     if (statUpdated) statUpdated.textContent = "—";
+  }
+
+  function renderNextBatch() {
+    const nextItems = allItems.slice(shownCount, shownCount + PAGE_SIZE);
+
+    const html = nextItems.map(item => `
+      <a class="music-card" href="${item.url}" target="_blank" rel="noopener noreferrer">
+        <img class="music-thumb" src="${item.thumbnail}" alt="${escapeHtml(item.title)}">
+        <div class="music-meta">
+          <h3>${escapeHtml(item.title)}</h3>
+          <p>${formatDate(item.published)}</p>
+        </div>
+      </a>
+    `).join("");
+
+    musicGrid.insertAdjacentHTML("beforeend", html);
+    shownCount += nextItems.length;
+
+    updateShowMoreButton();
+  }
+
+  function updateShowMoreButton() {
+    let existing = document.getElementById("showMoreButton");
+    if (existing) existing.remove();
+
+    if (shownCount >= allItems.length) return;
+
+    const button = document.createElement("button");
+    button.id = "showMoreButton";
+    button.className = "platform-link";
+    button.type = "button";
+    button.textContent = "Show More";
+    button.style.display = "block";
+    button.style.margin = "30px auto 0 auto";
+
+    button.addEventListener("click", renderNextBatch);
+    musicGrid.insertAdjacentElement("afterend", button);
   }
 });
 
