@@ -33,12 +33,13 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     allItems.sort((a, b) => new Date(b.published) - new Date(a.published));
 
-    if (statTracks) statTracks.textContent = String(allItems.length);
-    if (statUpdated) statUpdated.textContent = formatDate(allItems[0]?.published);
-
     const latest = allItems[0];
+    const latestDate = latest?.published || "";
 
-    if (latestWrap) {
+    if (statTracks) statTracks.textContent = String(allItems.length);
+    if (statUpdated) statUpdated.textContent = formatDate(latestDate);
+
+    if (latestWrap && latest) {
       latestWrap.innerHTML = `
         <a class="latest-card" href="${latest.url}" target="_blank" rel="noopener noreferrer">
           <div class="latest-thumb-wrap">
@@ -46,7 +47,7 @@ document.addEventListener("DOMContentLoaded", async () => {
           </div>
           <div class="latest-content">
             <h3>${escapeHtml(latest.title)}</h3>
-            <p class="release-date">${formatDate(latest.published)}</p>
+            <p class="release-date">${formatDate(latestDate)}</p>
             <p class="release-desc">
               Latest Lanthano upload pulled automatically from YouTube.
             </p>
