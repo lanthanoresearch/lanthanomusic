@@ -48,9 +48,7 @@ document.addEventListener("DOMContentLoaded", async () => {
           <div class="latest-content">
             <h3>${escapeHtml(latest.title)}</h3>
             <p class="release-date">${formatDate(latestDate)}</p>
-            <p class="release-desc">
-              Latest Lanthano upload pulled automatically from YouTube.
-            </p>
+           
             <span class="watch-button">Listen on YouTube</span>
           </div>
         </a>
