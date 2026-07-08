@@ -8,37 +8,61 @@ if (!API_KEY) {
   process.exit(1);
 }
 
-async function fetchAllVideos() {
+async function fetchJson(url) {
+  const res = await fetch(url);
+
+  if (!res.ok) {
+    const text = await res.text();
+    throw new Error(`YouTube API request failed: ${res.status} ${res.statusText}\n${text}`);
+  }
+
+  return res.json();
+}
+
+async function getUploadsPlaylistId() {
+  const url =
+    `https://www.googleapis.com/youtube/v3/channels` +
+    `?key=${encodeURIComponent(API_KEY)}` +
+    `&id=${encodeURIComponent(CHANNEL_ID)}` +
+    `&part=contentDetails`;
+
+  const data = await fetchJson(url);
+  const item = data.items && data.items[0];
+
+  const uploadsId = item?.contentDetails?.relatedPlaylists?.uploads;
+
+  if (!uploadsId) {
+    throw new Error("Could not find uploads playlist for the channel.");
+  }
+
+  return uploadsId;
+}
+
+async function fetchAllUploads(uploadsPlaylistId) {
   let allItems = [];
   let nextPageToken = "";
 
   while (true) {
     const url =
-      `https://www.googleapis.com/youtube/v3/search` +
+      `https://www.googleapis.com/youtube/v3/playlistItems` +
       `?key=${encodeURIComponent(API_KEY)}` +
-      `&channelId=${encodeURIComponent(CHANNEL_ID)}` +
-      `&part=snippet,id` +
-      `&order=date` +
-      `&type=video` +
+      `&playlistId=${encodeURIComponent(uploadsPlaylistId)}` +
+      `&part=snippet,contentDetails` +
       `&maxResults=50` +
       (nextPageToken ? `&pageToken=${encodeURIComponent(nextPageToken)}` : "");
 
-    const res = await fetch(url);
-
-    if (!res.ok) {
-      const text = await res.text();
-      throw new Error(`YouTube API request failed: ${res.status} ${res.statusText}\n${text}`);
-    }
-
-    const data = await res.json();
+    const data = await fetchJson(url);
 
     const pageItems = (data.items || []).map(item => {
-      const videoId = item.id?.videoId;
       const snippet = item.snippet || {};
+      const contentDetails = item.contentDetails || {};
+      const videoId = contentDetails.videoId || snippet.resourceId?.videoId;
 
       if (!videoId) return null;
 
       const thumb =
+        snippet.thumbnails?.maxres?.url ||
+        snippet.thumbnails?.standard?.url ||
         snippet.thumbnails?.high?.url ||
         snippet.thumbnails?.medium?.url ||
         snippet.thumbnails?.default?.url ||
@@ -48,7 +72,7 @@ async function fetchAllVideos() {
         title: snippet.title || "",
         videoId,
         url: `https://www.youtube.com/watch?v=${videoId}`,
-        published: snippet.publishedAt || "",
+        published: contentDetails.videoPublishedAt || snippet.publishedAt || "",
         thumbnail: thumb
       };
     }).filter(Boolean);
@@ -63,13 +87,15 @@ async function fetchAllVideos() {
 }
 
 async function main() {
-  const items = await fetchAllVideos();
+  const uploadsPlaylistId = await getUploadsPlaylistId();
+  const items = await fetchAllUploads(uploadsPlaylistId);
 
   items.sort((a, b) => new Date(b.published) - new Date(a.published));
 
   const output = {
     artist: "Lanthano",
     channelId: CHANNEL_ID,
+    uploadsPlaylistId,
     updated: new Date().toISOString(),
     total: items.length,
     items
