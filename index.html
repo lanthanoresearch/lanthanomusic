@@ -149,12 +149,6 @@
       text-align:center;
     }
 
-    .section-title{
-      text-align:center;
-      font-size:2rem;
-      margin:0 0 30px 0;
-    }
-
     #latestRelease{
       margin:0 auto 60px;
       max-width:950px;
@@ -229,8 +223,21 @@
 
     .music-grid{
       display:grid;
-      grid-template-columns:repeat(auto-fit, minmax(230px, 1fr));
+      grid-template-columns:repeat(4, minmax(0, 1fr));
       gap:18px;
+    }
+
+    @media (max-width: 950px){
+      .music-grid{
+        grid-template-columns:repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 560px){
+      .music-grid{
+        grid-template-columns:repeat(2, minmax(0, 1fr));
+        gap:14px;
+      }
     }
 
     .music-card{
@@ -334,10 +341,6 @@
         padding:28px 14px;
       }
 
-      .section-title{
-        font-size:1.6rem;
-      }
-
       .stats{
         gap:10px;
         padding:14px 12px;
@@ -380,7 +383,13 @@
     <div class="intro">
       <h2>Listen. Explore. Follow.</h2>
       <p>
-        A central place for Lanthano music releases, videos, and uploads pulled directly from YouTube.
+        Lanthano Music is an independent AI music project expressing ideas, convictions, and themes drawn from Lanthano Research through sound, lyric, and atmosphere.
+      </p>
+      <p>
+        This music is not made to follow trends or satisfy popular taste. I serve the Lord, and these songs are one result of that work.
+      </p>
+      <p>
+        Every song and idea should be judged by its substance, not by its popularity.
       </p>
     </div>
 
@@ -405,12 +414,10 @@
       </div>
     </div>
 
-    <div class="section-eyebrow">Featured</div>
-    <h2 class="section-title">Latest Release</h2>
+    <div class="section-eyebrow">Latest Release</div>
     <div id="latestRelease"></div>
 
-    <div class="section-eyebrow">Catalog</div>
-    <h2 class="section-title">Recent Music</h2>
+    <div class="section-eyebrow">Recent Music</div>
     <div id="musicGrid" class="music-grid"></div>
 
     <div class="platform-links">
