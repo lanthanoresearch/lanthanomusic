@@ -1,7 +1,7 @@
 const fs = require("fs");
 
 const CHANNEL_ID = "UC-LsR_7xdkNvIy4a3DtVzdA";
-const FEED_URL = `https://www.youtube.com/feeds/videos.xml?channel_id=${UC-LsR_7xdkNvIy4a3DtVzdA}`;
+const FEED_URL = `https://www.youtube.com/feeds/videos.xml?channel_id=${CHANNEL_ID}`;
 
 async function main() {
   const res = await fetch(FEED_URL, {
@@ -16,7 +16,7 @@ async function main() {
 
   const xml = await res.text();
 
-  const entries = [...xml.matchAll(/<entry>([\s\S]*?)<\/entry>/g)].map(match => match[1]);
+  const entries = [...xml.matchAll(/<entry>([\s\S]*?)<\/entry>/g)].map(m => m[1]);
 
   const items = entries.map(entry => {
     const title = getTag(entry, "title");
