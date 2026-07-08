@@ -767,6 +767,39 @@ function shareSite(){
 }
 </script>
 
+  <script>
+document.addEventListener("click", e => {
+  const link = e.target.closest("a");
+  if(!link) return;
+
+  const href = link.getAttribute("href") || "";
+
+  if(href.startsWith("#")) return;
+
+  sessionStorage.setItem("indexScroll", window.scrollY);
+  sessionStorage.setItem("returnToIndex", "yes");
+
+  sessionStorage.removeItem("restoreSearch");
+  sessionStorage.removeItem("lastSearch");
+});
+
+window.addEventListener("load", () => {
+  const savedIndexScroll = sessionStorage.getItem("indexScroll");
+  const returningToIndex =
+    sessionStorage.getItem("returnToIndex") === "yes";
+
+  if(returningToIndex && savedIndexScroll){
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        window.scrollTo(0, parseInt(savedIndexScroll, 10) || 0);
+        sessionStorage.removeItem("returnToIndex");
+      });
+    });
+  }else if(!returningToIndex){
+    sessionStorage.removeItem("indexScroll");
+  }
+});
+</script>
   
   <script src="music.js"></script>
 </body>
