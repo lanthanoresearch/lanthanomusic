@@ -20,6 +20,85 @@
 
   <style>
 
+
+
+
+    .more-section{
+  margin-top:100px;
+  margin-bottom:30px;
+  text-align:center;
+}
+
+.more-section h2{
+  margin:0;
+  font-size:2em;
+  color:#fff;
+}
+
+.more-section p{
+  margin-top:10px;
+  color:#888;
+  font-size:1em;
+}
+.share-button{
+  display:block;
+  margin:30px auto;
+  padding:12px 24px;
+  background:#1d1d1d;
+  color:#aaa;
+  border:none;
+  border-radius:10px;
+  cursor:pointer;
+  font-size:1em;
+}
+
+.share-button:hover{
+  background:#262626;
+  color:#fff;
+}
+
+.qr-block{
+  text-align:center;
+  margin:20px auto 0;
+}
+
+.qr-code{
+  display:block;
+  width:170px;
+  max-width:70vw;
+  height:auto;
+  margin:0 auto 10px;
+}
+
+.qr-block p{
+  margin:0;
+  color:#888;
+  font-size:.95em;
+}
+.more-section{
+  margin-top:48px;
+  margin-bottom:20px;
+}
+
+.more-section h2{
+  font-size:1.5rem;
+}
+
+.more-section p{
+  margin-top:8px;
+  font-size:.95rem;
+}
+
+.footer-links{
+  margin-top:24px;
+  margin-bottom:10px;
+}
+
+footer{
+  padding:28px 16px;
+}
+
+    
     .footer-links{
   text-align:center;
   margin-top:40px;
@@ -573,29 +652,32 @@
 
 
     
-    <div class="section-eyebrow">Recent Music</div>
-    
-    <div id="musicGrid" class="music-grid"></div>
+   <div class="section-eyebrow">Recent Music</div>
 
-    
+<div id="musicGrid" class="music-grid"></div>
+
+<div class="more-section">
+  <h2>More from Lanthano</h2>
+  <p>Research, merchandise, and more from the wider Lanthano project.</p>
+</div>
+
 <div class="featured-links">
-  <h2 class="featured-links-title">More from Lanthano</h2>
-  <p class="featured-links-subtitle">
-    Research, and merch from the wider Lanthano project.
-  </p>
-
-  <a class="feature-banner-link" href="https://lanthanoresearch.com" target="_blank" rel="noopener noreferrer">
+  <a
+    class="feature-banner-link"
+    href="https://lanthanoresearch.com"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
     <img class="feature-banner" src="ResearchAdd.png" alt="Lanthano Research">
   </a>
 
-  <div class="feature-banner-static">
+  <a
+    class="feature-banner-link"
+    href="store.html"
+  >
     <img class="feature-banner" src="store.png" alt="Lanthano Store">
-  </div>
+  </a>
 </div>
-
-  <img class="feature-banner" src="store.png" alt="Lanthano Store">
-</div>
-
 
 <div class="footer-links">
   <a href="about.html">About</a>
@@ -604,6 +686,14 @@
   <a href="store.html">Store</a>
 </div>
 
+<button class="share-button" onclick="shareSite()">
+  Share Site
+</button>
+
+<div class="qr-block">
+  <img src="music-qr.png" alt="Lanthano Music QR Code" class="qr-code">
+  <p>Scan to Share</p>
+</div>
 <footer>
   © Lanthano Music 2026
 </footer>
@@ -646,6 +736,34 @@
     });
   }
 </script>
+
+<script>
+function shareSite(){
+  const url = "https://lanthanomusic.com";
+
+  if(navigator.share){
+    navigator.share({
+      title: "Lanthano Music",
+      text: "Listen to Lanthano Music",
+      url: url
+    });
+    return;
+  }
+
+  if(navigator.clipboard){
+    navigator.clipboard.writeText(url)
+      .then(() => {
+        alert("Website link copied to clipboard.");
+      })
+      .catch(() => {
+        prompt("Copy this link:", url);
+      });
+  } else {
+    prompt("Copy this link:", url);
+  }
+}
+</script>
+
   
   <script src="music.js"></script>
 </body>
