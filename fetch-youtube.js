@@ -28,7 +28,6 @@ async function getUploadsPlaylistId() {
 
   const data = await fetchJson(url);
   const item = data.items && data.items[0];
-
   const uploadsId = item?.contentDetails?.relatedPlaylists?.uploads;
 
   if (!uploadsId) {
@@ -86,23 +85,53 @@ async function fetchAllUploads(uploadsPlaylistId) {
   return allItems;
 }
 
+async function fetchDurations(videoIds) {
+  const durationMap = {};
+
+  for (let i = 0; i < videoIds.length; i += 50) {
+    const chunk = videoIds.slice(i, i + 50);
+
+    const url =
+      `https://www.googleapis.com/youtube/v3/videos` +
+      `?key=${encodeURIComponent(API_KEY)}` +
+      `&id=${encodeURIComponent(chunk.join(","))}` +
+      `&part=contentDetails`;
+
+    const data = await fetchJson(url);
+
+    for (const item of data.items || []) {
+      durationMap[item.id] = item.contentDetails?.duration || "PT0S";
+    }
+  }
+
+  return durationMap;
+}
+
 async function main() {
   const uploadsPlaylistId = await getUploadsPlaylistId();
   const items = await fetchAllUploads(uploadsPlaylistId);
 
-  items.sort((a, b) => new Date(b.published) - new Date(a.published));
+  const videoIds = items.map(item => item.videoId);
+  const durationMap = await fetchDurations(videoIds);
+
+  const enrichedItems = items.map(item => ({
+    ...item,
+    duration: durationMap[item.videoId] || "PT0S"
+  }));
+
+  enrichedItems.sort((a, b) => new Date(b.published) - new Date(a.published));
 
   const output = {
     artist: "Lanthano",
     channelId: CHANNEL_ID,
     uploadsPlaylistId,
     updated: new Date().toISOString(),
-    total: items.length,
-    items
+    total: enrichedItems.length,
+    items: enrichedItems
   };
 
   fs.writeFileSync("music.json", JSON.stringify(output, null, 2), "utf8");
-  console.log(`Updated music.json with ${items.length} items.`);
+  console.log(`Updated music.json with ${enrichedItems.length} items.`);
 }
 
 main().catch(err => {
