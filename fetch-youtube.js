@@ -1,7 +1,7 @@
 const fs = require("fs");
 
 const CHANNEL_ID = "UC-LsR_7xdkNvIy4a3DtVzdA";
-const FEED_URL = `https://www.youtube.com/feeds/videos.xml?channel_id=${CHANNEL_ID}`;
+const FEED_URL = `https://www.youtube.com/feeds/videos.xml?channel_id=${UC-LsR_7xdkNvIy4a3DtVzdA}`;
 
 async function main() {
   const res = await fetch(FEED_URL, {
