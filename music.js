@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   const latestWrap = document.getElementById("latestRelease");
 
   const statTracks = document.getElementById("statTracks");
+  const statRuntime = document.getElementById("statRuntime");
   const statUpdated = document.getElementById("statUpdated");
 
   if (!musicGrid) return;
@@ -22,6 +23,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         latestWrap.innerHTML = `<p class="empty-state">No latest release available yet.</p>`;
       }
       if (statTracks) statTracks.textContent = "0";
+      if (statRuntime) statRuntime.textContent = "0m";
       if (statUpdated) statUpdated.textContent = "—";
       return;
     }
@@ -36,7 +38,12 @@ document.addEventListener("DOMContentLoaded", async () => {
     const latest = allItems[0];
     const latestDate = latest?.published || "";
 
+    const totalSeconds = allItems.reduce((sum, item) => {
+      return sum + isoDurationToSeconds(item.duration || "PT0S");
+    }, 0);
+
     if (statTracks) statTracks.textContent = String(allItems.length);
+    if (statRuntime) statRuntime.textContent = formatRuntime(totalSeconds);
     if (statUpdated) statUpdated.textContent = formatDate(latestDate);
 
     if (latestWrap && latest) {
@@ -48,7 +55,6 @@ document.addEventListener("DOMContentLoaded", async () => {
           <div class="latest-content">
             <h3>${escapeHtml(latest.title)}</h3>
             <p class="release-date">${formatDate(latestDate)}</p>
-           
             <span class="watch-button">Listen on YouTube</span>
           </div>
         </a>
@@ -64,6 +70,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       latestWrap.innerHTML = `<p class="empty-state">Could not load latest release.</p>`;
     }
     if (statTracks) statTracks.textContent = "—";
+    if (statRuntime) statRuntime.textContent = "—";
     if (statUpdated) statUpdated.textContent = "—";
   }
 
@@ -128,4 +135,31 @@ function escapeHtml(str) {
     .replaceAll("<", "&lt;")
     .replaceAll(">", "&gt;")
     .replaceAll('"', "&quot;");
+}
+
+function isoDurationToSeconds(iso) {
+  const match = iso.match(/PT(?:(\d+)H)?(?:(\d+)M)?(?:(\d+)S)?/);
+  if (!match) return 0;
+
+  const hours = parseInt(match[1] || "0", 10);
+  const minutes = parseInt(match[2] || "0", 10);
+  const seconds = parseInt(match[3] || "0", 10);
+
+  return hours * 3600 + minutes * 60 + seconds;
+}
+
+function formatRuntime(totalSeconds) {
+  const totalMinutes = Math.floor(totalSeconds / 60);
+  const hours = Math.floor(totalMinutes / 60);
+  const minutes = totalMinutes % 60;
+
+  if (hours <= 0) {
+    return `${minutes}m`;
+  }
+
+  if (minutes === 0) {
+    return `${hours}h`;
+  }
+
+  return `${hours}h ${minutes}m`;
 }
