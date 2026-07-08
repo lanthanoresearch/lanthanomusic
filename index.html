@@ -665,14 +665,15 @@ footer{
 </div>
 
 <div class="featured-links">
-  <a
-    class="feature-banner-link"
-    href="https://lanthanoresearch.com"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    <img class="feature-banner" src="ResearchAdd.png" alt="Lanthano Research">
-  </a>
+ <a
+  class="feature-banner-link"
+  id="lanthanoResearchBanner"
+  href="https://lanthanoresearch.com"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <img class="feature-banner" src="ResearchAdd.png" alt="Lanthano Research">
+</a>
 
   <a
     class="feature-banner-link"
@@ -685,7 +686,19 @@ footer{
 <div class="footer-links">
   <a href="about.html">About</a>
   <a href="contact.html">Contact</a>
-  <a href="https://lanthanoresearch.com" target="_blank" rel="noopener noreferrer">Research</a>
+
+
+  <a
+  id="lanthanoResearchLink"
+  href="https://lanthanoresearch.com"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  Research
+</a>
+
+
+  
   <a href="store.html">Store</a>
 </div>
 
@@ -800,6 +813,32 @@ window.addEventListener("load", () => {
   }
 });
 </script>
+
+
+  <script>
+function openResearchLink(e){
+  const isStandalone =
+    window.matchMedia("(display-mode: standalone)").matches ||
+    window.navigator.standalone === true;
+
+  sessionStorage.setItem("indexScroll", window.scrollY);
+  sessionStorage.setItem("returnToIndex", "yes");
+
+  if(isStandalone){
+    e.preventDefault();
+    window.location.href = "https://lanthanoresearch.com";
+  }
+}
+
+document
+  .getElementById("lanthanoResearchLink")
+  ?.addEventListener("click", openResearchLink);
+
+document
+  .getElementById("lanthanoResearchBanner")
+  ?.addEventListener("click", openResearchLink);
+</script>
+
   
   <script src="music.js"></script>
 </body>
