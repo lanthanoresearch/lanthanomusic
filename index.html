@@ -3,7 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Lanthano Music</title>
+
+  <link rel="icon" type="image/png" href="file_000000000c40722f92b1fe6758cb4855.png">
 
   <style>
     html{
@@ -27,70 +30,33 @@
       scroll-snap-align:start;
       height:100svh;
       position:relative;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      text-align:center;
-      overflow:hidden;
-      background:
-        linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.6)),
-        radial-gradient(circle at top, rgba(60,60,60,.25), transparent 40%),
-        #111;
     }
 
-    .hero::before{
-      content:"";
-      position:absolute;
-      inset:0;
-      background:
-        linear-gradient(135deg, rgba(255,255,255,.03), transparent 35%),
-        linear-gradient(315deg, rgba(255,255,255,.02), transparent 40%);
-      pointer-events:none;
+    .banner{
+      display:block;
+      width:100%;
+      height:100%;
     }
 
-    .hero-overlay{
-      position:relative;
-      z-index:2;
-      max-width:950px;
-      padding:20px;
+    @media (orientation:portrait){
+      .banner{
+        object-fit:cover;
+        object-position:center bottom;
+      }
     }
 
-    .hero h1{
-      margin:0 0 14px 0;
-      font-size:clamp(2.5rem, 7vw, 5rem);
-      letter-spacing:.5px;
+    @media (orientation:landscape){
+      .banner{
+        object-fit:cover;
+        object-position:center center;
+      }
     }
 
-    .hero p{
-      margin:0 auto;
-      max-width:760px;
-      color:#d0d0d0;
-      font-size:1.08rem;
-      line-height:1.7;
-    }
-
-    .hero-actions{
-      display:flex;
-      justify-content:center;
-      gap:14px;
-      flex-wrap:wrap;
-      margin-top:26px;
-    }
-
-    .hero-button{
-      display:inline-block;
-      padding:12px 20px;
-      background:#1d1d1d;
-      border:1px solid #333;
-      border-radius:10px;
-      color:#fff;
-      font-weight:bold;
-      transition:.2s ease;
-    }
-
-    .hero-button:hover{
-      background:#272727;
-      border-color:#444;
+    section{
+      max-width:1100px;
+      margin:auto;
+      padding:40px 20px;
+      scroll-snap-align:start;
     }
 
     .top-button{
@@ -113,13 +79,6 @@
 
     .top-button:hover{
       background:#333;
-    }
-
-    section{
-      max-width:1100px;
-      margin:auto;
-      padding:40px 20px;
-      scroll-snap-align:start;
     }
 
     .intro{
@@ -353,7 +312,7 @@
       margin-top:40px;
     }
 
-    @media (max-width: 850px){
+    @media (max-width:850px){
       .latest-card{
         flex-direction:column;
       }
@@ -401,17 +360,20 @@
 <body>
 
   <div class="hero">
-    <div class="hero-overlay">
-      <h1>Lanthano Music</h1>
-      <p>
-        Official music releases, videos, and recent uploads from Lanthano.
-      </p>
+    <picture>
+      <source
+        media="(orientation: portrait)"
+        srcset="file_00000000cd0c71f586c9ec2ad781de1d.png">
 
-      <div class="hero-actions">
-        <a href="#music" class="hero-button">Browse Music</a>
-        <a href="https://www.youtube.com/channel/UC-LsR_7xdkNvIy4a3DtVzdA" target="_blank" rel="noopener noreferrer" class="hero-button">YouTube Channel</a>
-      </div>
-    </div>
+      <source
+        media="(orientation: landscape)"
+        srcset="file_00000000c49c720ca711dcea689d14dd.png">
+
+      <img
+        class="banner"
+        src="file_00000000c49c720ca711dcea689d14dd.png"
+        alt="Lanthano Music">
+    </picture>
   </div>
 
   <section id="music">
@@ -452,7 +414,13 @@
     <div id="musicGrid" class="music-grid"></div>
 
     <div class="platform-links">
-      <a class="platform-link" href="https://www.youtube.com/channel/UC-LsR_7xdkNvIy4a3DtVzdA" target="_blank" rel="noopener noreferrer">YouTube</a>
+      <a
+        class="platform-link"
+        href="https://www.youtube.com/channel/UC-LsR_7xdkNvIy4a3DtVzdA"
+        target="_blank"
+        rel="noopener noreferrer">
+        YouTube
+      </a>
     </div>
   </section>
 
