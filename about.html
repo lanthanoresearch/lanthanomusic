@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" type="image/png" href="file_0000000082c071f582b85259d9acf7a0.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | Lanthano Music</title>
+
+  <link rel="manifest" href="manifest.webmanifest">
+  <meta name="theme-color" content="#111111">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Lanthano Music">
+  <link rel="apple-touch-icon" href="file_0000000082c071f582b85259d9acf7a0.png">
+
+  <style>
+    body{
+      margin:0;
+      background:#111;
+      color:#eee;
+      font-family:Arial,sans-serif;
+    }
+
+    section{
+      max-width:900px;
+      margin:auto;
+      padding:40px 20px;
+    }
+
+    .update-note{
+      text-align:center;
+      color:#777;
+      font-size:.9em;
+      margin-top:40px;
+      line-height:1.6;
+    }
+
+    h1{
+      text-align:center;
+      margin-bottom:40px;
+    }
+
+    .card{
+      background:#1d1d1d;
+      padding:25px;
+      margin:20px 0;
+      border-radius:10px;
+      border:1px solid #2b2b2b;
+    }
+
+    .back{
+      color:white;
+      text-decoration:none;
+      display:inline-block;
+      margin-bottom:20px;
+    }
+
+    .back:hover{
+      color:#fff;
+    }
+
+    h2{
+      margin-top:0;
+    }
+
+    p{
+      line-height:1.7;
+      color:#ddd;
+    }
+  </style>
+</head>
+<body>
+  <section>
+    <a class="back" href="index.html">◀ Home</a>
+
+    <h1>About Lanthano Music</h1>
+
+    <div class="card">
+      <h2>What Is Lanthano Music?</h2>
+      <p>
+        Lanthano Music is an independent AI music project built around ideas, convictions, and themes that also appear in Lanthano Research.
+      </p>
+      <p>
+        It exists as a way to express those things through sound, lyric, atmosphere, and tone rather than only through papers and written work.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>What Kind of Music Is It?</h2>
+      <p>
+        The music is varied in style, but it is generally built around darker, mythic, conspiratorial, historical, biblical, atmospheric, and reflective themes.
+      </p>
+      <p>
+        Some songs are direct. Some are abstract. Some are built more around mood and imagery than straightforward explanation. The goal is not to fit a single genre, but to make music that carries weight, meaning, and identity.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>Why Does It Exist?</h2>
+      <p>
+        This project does not exist to follow trends, chase approval, or mirror what is already popular.
+      </p>
+      <p>
+        Lanthano exists to serve the Lord, and this music is one result of that work. The point is to make something worthwhile, memorable, and honest rather than something designed only for mass appeal.
+      </p>
+      <p>
+        Every song and idea should be judged by its substance, not by its popularity.
+      </p>
+    </div>
+
+    <div class="update-note" id="lastUpdate">
+      Loading latest release...
+    </div>
+  </section>
+
+  <script>
+    function decodeHtmlEntities(str) {
+      const textarea = document.createElement("textarea");
+      textarea.innerHTML = str;
+      return textarea.value;
+    }
+
+    fetch("music.json", { cache: "no-store" })
+      .then(response => response.json())
+      .then(data => {
+        const items = Array.isArray(data.items) ? data.items : [];
+
+        if (!items.length) {
+          document.getElementById("lastUpdate").textContent = "No releases found yet.";
+          return;
+        }
+
+        items.sort((a, b) => new Date(b.published) - new Date(a.published));
+        const latest = items[0];
+
+        const date = new Date(latest.published).toLocaleDateString("en-US", {
+          year: "numeric",
+          month: "long",
+          day: "numeric"
+        });
+
+        document.getElementById("lastUpdate").textContent =
+          "Latest release: " +
+          decodeHtmlEntities(latest.title || "") +
+          " — " +
+          date +
+          ".";
+      })
+      .catch(() => {
+        document.getElementById("lastUpdate").textContent =
+          "Could not load latest release.";
+      });
+  </script>
+</body>
+</html>
