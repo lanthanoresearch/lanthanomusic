@@ -26,30 +26,33 @@
   background:#181818;
   border:1px solid #2b2b2b;
   border-radius:16px;
+  display:flex;
+  flex-direction:column;
+  gap:25px;
+}
+
+.feature-banner-link,
+.feature-banner-static{
+  display:block;
+  width:100%;
+  max-width:500px;
+  margin:0 auto;
 }
 
 .feature-banner{
   display:block;
   width:100%;
-  max-width:500px;
   height:auto;
   aspect-ratio:2 / 1;
   object-fit:cover;
   object-position:center;
-  margin:0 auto 25px;
   border-radius:10px;
   transition:transform .2s ease;
 }
 
-.feature-banner:hover{
+.feature-banner-link:hover .feature-banner{
   transform:scale(1.02);
 }
-
-.featured-links a:last-child .feature-banner,
-.featured-links .feature-banner:last-child{
-  margin-bottom:0;
-}
-
     
     html{
       scroll-behavior:smooth;
@@ -415,14 +418,14 @@
 
     
     @media (max-width:850px){
-     .featured-links{
+    .featured-links{
   margin:28px auto;
   padding:16px;
   border-radius:12px;
+  gap:16px;
 }
 
 .feature-banner{
-  margin:0 auto 16px;
   border-radius:8px;
 }
       section{
