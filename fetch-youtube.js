@@ -1,34 +1,48 @@
 const fs = require("fs");
 
+const API_KEY = process.env.YOUTUBE_API_KEY;
 const CHANNEL_ID = "UC-LsR_7xdkNvIy4a3DtVzdA";
-const FEED_URL = `https://www.youtube.com/feeds/videos.xml?channel_id=${CHANNEL_ID}`;
+
+if (!API_KEY) {
+  console.error("Missing YOUTUBE_API_KEY environment variable.");
+  process.exit(1);
+}
 
 async function main() {
-  const res = await fetch(FEED_URL, {
-    headers: {
-      "User-Agent": "Mozilla/5.0"
-    }
-  });
+  const searchUrl =
+    `https://www.googleapis.com/youtube/v3/search` +
+    `?key=${encodeURIComponent(API_KEY)}` +
+    `&channelId=${encodeURIComponent(CHANNEL_ID)}` +
+    `&part=snippet,id` +
+    `&order=date` +
+    `&type=video` +
+    `&maxResults=24`;
+
+  const res = await fetch(searchUrl);
 
   if (!res.ok) {
-    throw new Error(`Failed to fetch YouTube feed: ${res.status} ${res.statusText}`);
+    const text = await res.text();
+    throw new Error(`YouTube API request failed: ${res.status} ${res.statusText}\n${text}`);
   }
 
-  const xml = await res.text();
+  const data = await res.json();
 
-  const entries = [...xml.matchAll(/<entry>([\s\S]*?)<\/entry>/g)].map(m => m[1]);
+  const items = (data.items || []).map(item => {
+    const videoId = item.id.videoId;
+    const snippet = item.snippet || {};
 
-  const items = entries.map(entry => {
-    const title = getTag(entry, "title");
-    const videoId = getTag(entry, "yt:videoId");
-    const published = getTag(entry, "published");
+    const thumb =
+      snippet.thumbnails?.high?.url ||
+      snippet.thumbnails?.medium?.url ||
+      snippet.thumbnails?.default?.url ||
+      `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`;
 
     return {
-      title: decodeXml(title || ""),
+      title: snippet.title || "",
       videoId,
       url: `https://www.youtube.com/watch?v=${videoId}`,
-      published,
-      thumbnail: `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`
+      published: snippet.publishedAt || "",
+      thumbnail: thumb
     };
   }).filter(item => item.videoId && item.title);
 
@@ -41,21 +55,6 @@ async function main() {
 
   fs.writeFileSync("music.json", JSON.stringify(output, null, 2), "utf8");
   console.log(`Updated music.json with ${items.length} items.`);
-}
-
-function getTag(block, tagName) {
-  const escaped = tagName.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-  const match = block.match(new RegExp(`<${escaped}>([\\s\\S]*?)<\\/${escaped}>`));
-  return match ? match[1].trim() : "";
-}
-
-function decodeXml(str) {
-  return str
-    .replaceAll("&amp;", "&")
-    .replaceAll("&lt;", "<")
-    .replaceAll("&gt;", ">")
-    .replaceAll("&quot;", '"')
-    .replaceAll("&#39;", "'");
 }
 
 main().catch(err => {
