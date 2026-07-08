@@ -24,13 +24,19 @@ document.addEventListener("DOMContentLoaded", async () => {
       return;
     }
 
-    items.sort((a, b) => new Date(b.published) - new Date(a.published));
+    // Decode titles coming from YouTube / JSON before sorting/rendering
+    const cleanedItems = items.map(item => ({
+      ...item,
+      title: decodeHtmlEntities(item.title || "")
+    }));
 
-    if (statTracks) statTracks.textContent = String(items.length);
-    if (statVideos) statVideos.textContent = String(items.length);
+    cleanedItems.sort((a, b) => new Date(b.published) - new Date(a.published));
+
+    if (statTracks) statTracks.textContent = String(cleanedItems.length);
+    if (statVideos) statVideos.textContent = String(cleanedItems.length);
     if (statUpdated) statUpdated.textContent = formatShortDate(data.updated);
 
-    const latest = items[0];
+    const latest = cleanedItems[0];
 
     if (latestWrap) {
       latestWrap.innerHTML = `
@@ -39,19 +45,18 @@ document.addEventListener("DOMContentLoaded", async () => {
             <img class="latest-thumb" src="${latest.thumbnail}" alt="${escapeHtml(latest.title)}">
           </div>
           <div class="latest-content">
-            <div class="section-eyebrow" style="text-align:left; margin-bottom:8px;">Latest Release</div>
             <h3>${escapeHtml(latest.title)}</h3>
             <p class="release-date">${formatDate(latest.published)}</p>
             <p class="release-desc">
               Latest Lanthano upload pulled automatically from YouTube.
             </p>
-            <span class="watch-button">Watch on YouTube</span>
+            <span class="watch-button">Listen on YouTube</span>
           </div>
         </a>
       `;
     }
 
-    musicGrid.innerHTML = items.map(item => `
+    musicGrid.innerHTML = cleanedItems.map(item => `
       <a class="music-card" href="${item.url}" target="_blank" rel="noopener noreferrer">
         <img class="music-thumb" src="${item.thumbnail}" alt="${escapeHtml(item.title)}">
         <div class="music-meta">
@@ -94,11 +99,16 @@ function formatShortDate(dateString) {
   });
 }
 
+function decodeHtmlEntities(str) {
+  const textarea = document.createElement("textarea");
+  textarea.innerHTML = str;
+  return textarea.value;
+}
+
 function escapeHtml(str) {
   return String(str)
     .replaceAll("&", "&amp;")
     .replaceAll("<", "&lt;")
     .replaceAll(">", "&gt;")
-    .replaceAll('"', "&quot;")
-    .replaceAll("'", "&#039;");
+    .replaceAll('"', "&quot;");
 }
