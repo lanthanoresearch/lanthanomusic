@@ -16,6 +16,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     const res = await fetch("music.json", { cache: "no-store" });
     const data = await res.json();
     const items = Array.isArray(data.items) ? data.items : [];
+    
 
     if (!items.length) {
       musicGrid.innerHTML = `<p class="empty-state">No music found yet.</p>`;
