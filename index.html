@@ -19,7 +19,41 @@
   <link rel="icon" type="image/png" href="file_0000000082c071f582b85259d9acf7a0.png">
 
   <style>
+.footer-links-wrap{
+  max-width:850px;
+  margin:60px auto 0;
+  padding:30px;
+  background:#181818;
+  border:1px solid #2b2b2b;
+  border-radius:16px;
+  text-align:center;
+}
 
+.footer-links-grid{
+  display:grid;
+  grid-template-columns:repeat(2, minmax(0, 1fr));
+  gap:14px;
+}
+
+.footer-link{
+  display:block;
+  padding:14px 18px;
+  background:#1d1d1d;
+  border:1px solid #333;
+  border-radius:10px;
+  color:#ddd;
+  font-weight:bold;
+  text-align:center;
+  transition:.2s ease;
+}
+
+.footer-link:hover{
+  background:#272727;
+  border-color:#444;
+  color:#fff;
+}
+
+    
     .featured-links-title{
   margin:0;
   font-size:1.4rem;
@@ -450,6 +484,17 @@
 
     
     @media (max-width:850px){
+
+      .footer-links-wrap{
+  margin:28px auto 0;
+  padding:16px;
+  border-radius:12px;
+}
+
+.footer-links-grid{
+  grid-template-columns:1fr;
+}
+      
     .featured-links{
   margin:28px auto;
   padding:16px;
@@ -574,6 +619,18 @@
 
   <img class="feature-banner" src="store.png" alt="Lanthano Store">
 </div>
+
+
+<div class="footer-links-wrap">
+  <div class="footer-links-grid">
+    <a class="footer-link" href="about.html">About</a>
+    <a class="footer-link" href="contact.html">Contact</a>
+    <a class="footer-link" href="https://lanthanoresearch.com" target="_blank" rel="noopener noreferrer">Research</a>
+    <a class="footer-link" href="store.html">Merch</a>
+  </div>
+</div>
+
+    
 
   <footer>
     © Lanthano Music 2026
