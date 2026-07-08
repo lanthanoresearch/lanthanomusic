@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lanthano Music</title>
+
   <style>
     html{
       scroll-behavior:smooth;
@@ -30,28 +31,66 @@
       align-items:center;
       justify-content:center;
       text-align:center;
+      overflow:hidden;
       background:
-        linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.55)),
-        url("https://i.ytimg.com/vi/uUSQEsWb_G0/maxresdefault.jpg") center/cover no-repeat;
+        linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.6)),
+        radial-gradient(circle at top, rgba(60,60,60,.25), transparent 40%),
+        #111;
+    }
+
+    .hero::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:
+        linear-gradient(135deg, rgba(255,255,255,.03), transparent 35%),
+        linear-gradient(315deg, rgba(255,255,255,.02), transparent 40%);
+      pointer-events:none;
     }
 
     .hero-overlay{
-      max-width:900px;
+      position:relative;
+      z-index:2;
+      max-width:950px;
       padding:20px;
     }
 
     .hero h1{
       margin:0 0 14px 0;
-      font-size:clamp(2.3rem, 7vw, 4.8rem);
+      font-size:clamp(2.5rem, 7vw, 5rem);
       letter-spacing:.5px;
     }
 
     .hero p{
       margin:0 auto;
-      max-width:700px;
+      max-width:760px;
       color:#d0d0d0;
-      font-size:1.1rem;
-      line-height:1.6;
+      font-size:1.08rem;
+      line-height:1.7;
+    }
+
+    .hero-actions{
+      display:flex;
+      justify-content:center;
+      gap:14px;
+      flex-wrap:wrap;
+      margin-top:26px;
+    }
+
+    .hero-button{
+      display:inline-block;
+      padding:12px 20px;
+      background:#1d1d1d;
+      border:1px solid #333;
+      border-radius:10px;
+      color:#fff;
+      font-weight:bold;
+      transition:.2s ease;
+    }
+
+    .hero-button:hover{
+      background:#272727;
+      border-color:#444;
     }
 
     .top-button{
@@ -101,6 +140,47 @@
       margin:10px 0;
     }
 
+    .stats{
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      flex-wrap:wrap;
+      gap:14px;
+      margin:28px 0 46px;
+      padding:16px 20px;
+      background:#181818;
+      border:1px solid #2b2b2b;
+      border-radius:14px;
+    }
+
+    .stat{
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      min-width:100px;
+    }
+
+    .stat-number{
+      font-size:1.7rem;
+      font-weight:bold;
+      color:#fff;
+      line-height:1.1;
+    }
+
+    .stat-label{
+      font-size:.9rem;
+      color:#999;
+      margin-top:4px;
+      letter-spacing:.4px;
+      text-transform:uppercase;
+    }
+
+    .stat-divider{
+      color:#555;
+      font-size:1.2rem;
+      user-select:none;
+    }
+
     .section-eyebrow{
       color:#888;
       font-size:.95rem;
@@ -138,6 +218,7 @@
       width:42%;
       min-height:260px;
       flex-shrink:0;
+      background:#1a1a1a;
     }
 
     .latest-thumb{
@@ -163,6 +244,12 @@
 
     .release-date{
       color:#aaa;
+      margin:0 0 18px 0;
+    }
+
+    .release-desc{
+      color:#cfcfcf;
+      line-height:1.65;
       margin:0 0 22px 0;
     }
 
@@ -224,6 +311,31 @@
       font-size:.95rem;
     }
 
+    .platform-links{
+      display:flex;
+      justify-content:center;
+      gap:14px;
+      flex-wrap:wrap;
+      margin-top:50px;
+    }
+
+    .platform-link{
+      display:inline-block;
+      padding:12px 18px;
+      background:#1d1d1d;
+      border:1px solid #333;
+      border-radius:10px;
+      color:#ddd;
+      font-weight:bold;
+      transition:.2s ease;
+    }
+
+    .platform-link:hover{
+      background:#272727;
+      border-color:#444;
+      color:#fff;
+    }
+
     .empty-state{
       text-align:center;
       color:#888;
@@ -266,6 +378,23 @@
       .section-title{
         font-size:1.6rem;
       }
+
+      .stats{
+        gap:10px;
+        padding:14px 12px;
+      }
+
+      .stat{
+        min-width:78px;
+      }
+
+      .stat-number{
+        font-size:1.35rem;
+      }
+
+      .stat-label{
+        font-size:.78rem;
+      }
     }
   </style>
 </head>
@@ -275,8 +404,13 @@
     <div class="hero-overlay">
       <h1>Lanthano Music</h1>
       <p>
-        Music releases, videos, and new uploads from Lanthano.
+        Official music releases, videos, and recent uploads from Lanthano.
       </p>
+
+      <div class="hero-actions">
+        <a href="#music" class="hero-button">Browse Music</a>
+        <a href="https://www.youtube.com/channel/UC-LsR_7xdkNvIy4a3DtVzdA" target="_blank" rel="noopener noreferrer" class="hero-button">YouTube Channel</a>
+      </div>
     </div>
   </div>
 
@@ -284,8 +418,29 @@
     <div class="intro">
       <h2>Listen. Explore. Follow.</h2>
       <p>
-        A central place for Lanthano releases, uploads, and music videos pulled directly from YouTube.
+        A central place for Lanthano music releases, videos, and uploads pulled directly from YouTube.
       </p>
+    </div>
+
+    <div id="statsBar" class="stats">
+      <div class="stat">
+        <span id="statTracks" class="stat-number">—</span>
+        <span class="stat-label">Tracks</span>
+      </div>
+
+      <div class="stat-divider">•</div>
+
+      <div class="stat">
+        <span id="statVideos" class="stat-number">—</span>
+        <span class="stat-label">Videos</span>
+      </div>
+
+      <div class="stat-divider">•</div>
+
+      <div class="stat">
+        <span id="statUpdated" class="stat-number">—</span>
+        <span class="stat-label">Updated</span>
+      </div>
     </div>
 
     <div class="section-eyebrow">Featured</div>
@@ -295,6 +450,10 @@
     <div class="section-eyebrow">Catalog</div>
     <h2 class="section-title">Recent Music</h2>
     <div id="musicGrid" class="music-grid"></div>
+
+    <div class="platform-links">
+      <a class="platform-link" href="https://www.youtube.com/channel/UC-LsR_7xdkNvIy4a3DtVzdA" target="_blank" rel="noopener noreferrer">YouTube</a>
+    </div>
   </section>
 
   <footer>
