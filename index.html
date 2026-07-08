@@ -30,6 +30,7 @@
       scroll-snap-align:start;
       height:100svh;
       position:relative;
+      overflow:hidden;
     }
 
     .banner{
@@ -150,7 +151,7 @@
     }
 
     #latestRelease{
-      margin:0 auto 60px;
+      margin:0 auto 26px;
       max-width:950px;
     }
 
@@ -221,6 +222,32 @@
       background:#333;
     }
 
+    .platform-links{
+      display:grid;
+      grid-template-columns:repeat(2, minmax(0, 1fr));
+      gap:14px;
+      max-width:950px;
+      margin:0 auto 60px;
+    }
+
+    .platform-link{
+      display:block;
+      padding:14px 18px;
+      background:#1d1d1d;
+      border:1px solid #333;
+      border-radius:10px;
+      color:#ddd;
+      font-weight:bold;
+      text-align:center;
+      transition:.2s ease;
+    }
+
+    .platform-link:hover{
+      background:#272727;
+      border-color:#444;
+      color:#fff;
+    }
+
     .music-grid{
       display:grid;
       grid-template-columns:repeat(4, minmax(0, 1fr));
@@ -275,31 +302,6 @@
       margin:0;
       color:#999;
       font-size:.95rem;
-    }
-
-    .platform-links{
-      display:flex;
-      justify-content:center;
-      gap:14px;
-      flex-wrap:wrap;
-      margin-top:50px;
-    }
-
-    .platform-link{
-      display:inline-block;
-      padding:12px 18px;
-      background:#1d1d1d;
-      border:1px solid #333;
-      border-radius:10px;
-      color:#ddd;
-      font-weight:bold;
-      transition:.2s ease;
-    }
-
-    .platform-link:hover{
-      background:#272727;
-      border-color:#444;
-      color:#fff;
     }
 
     .empty-state{
@@ -357,6 +359,11 @@
       .stat-label{
         font-size:.78rem;
       }
+
+      .platform-links{
+        grid-template-columns:1fr;
+        margin:0 auto 50px;
+      }
     }
   </style>
 </head>
@@ -394,35 +401,33 @@
     </div>
 
     <div id="statsBar" class="stats">
-  <div class="stat">
-    <span id="statTracks" class="stat-number">—</span>
-    <span class="stat-label">Songs</span>
-  </div>
+      <div class="stat">
+        <span id="statTracks" class="stat-number">—</span>
+        <span class="stat-label">Songs</span>
+      </div>
 
-  <div class="stat-divider">•</div>
+      <div class="stat-divider">•</div>
 
-  <div class="stat">
-    <span id="statUpdated" class="stat-number">—</span>
-    <span class="stat-label">Last Release</span>
-  </div>
-</div>
+      <div class="stat">
+        <span id="statUpdated" class="stat-number">—</span>
+        <span class="stat-label">Last Release</span>
+      </div>
+    </div>
 
-    
     <div class="section-eyebrow">Latest Release</div>
     <div id="latestRelease"></div>
 
+    <div class="platform-links">
+      <a class="platform-link" href="https://music.youtube.com/channel/UC-LsR_7xdkNvIy4a3DtVzdA?si=icZZzfK-n-OUJ2ke" target="_blank" rel="noopener noreferrer">YouTube Music</a>
+      <a class="platform-link" href="https://m.youtube.com/channel/UC-LsR_7xdkNvIy4a3DtVzdA" target="_blank" rel="noopener noreferrer">YouTube</a>
+      <a class="platform-link" href="https://open.spotify.com/artist/24VwcCehwH5BOeVQRfVYM4?si=jQarGxsOS6GgdQkjxdYy1w" target="_blank" rel="noopener noreferrer">Spotify</a>
+      <a class="platform-link" href="https://pandora.app.link/67TRkFnga4b" target="_blank" rel="noopener noreferrer">Pandora</a>
+      <a class="platform-link" href="https://music.apple.com/us/artist/lanthano/1863610418" target="_blank" rel="noopener noreferrer">Apple Music</a>
+      <a class="platform-link" href="https://music.amazon.com/artists/B0GC2GP267/lanthano?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_IPHi9gn4t67j3vjXGO4UQFTJy" target="_blank" rel="noopener noreferrer">Amazon Music</a>
+    </div>
+
     <div class="section-eyebrow">Recent Music</div>
     <div id="musicGrid" class="music-grid"></div>
-
-    <div class="platform-links">
-      <a
-        class="platform-link"
-        href="https://www.youtube.com/channel/UC-LsR_7xdkNvIy4a3DtVzdA"
-        target="_blank"
-        rel="noopener noreferrer">
-        YouTube
-      </a>
-    </div>
   </section>
 
   <footer>
