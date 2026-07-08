@@ -18,6 +18,39 @@
   <link rel="icon" type="image/png" href="file_0000000082c071f582b85259d9acf7a0.png">
 
   <style>
+
+    .featured-links{
+  max-width:850px;
+  margin:60px auto;
+  padding:30px;
+  background:#181818;
+  border:1px solid #2b2b2b;
+  border-radius:16px;
+}
+
+.feature-banner{
+  display:block;
+  width:100%;
+  max-width:500px;
+  height:auto;
+  aspect-ratio:2 / 1;
+  object-fit:cover;
+  object-position:center;
+  margin:0 auto 25px;
+  border-radius:10px;
+  transition:transform .2s ease;
+}
+
+.feature-banner:hover{
+  transform:scale(1.02);
+}
+
+.featured-links a:last-child .feature-banner,
+.featured-links .feature-banner:last-child{
+  margin-bottom:0;
+}
+
+    
     html{
       scroll-behavior:smooth;
       scroll-snap-type:y mandatory;
@@ -382,7 +415,16 @@
 
     
     @media (max-width:850px){
-     
+     .featured-links{
+  margin:28px auto;
+  padding:16px;
+  border-radius:12px;
+}
+
+.feature-banner{
+  margin:0 auto 16px;
+  border-radius:8px;
+}
       section{
         padding:28px 14px;
       }
@@ -485,9 +527,20 @@
       <a class="platform-link" href="https://music.amazon.com/artists/B0GC2GP267/lanthano?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_IPHi9gn4t67j3vjXGO4UQFTJy" target="_blank" rel="noopener noreferrer">Amazon Music</a>
     </div>
 
+
+    
     <div class="section-eyebrow">Recent Music</div>
+    
     <div id="musicGrid" class="music-grid"></div>
- 
+
+    
+ <div class="featured-links">
+  <a href="https://lanthanoresearch.com" target="_blank" rel="noopener noreferrer">
+    <img class="feature-banner" src="ResearchAdd.png" alt="Lanthano Research">
+  </a>
+
+  <img class="feature-banner" src="store.png" alt="Lanthano Store">
+</div>
 
   <footer>
     © Lanthano Music 2026
