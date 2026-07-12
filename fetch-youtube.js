@@ -56,10 +56,35 @@ async function fetchAllUploads(uploadsPlaylistId) {
       const snippet = item.snippet || {};
 
 
-      console.log("TITLE:", snippet.title);
-console.log("DESCRIPTION:");
-console.log(snippet.description);
-console.log("--------------------------------");
+    const description = snippet.description || "";
+
+
+
+
+
+
+
+
+
+      
+let album = "";
+
+const lines = description
+  .split("\n")
+  .map(line => line.trim())
+  .filter(Boolean);
+
+const artistLine = lines.findIndex(line => line.includes("·"));
+
+if (artistLine !== -1 && artistLine + 1 < lines.length) {
+  album = lines[artistLine + 1];
+}
+
+
+
+
+
+      
       
       const contentDetails = item.contentDetails || {};
       const videoId = contentDetails.videoId || snippet.resourceId?.videoId;
@@ -74,13 +99,20 @@ console.log("--------------------------------");
         snippet.thumbnails?.default?.url ||
         `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`;
 
+
+      
       return {
-        title: snippet.title || "",
-        videoId,
-        url: `https://www.youtube.com/watch?v=${videoId}`,
-        published: contentDetails.videoPublishedAt || snippet.publishedAt || "",
-        thumbnail: thumb
-      };
+  title: snippet.title || "",
+  album,
+  videoId,
+  url: `https://www.youtube.com/watch?v=${videoId}`,
+  published: contentDetails.videoPublishedAt || snippet.publishedAt || "",
+  thumbnail: thumb
+};
+
+
+      
+      
     }).filter(Boolean);
 
     allItems.push(...pageItems);
