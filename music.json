@@ -2,11 +2,12 @@
   "artist": "Lanthano",
   "channelId": "UC-LsR_7xdkNvIy4a3DtVzdA",
   "uploadsPlaylistId": "UU-LsR_7xdkNvIy4a3DtVzdA",
-  "updated": "2026-07-12T23:20:10.381Z",
+  "updated": "2026-07-12T23:30:12.767Z",
   "total": 265,
   "items": [
     {
       "title": "Videt",
+      "album": "In Gehenna",
       "videoId": "uUSQEsWb_G0",
       "url": "https://www.youtube.com/watch?v=uUSQEsWb_G0",
       "published": "2026-06-30T10:04:48Z",
@@ -15,6 +16,7 @@
     },
     {
       "title": "Fluctus Tormentorum",
+      "album": "In Gehenna",
       "videoId": "p1DpZDFL0Bo",
       "url": "https://www.youtube.com/watch?v=p1DpZDFL0Bo",
       "published": "2026-06-30T10:04:02Z",
@@ -23,6 +25,7 @@
     },
     {
       "title": "Si Satis Memineris, Hoc Tibi Iam Dixero",
+      "album": "In Gehenna",
       "videoId": "a32a82wUXoY",
       "url": "https://www.youtube.com/watch?v=a32a82wUXoY",
       "published": "2026-06-30T10:03:42Z",
@@ -31,6 +34,7 @@
     },
     {
       "title": "In Somniis",
+      "album": "In Gehenna",
       "videoId": "J02APtm6aaE",
       "url": "https://www.youtube.com/watch?v=J02APtm6aaE",
       "published": "2026-06-30T10:01:31Z",
@@ -39,6 +43,7 @@
     },
     {
       "title": "If You don't Bow",
+      "album": "Not God's People",
       "videoId": "G9cg-Z1dGec",
       "url": "https://www.youtube.com/watch?v=G9cg-Z1dGec",
       "published": "2026-06-12T10:04:49Z",
@@ -47,6 +52,7 @@
     },
     {
       "title": "Two Hundred Marks",
+      "album": "Two Hundred Marks",
       "videoId": "hyWIimj_cPs",
       "url": "https://www.youtube.com/watch?v=hyWIimj_cPs",
       "published": "2026-06-12T10:03:23Z",
@@ -55,6 +61,7 @@
     },
     {
       "title": "Watchers",
+      "album": "Two Hundred Marks",
       "videoId": "IX2asKFSM-0",
       "url": "https://www.youtube.com/watch?v=IX2asKFSM-0",
       "published": "2026-06-12T10:02:53Z",
@@ -63,6 +70,7 @@
     },
     {
       "title": "Israel is not God's people",
+      "album": "Not God's People",
       "videoId": "Z45DiTMabgY",
       "url": "https://www.youtube.com/watch?v=Z45DiTMabgY",
       "published": "2026-06-12T10:02:34Z",
@@ -71,6 +79,7 @@
     },
     {
       "title": "Children of War",
+      "album": "Not God's People",
       "videoId": "ABKUCaKrv48",
       "url": "https://www.youtube.com/watch?v=ABKUCaKrv48",
       "published": "2026-06-12T10:02:29Z",
@@ -79,6 +88,7 @@
     },
     {
       "title": "North of Eden",
+      "album": "Eden's North",
       "videoId": "x6dgDc1nFCg",
       "url": "https://www.youtube.com/watch?v=x6dgDc1nFCg",
       "published": "2026-06-05T10:05:13Z",
@@ -87,6 +97,7 @@
     },
     {
       "title": "Seek and You Will Find",
+      "album": "Eden's North",
       "videoId": "8pwTEtUMN_I",
       "url": "https://www.youtube.com/watch?v=8pwTEtUMN_I",
       "published": "2026-06-05T10:05:07Z",
@@ -95,6 +106,7 @@
     },
     {
       "title": "I'm Going North",
+      "album": "Eden's North",
       "videoId": "FhrTYPP1v9w",
       "url": "https://www.youtube.com/watch?v=FhrTYPP1v9w",
       "published": "2026-06-05T10:04:26Z",
@@ -103,6 +115,7 @@
     },
     {
       "title": "Eden's North",
+      "album": "Eden's North",
       "videoId": "z6FjsPrHMnU",
       "url": "https://www.youtube.com/watch?v=z6FjsPrHMnU",
       "published": "2026-06-05T10:03:15Z",
@@ -111,6 +124,7 @@
     },
     {
       "title": "Not Gone",
+      "album": "Eden's North",
       "videoId": "Zq6bqdo54U8",
       "url": "https://www.youtube.com/watch?v=Zq6bqdo54U8",
       "published": "2026-06-05T10:02:16Z",
@@ -119,6 +133,7 @@
     },
     {
       "title": "Lanthano",
+      "album": "You Can Hate This",
       "videoId": "GdL8inV7i38",
       "url": "https://www.youtube.com/watch?v=GdL8inV7i38",
       "published": "2026-06-02T10:04:54Z",
@@ -127,6 +142,7 @@
     },
     {
       "title": "This is AI",
+      "album": "You Can Hate This",
       "videoId": "VJy7l2CDFEU",
       "url": "https://www.youtube.com/watch?v=VJy7l2CDFEU",
       "published": "2026-06-02T10:04:49Z",
@@ -135,6 +151,7 @@
     },
     {
       "title": "Walls",
+      "album": "Surreal",
       "videoId": "1EzRhr2Rimc",
       "url": "https://www.youtube.com/watch?v=1EzRhr2Rimc",
       "published": "2026-06-02T10:04:43Z",
@@ -143,6 +160,7 @@
     },
     {
       "title": "Wonder",
+      "album": "Surreal",
       "videoId": "tOpNTckuDkM",
       "url": "https://www.youtube.com/watch?v=tOpNTckuDkM",
       "published": "2026-06-02T10:03:47Z",
@@ -151,6 +169,7 @@
     },
     {
       "title": "Majesty",
+      "album": "Surreal",
       "videoId": "EGUp4XNiiWc",
       "url": "https://www.youtube.com/watch?v=EGUp4XNiiWc",
       "published": "2026-06-02T10:03:41Z",
@@ -159,6 +178,7 @@
     },
     {
       "title": "Not Made for Your Ears",
+      "album": "You Can Hate This",
       "videoId": "7JhGFZiHrSQ",
       "url": "https://www.youtube.com/watch?v=7JhGFZiHrSQ",
       "published": "2026-06-02T10:03:32Z",
@@ -167,6 +187,7 @@
     },
     {
       "title": "I Know You Hate my Music",
+      "album": "You Can Hate This",
       "videoId": "QNHFiNES-LY",
       "url": "https://www.youtube.com/watch?v=QNHFiNES-LY",
       "published": "2026-06-02T10:02:36Z",
@@ -175,6 +196,7 @@
     },
     {
       "title": "Long Ago",
+      "album": "Surreal",
       "videoId": "ZAFaKqqMvsk",
       "url": "https://www.youtube.com/watch?v=ZAFaKqqMvsk",
       "published": "2026-06-02T10:02:16Z",
@@ -183,6 +205,7 @@
     },
     {
       "title": "Far",
+      "album": "Surreal",
       "videoId": "P0qCkYe-W2E",
       "url": "https://www.youtube.com/watch?v=P0qCkYe-W2E",
       "published": "2026-06-02T10:01:53Z",
@@ -191,6 +214,7 @@
     },
     {
       "title": "Stella",
+      "album": "Feom Deus",
       "videoId": "vpRj3nM60jc",
       "url": "https://www.youtube.com/watch?v=vpRj3nM60jc",
       "published": "2026-05-25T10:04:26Z",
@@ -199,6 +223,7 @@
     },
     {
       "title": "Fiam",
+      "album": "Feom Deus",
       "videoId": "oKueP476STU",
       "url": "https://www.youtube.com/watch?v=oKueP476STU",
       "published": "2026-05-25T10:03:19Z",
@@ -207,6 +232,7 @@
     },
     {
       "title": "Feom Deus",
+      "album": "Feom Deus",
       "videoId": "JVc6sERGUCc",
       "url": "https://www.youtube.com/watch?v=JVc6sERGUCc",
       "published": "2026-05-25T10:02:59Z",
@@ -215,6 +241,7 @@
     },
     {
       "title": "In Dream",
+      "album": "Feom Deus",
       "videoId": "GGGNBTjVyEE",
       "url": "https://www.youtube.com/watch?v=GGGNBTjVyEE",
       "published": "2026-05-25T10:01:46Z",
@@ -223,6 +250,7 @@
     },
     {
       "title": "Occultus",
+      "album": "Occultus",
       "videoId": "CkIfgLApBD8",
       "url": "https://www.youtube.com/watch?v=CkIfgLApBD8",
       "published": "2026-05-12T10:03:49Z",
@@ -231,6 +259,7 @@
     },
     {
       "title": "Ave de Caelo",
+      "album": "Occultus",
       "videoId": "Cfgpn9Ay9bE",
       "url": "https://www.youtube.com/watch?v=Cfgpn9Ay9bE",
       "published": "2026-05-12T10:03:28Z",
@@ -239,6 +268,7 @@
     },
     {
       "title": "Amici Quos non Servavi",
+      "album": "Occultus",
       "videoId": "pf_b6IHsXVE",
       "url": "https://www.youtube.com/watch?v=pf_b6IHsXVE",
       "published": "2026-05-12T10:03:27Z",
@@ -247,6 +277,7 @@
     },
     {
       "title": "Utinam Scire Possem",
+      "album": "Occultus",
       "videoId": "cIsTiiTkdDw",
       "url": "https://www.youtube.com/watch?v=cIsTiiTkdDw",
       "published": "2026-05-12T10:03:22Z",
@@ -255,6 +286,7 @@
     },
     {
       "title": "Te Primum Cognovi",
+      "album": "Occultus",
       "videoId": "JAL2K2efPHU",
       "url": "https://www.youtube.com/watch?v=JAL2K2efPHU",
       "published": "2026-05-12T10:02:49Z",
@@ -263,6 +295,7 @@
     },
     {
       "title": "Recordaris",
+      "album": "Occultus",
       "videoId": "99heM1cNQCw",
       "url": "https://www.youtube.com/watch?v=99heM1cNQCw",
       "published": "2026-05-12T10:01:46Z",
@@ -271,6 +304,7 @@
     },
     {
       "title": "Tempus Quondam Perfectum",
+      "album": "Occultus",
       "videoId": "x00gHWVnRPc",
       "url": "https://www.youtube.com/watch?v=x00gHWVnRPc",
       "published": "2026-05-12T10:01:30Z",
@@ -279,6 +313,7 @@
     },
     {
       "title": "But I Don't",
+      "album": "Be Angry and Sin Not",
       "videoId": "mPW-JQ9qLos",
       "url": "https://www.youtube.com/watch?v=mPW-JQ9qLos",
       "published": "2026-05-06T10:04:35Z",
@@ -287,6 +322,7 @@
     },
     {
       "title": "Prince of Peace",
+      "album": "Clever Resistance",
       "videoId": "LdeRX10zjMk",
       "url": "https://www.youtube.com/watch?v=LdeRX10zjMk",
       "published": "2026-05-06T10:04:34Z",
@@ -295,6 +331,7 @@
     },
     {
       "title": "Anger Without Sin",
+      "album": "Be Angry and Sin Not",
       "videoId": "AEN2ZTb1wmQ",
       "url": "https://www.youtube.com/watch?v=AEN2ZTb1wmQ",
       "published": "2026-05-06T10:04:20Z",
@@ -303,6 +340,7 @@
     },
     {
       "title": "Clever Resistance",
+      "album": "Clever Resistance",
       "videoId": "jU6kvf2ClmE",
       "url": "https://www.youtube.com/watch?v=jU6kvf2ClmE",
       "published": "2026-05-06T10:03:32Z",
@@ -311,6 +349,7 @@
     },
     {
       "title": "Money, Money, Money",
+      "album": "Material World",
       "videoId": "8AtG8rTIzXU",
       "url": "https://www.youtube.com/watch?v=8AtG8rTIzXU",
       "published": "2026-05-06T10:03:02Z",
@@ -319,6 +358,7 @@
     },
     {
       "title": "One God, One Will",
+      "album": "Clever Resistance",
       "videoId": "bYTRcO0y2dM",
       "url": "https://www.youtube.com/watch?v=bYTRcO0y2dM",
       "published": "2026-05-06T10:02:57Z",
@@ -327,6 +367,7 @@
     },
     {
       "title": "Trapped",
+      "album": "Trapped",
       "videoId": "ZUhxvTHuf0g",
       "url": "https://www.youtube.com/watch?v=ZUhxvTHuf0g",
       "published": "2026-05-06T10:02:49Z",
@@ -335,6 +376,7 @@
     },
     {
       "title": "Sinless Anger",
+      "album": "Be Angry and Sin Not",
       "videoId": "M_AsIlQPtOA",
       "url": "https://www.youtube.com/watch?v=M_AsIlQPtOA",
       "published": "2026-05-06T10:02:24Z",
@@ -343,6 +385,7 @@
     },
     {
       "title": "I Don't Know What I've Been Told",
+      "album": "Material World",
       "videoId": "hO1oJ136xV8",
       "url": "https://www.youtube.com/watch?v=hO1oJ136xV8",
       "published": "2026-05-06T10:01:55Z",
@@ -351,6 +394,7 @@
     },
     {
       "title": "Conspiracies Reveal",
+      "album": "Obvious Truth",
       "videoId": "m9fqd9JXO_0",
       "url": "https://www.youtube.com/watch?v=m9fqd9JXO_0",
       "published": "2026-04-17T10:04:26Z",
@@ -359,6 +403,7 @@
     },
     {
       "title": "In Jesus Name",
+      "album": "AR-15",
       "videoId": "8ty7PVMB5eE",
       "url": "https://www.youtube.com/watch?v=8ty7PVMB5eE",
       "published": "2026-04-17T10:04:08Z",
@@ -367,6 +412,7 @@
     },
     {
       "title": "Is Charlie Kirk Dead",
+      "album": "Obvious Truth",
       "videoId": "tUM-NhPRKEM",
       "url": "https://www.youtube.com/watch?v=tUM-NhPRKEM",
       "published": "2026-04-17T10:04:06Z",
@@ -375,6 +421,7 @@
     },
     {
       "title": "I've Got 10,000 Rounds",
+      "album": "AR-15",
       "videoId": "xw4I0bI7HpA",
       "url": "https://www.youtube.com/watch?v=xw4I0bI7HpA",
       "published": "2026-04-17T10:04:03Z",
@@ -383,6 +430,7 @@
     },
     {
       "title": "Me and my Nigga",
+      "album": "AR-15",
       "videoId": "9bZwP-FaxU4",
       "url": "https://www.youtube.com/watch?v=9bZwP-FaxU4",
       "published": "2026-04-17T10:03:45Z",
@@ -391,6 +439,7 @@
     },
     {
       "title": "Rooms on Fire",
+      "album": "Obvious Truth",
       "videoId": "311hxoeVxTA",
       "url": "https://www.youtube.com/watch?v=311hxoeVxTA",
       "published": "2026-04-17T10:03:40Z",
@@ -399,6 +448,7 @@
     },
     {
       "title": "Must've Been Catapults",
+      "album": "Obvious Truth",
       "videoId": "9OQfVZyMXjE",
       "url": "https://www.youtube.com/watch?v=9OQfVZyMXjE",
       "published": "2026-04-17T10:03:08Z",
@@ -407,6 +457,7 @@
     },
     {
       "title": "They Really Won",
+      "album": "Obvious Truth",
       "videoId": "lafb2u2P9dA",
       "url": "https://www.youtube.com/watch?v=lafb2u2P9dA",
       "published": "2026-04-17T10:03:06Z",
@@ -415,6 +466,7 @@
     },
     {
       "title": "Be Consistent",
+      "album": "That's What You Got",
       "videoId": "SYW3HqpTG8E",
       "url": "https://www.youtube.com/watch?v=SYW3HqpTG8E",
       "published": "2026-04-17T10:02:52Z",
@@ -423,6 +475,7 @@
     },
     {
       "title": "1,000 on the Line",
+      "album": "AR-15",
       "videoId": "V5gHUP4FlLc",
       "url": "https://www.youtube.com/watch?v=V5gHUP4FlLc",
       "published": "2026-04-17T10:02:35Z",
@@ -431,6 +484,7 @@
     },
     {
       "title": "AR-15",
+      "album": "AR-15",
       "videoId": "4dWtwk1721w",
       "url": "https://www.youtube.com/watch?v=4dWtwk1721w",
       "published": "2026-04-17T10:02:23Z",
@@ -439,6 +493,7 @@
     },
     {
       "title": "Dear Intruder",
+      "album": "AR-15",
       "videoId": "tbnqqI-4AoA",
       "url": "https://www.youtube.com/watch?v=tbnqqI-4AoA",
       "published": "2026-04-17T10:02:12Z",
@@ -447,6 +502,7 @@
     },
     {
       "title": "Fog of Man",
+      "album": "Obvious Truth",
       "videoId": "EJyTZmXlVW0",
       "url": "https://www.youtube.com/watch?v=EJyTZmXlVW0",
       "published": "2026-04-17T10:02:06Z",
@@ -455,6 +511,7 @@
     },
     {
       "title": "If the Shoe Fits",
+      "album": "That's What You Got",
       "videoId": "R3ZqmfX9Xc4",
       "url": "https://www.youtube.com/watch?v=R3ZqmfX9Xc4",
       "published": "2026-04-17T10:02:05Z",
@@ -463,6 +520,7 @@
     },
     {
       "title": "Can't Make me Fit",
+      "album": "That's What You Got",
       "videoId": "whZVL2TkD5E",
       "url": "https://www.youtube.com/watch?v=whZVL2TkD5E",
       "published": "2026-04-17T10:02:02Z",
@@ -471,6 +529,7 @@
     },
     {
       "title": "I Must Be Wrong",
+      "album": "That's What You Got",
       "videoId": "tYPpMa2tKKc",
       "url": "https://www.youtube.com/watch?v=tYPpMa2tKKc",
       "published": "2026-04-17T10:01:58Z",
@@ -479,6 +538,7 @@
     },
     {
       "title": "GDKPD",
+      "album": "AR-15",
       "videoId": "pukG2Q_jics",
       "url": "https://www.youtube.com/watch?v=pukG2Q_jics",
       "published": "2026-04-17T10:01:55Z",
@@ -487,6 +547,7 @@
     },
     {
       "title": "That's What You Got",
+      "album": "That's What You Got",
       "videoId": "0AQryULG42U",
       "url": "https://www.youtube.com/watch?v=0AQryULG42U",
       "published": "2026-04-17T10:01:53Z",
@@ -495,6 +556,7 @@
     },
     {
       "title": "Tin Foil Hats",
+      "album": "Obvious Truth",
       "videoId": "NUfeM8BySyg",
       "url": "https://www.youtube.com/watch?v=NUfeM8BySyg",
       "published": "2026-04-17T10:01:52Z",
@@ -503,6 +565,7 @@
     },
     {
       "title": "I Don't Care if You Concur",
+      "album": "That's What You Got",
       "videoId": "myb9wTEgjDU",
       "url": "https://www.youtube.com/watch?v=myb9wTEgjDU",
       "published": "2026-04-17T10:01:51Z",
@@ -511,6 +574,7 @@
     },
     {
       "title": "That's the Difference Between me and You",
+      "album": "That's What You Got",
       "videoId": "_CcNTba2OFg",
       "url": "https://www.youtube.com/watch?v=_CcNTba2OFg",
       "published": "2026-04-17T10:01:50Z",
@@ -519,6 +583,7 @@
     },
     {
       "title": "You are the Divider of the Church",
+      "album": "The Narrow Path",
       "videoId": "cMn6BE3QGHc",
       "url": "https://www.youtube.com/watch?v=cMn6BE3QGHc",
       "published": "2026-03-31T10:04:48Z",
@@ -527,6 +592,7 @@
     },
     {
       "title": "If You Don’t Meet the Measure",
+      "album": "The Narrow Path",
       "videoId": "jNAKMlHroeg",
       "url": "https://www.youtube.com/watch?v=jNAKMlHroeg",
       "published": "2026-03-31T10:04:46Z",
@@ -535,6 +601,7 @@
     },
     {
       "title": "Get it Right",
+      "album": "No Box",
       "videoId": "wlcnVcD--uc",
       "url": "https://www.youtube.com/watch?v=wlcnVcD--uc",
       "published": "2026-03-31T10:04:43Z",
@@ -543,6 +610,7 @@
     },
     {
       "title": "I Bow to no Man",
+      "album": "No Box",
       "videoId": "NqvxoDCdyk0",
       "url": "https://www.youtube.com/watch?v=NqvxoDCdyk0",
       "published": "2026-03-31T10:04:14Z",
@@ -551,6 +619,7 @@
     },
     {
       "title": "Out of Spite",
+      "album": "The Narrow Path",
       "videoId": "cj14bNK6QHI",
       "url": "https://www.youtube.com/watch?v=cj14bNK6QHI",
       "published": "2026-03-31T10:04:13Z",
@@ -559,6 +628,7 @@
     },
     {
       "title": "I Bear His Name",
+      "album": "The Narrow Path",
       "videoId": "1u5HMGi1v74",
       "url": "https://www.youtube.com/watch?v=1u5HMGi1v74",
       "published": "2026-03-31T10:04:05Z",
@@ -567,6 +637,7 @@
     },
     {
       "title": "Satan has asked to have You",
+      "album": "The Narrow Path",
       "videoId": "T7CsV5zfb9k",
       "url": "https://www.youtube.com/watch?v=T7CsV5zfb9k",
       "published": "2026-03-31T10:03:20Z",
@@ -575,6 +646,7 @@
     },
     {
       "title": "Tame and Stupid",
+      "album": "The Narrow Path",
       "videoId": "yen6cveJ75U",
       "url": "https://www.youtube.com/watch?v=yen6cveJ75U",
       "published": "2026-03-31T10:03:16Z",
@@ -583,6 +655,7 @@
     },
     {
       "title": "You Must be going Mad",
+      "album": "No Box",
       "videoId": "duVKNCAbuyE",
       "url": "https://www.youtube.com/watch?v=duVKNCAbuyE",
       "published": "2026-03-31T10:02:21Z",
@@ -591,6 +664,7 @@
     },
     {
       "title": "LORD of Hosts",
+      "album": "The Narrow Path",
       "videoId": "CYTDeAHxU-Y",
       "url": "https://www.youtube.com/watch?v=CYTDeAHxU-Y",
       "published": "2026-03-31T10:02:10Z",
@@ -599,6 +673,7 @@
     },
     {
       "title": "That's You",
+      "album": "No Box",
       "videoId": "atCjb52cCyk",
       "url": "https://www.youtube.com/watch?v=atCjb52cCyk",
       "published": "2026-03-31T10:02:10Z",
@@ -607,6 +682,7 @@
     },
     {
       "title": "You Believe, But do You Obey",
+      "album": "The Narrow Path",
       "videoId": "obcUtFXpztI",
       "url": "https://www.youtube.com/watch?v=obcUtFXpztI",
       "published": "2026-03-31T10:02:08Z",
@@ -615,6 +691,7 @@
     },
     {
       "title": "It's so Sad, it's Almost Funny",
+      "album": "No Box",
       "videoId": "ybd8w3tn4N4",
       "url": "https://www.youtube.com/watch?v=ybd8w3tn4N4",
       "published": "2026-03-31T10:02:06Z",
@@ -623,6 +700,7 @@
     },
     {
       "title": "I Stand Where I Stand",
+      "album": "No Box",
       "videoId": "BSJYUBtEihI",
       "url": "https://www.youtube.com/watch?v=BSJYUBtEihI",
       "published": "2026-03-31T10:01:48Z",
@@ -631,6 +709,7 @@
     },
     {
       "title": "Until You Know",
+      "album": "The Narrow Path",
       "videoId": "1I36kOJx-9Y",
       "url": "https://www.youtube.com/watch?v=1I36kOJx-9Y",
       "published": "2026-03-31T10:01:25Z",
@@ -639,6 +718,7 @@
     },
     {
       "title": "I Never Knew You",
+      "album": "The Narrow Path",
       "videoId": "AJboTcOwBsw",
       "url": "https://www.youtube.com/watch?v=AJboTcOwBsw",
       "published": "2026-03-31T10:01:14Z",
@@ -647,6 +727,7 @@
     },
     {
       "title": "Fear the LORD",
+      "album": "The Narrow Path",
       "videoId": "A-jfCnIBoas",
       "url": "https://www.youtube.com/watch?v=A-jfCnIBoas",
       "published": "2026-03-31T10:01:10Z",
@@ -655,6 +736,7 @@
     },
     {
       "title": "PHONK NO (Slowed Reverb)",
+      "album": "Dominion Kartel (Enhanced Edition)",
       "videoId": "24Bs3NXGzv8",
       "url": "https://www.youtube.com/watch?v=24Bs3NXGzv8",
       "published": "2026-03-27T10:04:44Z",
@@ -663,6 +745,7 @@
     },
     {
       "title": "PHONK (Sped Up)",
+      "album": "Dominion Kartel (Enhanced Edition)",
       "videoId": "7kUjxz4y4yk",
       "url": "https://www.youtube.com/watch?v=7kUjxz4y4yk",
       "published": "2026-03-27T10:04:17Z",
@@ -671,6 +754,7 @@
     },
     {
       "title": "Other Places (Sped Up)",
+      "album": "Dominion Kartel (Enhanced Edition)",
       "videoId": "0qHkQ3Jg-fk",
       "url": "https://www.youtube.com/watch?v=0qHkQ3Jg-fk",
       "published": "2026-03-27T10:03:09Z",
@@ -679,6 +763,7 @@
     },
     {
       "title": "Araphonk (Sped Up)",
+      "album": "Dominion Kartel (Enhanced Edition)",
       "videoId": "yZGHiI-8gf8",
       "url": "https://www.youtube.com/watch?v=yZGHiI-8gf8",
       "published": "2026-03-27T10:02:41Z",
@@ -687,6 +772,7 @@
     },
     {
       "title": "ANTHR LIFE (Sped Up)",
+      "album": "Dominion Kartel (Enhanced Edition)",
       "videoId": "eD9OokVPZ9g",
       "url": "https://www.youtube.com/watch?v=eD9OokVPZ9g",
       "published": "2026-03-27T10:01:59Z",
@@ -695,6 +781,7 @@
     },
     {
       "title": "Xhord (Sped Up)",
+      "album": "Dominion Kartel (Enhanced Edition)",
       "videoId": "hXsmAR8x6TE",
       "url": "https://www.youtube.com/watch?v=hXsmAR8x6TE",
       "published": "2026-03-27T10:01:24Z",
@@ -703,6 +790,7 @@
     },
     {
       "title": "Please Stay Underground",
+      "album": "Please Stay Underground",
       "videoId": "0LRdfiDjKzk",
       "url": "https://www.youtube.com/watch?v=0LRdfiDjKzk",
       "published": "2026-03-27T10:01:17Z",
@@ -711,6 +799,7 @@
     },
     {
       "title": "More Irish Than The Irish",
+      "album": "More Irish Than The Irish",
       "videoId": "XIydrgb71WA",
       "url": "https://www.youtube.com/watch?v=XIydrgb71WA",
       "published": "2026-03-20T10:04:12Z",
@@ -719,6 +808,7 @@
     },
     {
       "title": "The Devil Sees Me",
+      "album": "If You Know What I Know",
       "videoId": "QLmL70fCJ-k",
       "url": "https://www.youtube.com/watch?v=QLmL70fCJ-k",
       "published": "2026-03-20T10:03:43Z",
@@ -727,6 +817,7 @@
     },
     {
       "title": "Tried to Fly",
+      "album": "Tried to Fly",
       "videoId": "ooe8QpBiLNo",
       "url": "https://www.youtube.com/watch?v=ooe8QpBiLNo",
       "published": "2026-03-20T10:03:32Z",
@@ -735,6 +826,7 @@
     },
     {
       "title": "You Live in a Box",
+      "album": "No 10 Minute Answer",
       "videoId": "dZKQAPijFpQ",
       "url": "https://www.youtube.com/watch?v=dZKQAPijFpQ",
       "published": "2026-03-20T10:03:18Z",
@@ -743,6 +835,7 @@
     },
     {
       "title": "If You Know What I Know",
+      "album": "If You Know What I Know",
       "videoId": "FuN5UVNMOc4",
       "url": "https://www.youtube.com/watch?v=FuN5UVNMOc4",
       "published": "2026-03-20T10:02:45Z",
@@ -751,6 +844,7 @@
     },
     {
       "title": "It Don't Float, It Sinks",
+      "album": "If You Know What I Know",
       "videoId": "p6FA4f1dioA",
       "url": "https://www.youtube.com/watch?v=p6FA4f1dioA",
       "published": "2026-03-20T10:02:38Z",
@@ -759,6 +853,7 @@
     },
     {
       "title": "Gaslighter, Gaslighter",
+      "album": "Gaslighter, Gaslighter",
       "videoId": "3JanRzu8S8s",
       "url": "https://www.youtube.com/watch?v=3JanRzu8S8s",
       "published": "2026-03-20T10:02:32Z",
@@ -767,6 +862,7 @@
     },
     {
       "title": "Only I Can See The Devil",
+      "album": "If You Know What I Know",
       "videoId": "k0C8nyjwHQY",
       "url": "https://www.youtube.com/watch?v=k0C8nyjwHQY",
       "published": "2026-03-20T10:02:07Z",
@@ -775,6 +871,7 @@
     },
     {
       "title": "Pull Your Head Out of the Sand",
+      "album": "No 10 Minute Answer",
       "videoId": "kyCZCoWNPog",
       "url": "https://www.youtube.com/watch?v=kyCZCoWNPog",
       "published": "2026-03-20T10:02:04Z",
@@ -783,6 +880,7 @@
     },
     {
       "title": "It's Too Heavy",
+      "album": "If You Know What I Know",
       "videoId": "jov5vlx8Xck",
       "url": "https://www.youtube.com/watch?v=jov5vlx8Xck",
       "published": "2026-03-20T10:02:02Z",
@@ -791,6 +889,7 @@
     },
     {
       "title": "When the Colors Fade",
+      "album": "If You Know What I Know",
       "videoId": "jubZwmwgGwA",
       "url": "https://www.youtube.com/watch?v=jubZwmwgGwA",
       "published": "2026-03-20T10:01:57Z",
@@ -799,6 +898,7 @@
     },
     {
       "title": "No 10 Minute Answer",
+      "album": "No 10 Minute Answer",
       "videoId": "_avnP-0NeNQ",
       "url": "https://www.youtube.com/watch?v=_avnP-0NeNQ",
       "published": "2026-03-20T10:01:48Z",
@@ -807,6 +907,7 @@
     },
     {
       "title": "Break it Down",
+      "album": "Break it Down",
       "videoId": "22e8gko8Jkg",
       "url": "https://www.youtube.com/watch?v=22e8gko8Jkg",
       "published": "2026-03-13T10:04:22Z",
@@ -815,6 +916,7 @@
     },
     {
       "title": "A Finger and Half my Pinky",
+      "album": "A Finger and Half my Pinky",
       "videoId": "6u9OzKKuLIM",
       "url": "https://www.youtube.com/watch?v=6u9OzKKuLIM",
       "published": "2026-03-13T10:02:50Z",
@@ -823,6 +925,7 @@
     },
     {
       "title": "Xhord",
+      "album": "Dominion Kartel",
       "videoId": "R-8c2lIn5zU",
       "url": "https://www.youtube.com/watch?v=R-8c2lIn5zU",
       "published": "2026-03-06T10:04:56Z",
@@ -831,6 +934,7 @@
     },
     {
       "title": "Indian Giver",
+      "album": "Indian Giver",
       "videoId": "RLnHVHCUKl4",
       "url": "https://www.youtube.com/watch?v=RLnHVHCUKl4",
       "published": "2026-03-06T10:03:53Z",
@@ -839,6 +943,7 @@
     },
     {
       "title": "Araphonk",
+      "album": "Dominion Kartel",
       "videoId": "cjFtl4S7yYc",
       "url": "https://www.youtube.com/watch?v=cjFtl4S7yYc",
       "published": "2026-03-06T10:03:22Z",
@@ -847,6 +952,7 @@
     },
     {
       "title": "ANTHR LIFE",
+      "album": "Dominion Kartel",
       "videoId": "tyur6JALa7s",
       "url": "https://www.youtube.com/watch?v=tyur6JALa7s",
       "published": "2026-03-06T10:02:43Z",
@@ -855,6 +961,7 @@
     },
     {
       "title": "PHONK",
+      "album": "Dominion Kartel",
       "videoId": "lDrRcp9-0Uw",
       "url": "https://www.youtube.com/watch?v=lDrRcp9-0Uw",
       "published": "2026-03-06T10:02:21Z",
@@ -863,6 +970,7 @@
     },
     {
       "title": "Other Places",
+      "album": "Dominion Kartel",
       "videoId": "SPA9DNP-ejc",
       "url": "https://www.youtube.com/watch?v=SPA9DNP-ejc",
       "published": "2026-03-06T10:02:10Z",
@@ -871,6 +979,7 @@
     },
     {
       "title": "PHONK NO",
+      "album": "Dominion Kartel",
       "videoId": "96Z-L72ig80",
       "url": "https://www.youtube.com/watch?v=96Z-L72ig80",
       "published": "2026-03-06T10:01:48Z",
@@ -879,6 +988,7 @@
     },
     {
       "title": "Who Led US Astray",
+      "album": "Triggering Scripture",
       "videoId": "_AWfF6z2znI",
       "url": "https://www.youtube.com/watch?v=_AWfF6z2znI",
       "published": "2026-02-28T10:04:43Z",
@@ -887,6 +997,7 @@
     },
     {
       "title": "We Were Raised Wrong",
+      "album": "Triggering Scripture",
       "videoId": "KODnscrDjeY",
       "url": "https://www.youtube.com/watch?v=KODnscrDjeY",
       "published": "2026-02-28T10:04:41Z",
@@ -895,6 +1006,7 @@
     },
     {
       "title": "When Man and God Disagree",
+      "album": "Triggering Scripture",
       "videoId": "39T8l2Jr5vk",
       "url": "https://www.youtube.com/watch?v=39T8l2Jr5vk",
       "published": "2026-02-28T10:04:33Z",
@@ -903,6 +1015,7 @@
     },
     {
       "title": "Biblical Love",
+      "album": "Triggering Scripture",
       "videoId": "5aMQdmmyAo0",
       "url": "https://www.youtube.com/watch?v=5aMQdmmyAo0",
       "published": "2026-02-28T10:04:15Z",
@@ -911,6 +1024,7 @@
     },
     {
       "title": "Before You",
+      "album": "Triggering Scripture",
       "videoId": "zur22-Sz20Q",
       "url": "https://www.youtube.com/watch?v=zur22-Sz20Q",
       "published": "2026-02-28T10:04:06Z",
@@ -919,6 +1033,7 @@
     },
     {
       "title": "Yet a Little While",
+      "album": "Christ Reigned",
       "videoId": "pZxJuFdX_-U",
       "url": "https://www.youtube.com/watch?v=pZxJuFdX_-U",
       "published": "2026-02-28T10:04:01Z",
@@ -927,6 +1042,7 @@
     },
     {
       "title": "Going to Hell",
+      "album": "Triggering Scripture",
       "videoId": "nSlDplk12h4",
       "url": "https://www.youtube.com/watch?v=nSlDplk12h4",
       "published": "2026-02-28T10:03:50Z",
@@ -935,6 +1051,7 @@
     },
     {
       "title": "Ten Commandments",
+      "album": "Triggering Scripture",
       "videoId": "_GvLiYU57oQ",
       "url": "https://www.youtube.com/watch?v=_GvLiYU57oQ",
       "published": "2026-02-28T10:03:38Z",
@@ -943,6 +1060,7 @@
     },
     {
       "title": "Does it Warn of You or me",
+      "album": "That's How You See Me",
       "videoId": "GGY36fXKRSM",
       "url": "https://www.youtube.com/watch?v=GGY36fXKRSM",
       "published": "2026-02-28T10:03:24Z",
@@ -951,6 +1069,7 @@
     },
     {
       "title": "Nothing Goes Unquestioned",
+      "album": "That's How You See Me",
       "videoId": "meNj5dQ-t2U",
       "url": "https://www.youtube.com/watch?v=meNj5dQ-t2U",
       "published": "2026-02-28T10:03:23Z",
@@ -959,6 +1078,7 @@
     },
     {
       "title": "Liar or Lord",
+      "album": "Christ Reigned",
       "videoId": "ekFyvLRfV48",
       "url": "https://www.youtube.com/watch?v=ekFyvLRfV48",
       "published": "2026-02-28T10:03:09Z",
@@ -967,6 +1087,7 @@
     },
     {
       "title": "I'm Researched not Insane",
+      "album": "That's How You See Me",
       "videoId": "iZ4UaOc7WAo",
       "url": "https://www.youtube.com/watch?v=iZ4UaOc7WAo",
       "published": "2026-02-28T10:03:09Z",
@@ -975,6 +1096,7 @@
     },
     {
       "title": "Salvation Takes Work",
+      "album": "Triggering Scripture",
       "videoId": "Y5QXndpUTvw",
       "url": "https://www.youtube.com/watch?v=Y5QXndpUTvw",
       "published": "2026-02-28T10:03:07Z",
@@ -983,6 +1105,7 @@
     },
     {
       "title": "The Word of The Lord",
+      "album": "Triggering Scripture",
       "videoId": "GdgqJv7Q1iA",
       "url": "https://www.youtube.com/watch?v=GdgqJv7Q1iA",
       "published": "2026-02-28T10:02:57Z",
@@ -991,6 +1114,7 @@
     },
     {
       "title": "I can argue Your Belief Better than You",
+      "album": "That's How You See Me",
       "videoId": "2JiSkKO_tVc",
       "url": "https://www.youtube.com/watch?v=2JiSkKO_tVc",
       "published": "2026-02-28T10:02:49Z",
@@ -999,6 +1123,7 @@
     },
     {
       "title": "Hidden Kingdom",
+      "album": "Christ Reigned",
       "videoId": "Umkimy5FgdM",
       "url": "https://www.youtube.com/watch?v=Umkimy5FgdM",
       "published": "2026-02-28T10:02:47Z",
@@ -1007,6 +1132,7 @@
     },
     {
       "title": "KJV Dabate",
+      "album": "Triggering Scripture",
       "videoId": "frqYs7VkAUc",
       "url": "https://www.youtube.com/watch?v=frqYs7VkAUc",
       "published": "2026-02-28T10:02:44Z",
@@ -1015,6 +1141,7 @@
     },
     {
       "title": "Fiery Ones",
+      "album": "Triggering Scripture",
       "videoId": "funPWD-eBS4",
       "url": "https://www.youtube.com/watch?v=funPWD-eBS4",
       "published": "2026-02-28T10:02:42Z",
@@ -1023,6 +1150,7 @@
     },
     {
       "title": "The Past Reveals",
+      "album": "Christ Reigned",
       "videoId": "odJThvetzCo",
       "url": "https://www.youtube.com/watch?v=odJThvetzCo",
       "published": "2026-02-28T10:02:36Z",
@@ -1031,6 +1159,7 @@
     },
     {
       "title": "Where's the Gap in Daniel's Count",
+      "album": "Christ Reigned",
       "videoId": "vxLYYaHQMHM",
       "url": "https://www.youtube.com/watch?v=vxLYYaHQMHM",
       "published": "2026-02-28T10:02:33Z",
@@ -1039,6 +1168,7 @@
     },
     {
       "title": "We Were Both Wrong",
+      "album": "Christ Reigned",
       "videoId": "CqTkmlJaWDE",
       "url": "https://www.youtube.com/watch?v=CqTkmlJaWDE",
       "published": "2026-02-28T10:02:32Z",
@@ -1047,6 +1177,7 @@
     },
     {
       "title": "Forewarned",
+      "album": "Triggering Scripture",
       "videoId": "TCNVaN0Ekbs",
       "url": "https://www.youtube.com/watch?v=TCNVaN0Ekbs",
       "published": "2026-02-28T10:02:28Z",
@@ -1055,6 +1186,7 @@
     },
     {
       "title": "Godly Men",
+      "album": "Triggering Scripture",
       "videoId": "4tSQdc60MUU",
       "url": "https://www.youtube.com/watch?v=4tSQdc60MUU",
       "published": "2026-02-28T10:02:24Z",
@@ -1063,6 +1195,7 @@
     },
     {
       "title": "Watered Down Faith",
+      "album": "Triggering Scripture",
       "videoId": "cmfbEh3zkFM",
       "url": "https://www.youtube.com/watch?v=cmfbEh3zkFM",
       "published": "2026-02-28T10:02:10Z",
@@ -1071,6 +1204,7 @@
     },
     {
       "title": "Tartaria",
+      "album": "Christ Reigned",
       "videoId": "2Su2KPgj_kc",
       "url": "https://www.youtube.com/watch?v=2Su2KPgj_kc",
       "published": "2026-02-28T10:02:03Z",
@@ -1079,6 +1213,7 @@
     },
     {
       "title": "The End",
+      "album": "Christ Reigned",
       "videoId": "9Vt10nqAl1o",
       "url": "https://www.youtube.com/watch?v=9Vt10nqAl1o",
       "published": "2026-02-28T10:02:00Z",
@@ -1087,6 +1222,7 @@
     },
     {
       "title": "That's How You See Me",
+      "album": "That's How You See Me",
       "videoId": "oVt4dafMbE8",
       "url": "https://www.youtube.com/watch?v=oVt4dafMbE8",
       "published": "2026-02-28T10:01:55Z",
@@ -1095,6 +1231,7 @@
     },
     {
       "title": "End in Sight",
+      "album": "Christ Reigned",
       "videoId": "zjfdx2F1Oj8",
       "url": "https://www.youtube.com/watch?v=zjfdx2F1Oj8",
       "published": "2026-02-28T10:01:52Z",
@@ -1103,6 +1240,7 @@
     },
     {
       "title": "Argue No More",
+      "album": "Christ Reigned",
       "videoId": "4r3c14o3--s",
       "url": "https://www.youtube.com/watch?v=4r3c14o3--s",
       "published": "2026-02-28T10:01:46Z",
@@ -1111,6 +1249,7 @@
     },
     {
       "title": "Rapture Facts",
+      "album": "Triggering Scripture",
       "videoId": "1UA7f9ZBGq4",
       "url": "https://www.youtube.com/watch?v=1UA7f9ZBGq4",
       "published": "2026-02-28T10:01:45Z",
@@ -1119,6 +1258,7 @@
     },
     {
       "title": "Little Season",
+      "album": "Christ Reigned",
       "videoId": "88E9rsC_OXY",
       "url": "https://www.youtube.com/watch?v=88E9rsC_OXY",
       "published": "2026-02-28T10:01:45Z",
@@ -1127,6 +1267,7 @@
     },
     {
       "title": "Christ Reigned",
+      "album": "Christ Reigned",
       "videoId": "sGhUcim0zKc",
       "url": "https://www.youtube.com/watch?v=sGhUcim0zKc",
       "published": "2026-02-28T10:01:45Z",
@@ -1135,6 +1276,7 @@
     },
     {
       "title": "He Taught Soon",
+      "album": "Triggering Scripture",
       "videoId": "I1cOaudWznQ",
       "url": "https://www.youtube.com/watch?v=I1cOaudWznQ",
       "published": "2026-02-28T10:01:40Z",
@@ -1143,6 +1285,7 @@
     },
     {
       "title": "Why Fight What's Prophecied",
+      "album": "Christ Reigned",
       "videoId": "aVnM9fVEByQ",
       "url": "https://www.youtube.com/watch?v=aVnM9fVEByQ",
       "published": "2026-02-28T10:01:06Z",
@@ -1151,6 +1294,7 @@
     },
     {
       "title": "The World Before",
+      "album": "Alternative History",
       "videoId": "aRhSSdx3KJ8",
       "url": "https://www.youtube.com/watch?v=aRhSSdx3KJ8",
       "published": "2026-02-20T10:04:47Z",
@@ -1159,6 +1303,7 @@
     },
     {
       "title": "My War Cry",
+      "album": "God Be Blessed",
       "videoId": "zzrBfckw6lE",
       "url": "https://www.youtube.com/watch?v=zzrBfckw6lE",
       "published": "2026-02-20T10:04:39Z",
@@ -1167,6 +1312,7 @@
     },
     {
       "title": "In Egypt's Mysterious Sands",
+      "album": "Alternative History",
       "videoId": "op6arwC7IoI",
       "url": "https://www.youtube.com/watch?v=op6arwC7IoI",
       "published": "2026-02-20T10:04:33Z",
@@ -1175,6 +1321,7 @@
     },
     {
       "title": "There's Always More to Find",
+      "album": "Alternative History",
       "videoId": "oiTqYbTEEGg",
       "url": "https://www.youtube.com/watch?v=oiTqYbTEEGg",
       "published": "2026-02-20T10:03:56Z",
@@ -1183,6 +1330,7 @@
     },
     {
       "title": "Even if Heaven’s not open to me",
+      "album": "God Be Blessed",
       "videoId": "-qKNkRmesxU",
       "url": "https://www.youtube.com/watch?v=-qKNkRmesxU",
       "published": "2026-02-20T10:03:04Z",
@@ -1191,6 +1339,7 @@
     },
     {
       "title": "All to God",
+      "album": "God Be Blessed",
       "videoId": "UjqXdsh7aac",
       "url": "https://www.youtube.com/watch?v=UjqXdsh7aac",
       "published": "2026-02-20T10:02:52Z",
@@ -1199,6 +1348,7 @@
     },
     {
       "title": "Intelligent Beyond",
+      "album": "Alternative History",
       "videoId": "iQ2LVpskIr8",
       "url": "https://www.youtube.com/watch?v=iQ2LVpskIr8",
       "published": "2026-02-20T10:02:51Z",
@@ -1207,6 +1357,7 @@
     },
     {
       "title": "I Follow God",
+      "album": "God Be Blessed",
       "videoId": "CnZ2Ma0fCIw",
       "url": "https://www.youtube.com/watch?v=CnZ2Ma0fCIw",
       "published": "2026-02-20T10:02:49Z",
@@ -1215,6 +1366,7 @@
     },
     {
       "title": "Ancient Technologies",
+      "album": "Alternative History",
       "videoId": "aX7lkcXvuuQ",
       "url": "https://www.youtube.com/watch?v=aX7lkcXvuuQ",
       "published": "2026-02-20T10:02:34Z",
@@ -1223,6 +1375,7 @@
     },
     {
       "title": "God Be Blessed",
+      "album": "God Be Blessed",
       "videoId": "652Y90qUsp0",
       "url": "https://www.youtube.com/watch?v=652Y90qUsp0",
       "published": "2026-02-20T10:02:30Z",
@@ -1231,6 +1384,7 @@
     },
     {
       "title": "Megalithic Yard",
+      "album": "Alternative History",
       "videoId": "uiLh6zETDSc",
       "url": "https://www.youtube.com/watch?v=uiLh6zETDSc",
       "published": "2026-02-20T10:02:01Z",
@@ -1239,6 +1393,7 @@
     },
     {
       "title": "Echos of the Ancients",
+      "album": "Alternative History",
       "videoId": "kbM9J0LOY_s",
       "url": "https://www.youtube.com/watch?v=kbM9J0LOY_s",
       "published": "2026-02-20T10:01:51Z",
@@ -1247,6 +1402,7 @@
     },
     {
       "title": "War Chant",
+      "album": "God Be Blessed",
       "videoId": "eoupslICs4E",
       "url": "https://www.youtube.com/watch?v=eoupslICs4E",
       "published": "2026-02-20T10:01:45Z",
@@ -1255,6 +1411,7 @@
     },
     {
       "title": "Alternative History",
+      "album": "Alternative History",
       "videoId": "vfyXr8xQCLo",
       "url": "https://www.youtube.com/watch?v=vfyXr8xQCLo",
       "published": "2026-02-20T10:01:41Z",
@@ -1263,6 +1420,7 @@
     },
     {
       "title": "I'll Fight Onward",
+      "album": "God Be Blessed",
       "videoId": "BEuxxiQku2A",
       "url": "https://www.youtube.com/watch?v=BEuxxiQku2A",
       "published": "2026-02-20T10:01:37Z",
@@ -1271,6 +1429,7 @@
     },
     {
       "title": "Cr@zy G0@t$",
+      "album": "Cr@zy G0@t$",
       "videoId": "OG1JG3DAyso",
       "url": "https://www.youtube.com/watch?v=OG1JG3DAyso",
       "published": "2026-02-12T10:04:33Z",
@@ -1279,6 +1438,7 @@
     },
     {
       "title": "[BLEEP]",
+      "album": "[BLEEP]",
       "videoId": "ftdmxoqTb9k",
       "url": "https://www.youtube.com/watch?v=ftdmxoqTb9k",
       "published": "2026-02-12T10:03:29Z",
@@ -1287,6 +1447,7 @@
     },
     {
       "title": "Coke",
+      "album": "Catch that Clock",
       "videoId": "nVSZjFbo4Ww",
       "url": "https://www.youtube.com/watch?v=nVSZjFbo4Ww",
       "published": "2026-02-05T10:04:47Z",
@@ -1295,6 +1456,7 @@
     },
     {
       "title": "My Part",
+      "album": "Catch that Clock",
       "videoId": "Ym9qyA0kGlM",
       "url": "https://www.youtube.com/watch?v=Ym9qyA0kGlM",
       "published": "2026-02-05T10:04:37Z",
@@ -1303,6 +1465,7 @@
     },
     {
       "title": "Gotta Go",
+      "album": "Gotta Go",
       "videoId": "SJbHze7lQ9k",
       "url": "https://www.youtube.com/watch?v=SJbHze7lQ9k",
       "published": "2026-02-05T10:04:01Z",
@@ -1311,6 +1474,7 @@
     },
     {
       "title": "Hungry Hungry Hippo",
+      "album": "Hungry Hungry Hippo",
       "videoId": "QnKO0sPdCY8",
       "url": "https://www.youtube.com/watch?v=QnKO0sPdCY8",
       "published": "2026-02-05T10:03:27Z",
@@ -1319,6 +1483,7 @@
     },
     {
       "title": "Let's Gamble",
+      "album": "Hungry Hungry Hippo",
       "videoId": "P35Fg3OS14k",
       "url": "https://www.youtube.com/watch?v=P35Fg3OS14k",
       "published": "2026-02-05T10:03:26Z",
@@ -1327,6 +1492,7 @@
     },
     {
       "title": "Your Tax Money",
+      "album": "Your Tax Money",
       "videoId": "4DUkmlePumI",
       "url": "https://www.youtube.com/watch?v=4DUkmlePumI",
       "published": "2026-02-05T10:02:54Z",
@@ -1335,6 +1501,7 @@
     },
     {
       "title": "You Took my Leg",
+      "album": "You Took my Leg",
       "videoId": "hIRq1X3OPoU",
       "url": "https://www.youtube.com/watch?v=hIRq1X3OPoU",
       "published": "2026-02-05T10:02:50Z",
@@ -1343,6 +1510,7 @@
     },
     {
       "title": "Big Fat Molly Grubber Tooter",
+      "album": "Big Fat Molly Grubber Tooter",
       "videoId": "1tkoxlEwWkk",
       "url": "https://www.youtube.com/watch?v=1tkoxlEwWkk",
       "published": "2026-02-05T10:02:44Z",
@@ -1351,6 +1519,7 @@
     },
     {
       "title": "Catch that Clock",
+      "album": "Catch that Clock",
       "videoId": "AsciTFs8MQc",
       "url": "https://www.youtube.com/watch?v=AsciTFs8MQc",
       "published": "2026-02-05T10:02:32Z",
@@ -1359,6 +1528,7 @@
     },
     {
       "title": "Gingerbread Man",
+      "album": "Gingerbread Man",
       "videoId": "4JHFomTD6Bs",
       "url": "https://www.youtube.com/watch?v=4JHFomTD6Bs",
       "published": "2026-02-05T10:02:30Z",
@@ -1367,6 +1537,7 @@
     },
     {
       "title": "Gotta Go (Extended Version)",
+      "album": "Gotta Go",
       "videoId": "1mE6MjIMHB0",
       "url": "https://www.youtube.com/watch?v=1mE6MjIMHB0",
       "published": "2026-02-05T10:02:22Z",
@@ -1375,6 +1546,7 @@
     },
     {
       "title": "12 Cups Deep",
+      "album": "Catch that Clock",
       "videoId": "MylG0-dxnb0",
       "url": "https://www.youtube.com/watch?v=MylG0-dxnb0",
       "published": "2026-02-05T10:02:08Z",
@@ -1383,6 +1555,7 @@
     },
     {
       "title": "Honour in Change",
+      "album": "Level 9",
       "videoId": "v72s3znExzM",
       "url": "https://www.youtube.com/watch?v=v72s3znExzM",
       "published": "2026-01-31T10:04:52Z",
@@ -1391,6 +1564,7 @@
     },
     {
       "title": "The American Dream",
+      "album": "A World Gone Mad",
       "videoId": "IpR2RPk_maY",
       "url": "https://www.youtube.com/watch?v=IpR2RPk_maY",
       "published": "2026-01-31T10:04:45Z",
@@ -1399,6 +1573,7 @@
     },
     {
       "title": "Depopulate the Elite",
+      "album": "A World Gone Mad",
       "videoId": "J5DV4bsIMd4",
       "url": "https://www.youtube.com/watch?v=J5DV4bsIMd4",
       "published": "2026-01-31T10:04:45Z",
@@ -1407,6 +1582,7 @@
     },
     {
       "title": "Your Reels",
+      "album": "Level 9",
       "videoId": "GffqRhrbfAA",
       "url": "https://www.youtube.com/watch?v=GffqRhrbfAA",
       "published": "2026-01-31T10:04:41Z",
@@ -1415,6 +1591,7 @@
     },
     {
       "title": "World Dumb",
+      "album": "A World Gone Mad",
       "videoId": "APM_XvTaToY",
       "url": "https://www.youtube.com/watch?v=APM_XvTaToY",
       "published": "2026-01-31T10:04:40Z",
@@ -1423,6 +1600,7 @@
     },
     {
       "title": "Suppression",
+      "album": "A World Gone Mad",
       "videoId": "KK32NSi04fE",
       "url": "https://www.youtube.com/watch?v=KK32NSi04fE",
       "published": "2026-01-31T10:04:34Z",
@@ -1431,6 +1609,7 @@
     },
     {
       "title": "Fast Madness",
+      "album": "A World Gone Mad",
       "videoId": "TzEKiAtpKLY",
       "url": "https://www.youtube.com/watch?v=TzEKiAtpKLY",
       "published": "2026-01-31T10:04:30Z",
@@ -1439,6 +1618,7 @@
     },
     {
       "title": "Comfortable",
+      "album": "A World Gone Mad",
       "videoId": "SmtclWcV6Ug",
       "url": "https://www.youtube.com/watch?v=SmtclWcV6Ug",
       "published": "2026-01-31T10:04:16Z",
@@ -1447,6 +1627,7 @@
     },
     {
       "title": "Figured Out",
+      "album": "Level 9",
       "videoId": "cpqM94ptoN8",
       "url": "https://www.youtube.com/watch?v=cpqM94ptoN8",
       "published": "2026-01-31T10:04:14Z",
@@ -1455,6 +1636,7 @@
     },
     {
       "title": "Knew too Much",
+      "album": "A World Gone Mad",
       "videoId": "qRWDFsaCMVI",
       "url": "https://www.youtube.com/watch?v=qRWDFsaCMVI",
       "published": "2026-01-31T10:03:58Z",
@@ -1463,6 +1645,7 @@
     },
     {
       "title": "Poison's All Around Us",
+      "album": "A World Gone Mad",
       "videoId": "ikoVVFOW00g",
       "url": "https://www.youtube.com/watch?v=ikoVVFOW00g",
       "published": "2026-01-31T10:03:51Z",
@@ -1471,6 +1654,7 @@
     },
     {
       "title": "On a Roll to Hell",
+      "album": "A World Gone Mad",
       "videoId": "7aEuXfUwn1Q",
       "url": "https://www.youtube.com/watch?v=7aEuXfUwn1Q",
       "published": "2026-01-31T10:03:47Z",
@@ -1479,6 +1663,7 @@
     },
     {
       "title": "Up Till 4",
+      "album": "Level 9",
       "videoId": "kkM_o9CrxqE",
       "url": "https://www.youtube.com/watch?v=kkM_o9CrxqE",
       "published": "2026-01-31T10:03:47Z",
@@ -1487,6 +1672,7 @@
     },
     {
       "title": "World's Messed Up",
+      "album": "A World Gone Mad",
       "videoId": "5dkGlMVvacE",
       "url": "https://www.youtube.com/watch?v=5dkGlMVvacE",
       "published": "2026-01-31T10:03:45Z",
@@ -1495,6 +1681,7 @@
     },
     {
       "title": "A Leftist",
+      "album": "A World Gone Mad",
       "videoId": "NALc1sCXp9o",
       "url": "https://www.youtube.com/watch?v=NALc1sCXp9o",
       "published": "2026-01-31T10:03:44Z",
@@ -1503,6 +1690,7 @@
     },
     {
       "title": "Insanity",
+      "album": "A World Gone Mad",
       "videoId": "0PyPAilqW50",
       "url": "https://www.youtube.com/watch?v=0PyPAilqW50",
       "published": "2026-01-31T10:03:19Z",
@@ -1511,6 +1699,7 @@
     },
     {
       "title": "Investigation's a Sham",
+      "album": "A World Gone Mad",
       "videoId": "Qa1EGnBrw7U",
       "url": "https://www.youtube.com/watch?v=Qa1EGnBrw7U",
       "published": "2026-01-31T10:03:17Z",
@@ -1519,6 +1708,7 @@
     },
     {
       "title": "Blackest of the Black Sheep",
+      "album": "Level 9",
       "videoId": "Eh1Y2dg7z9k",
       "url": "https://www.youtube.com/watch?v=Eh1Y2dg7z9k",
       "published": "2026-01-31T10:03:14Z",
@@ -1527,6 +1717,7 @@
     },
     {
       "title": "Y'all a Bunch of Hoes",
+      "album": "A World Gone Mad",
       "videoId": "ZeRlJ4lJ1IY",
       "url": "https://www.youtube.com/watch?v=ZeRlJ4lJ1IY",
       "published": "2026-01-31T10:03:10Z",
@@ -1535,6 +1726,7 @@
     },
     {
       "title": "Level 9",
+      "album": "Level 9",
       "videoId": "Az7Q2DyHXG4",
       "url": "https://www.youtube.com/watch?v=Az7Q2DyHXG4",
       "published": "2026-01-31T10:03:05Z",
@@ -1543,6 +1735,7 @@
     },
     {
       "title": "Level Conspiracy",
+      "album": "Level 9",
       "videoId": "TKRcdMvQgUw",
       "url": "https://www.youtube.com/watch?v=TKRcdMvQgUw",
       "published": "2026-01-31T10:02:50Z",
@@ -1551,6 +1744,7 @@
     },
     {
       "title": "A World Gone Mad",
+      "album": "A World Gone Mad",
       "videoId": "sPUMbS1bCsc",
       "url": "https://www.youtube.com/watch?v=sPUMbS1bCsc",
       "published": "2026-01-31T10:02:45Z",
@@ -1559,6 +1753,7 @@
     },
     {
       "title": "Zombies",
+      "album": "A World Gone Mad",
       "videoId": "UWB8tS2oxBY",
       "url": "https://www.youtube.com/watch?v=UWB8tS2oxBY",
       "published": "2026-01-31T10:02:31Z",
@@ -1567,6 +1762,7 @@
     },
     {
       "title": "You Know Me",
+      "album": "Level 9",
       "videoId": "O2x6ShEexsY",
       "url": "https://www.youtube.com/watch?v=O2x6ShEexsY",
       "published": "2026-01-31T10:02:22Z",
@@ -1575,6 +1771,7 @@
     },
     {
       "title": "Caught You",
+      "album": "Level 9",
       "videoId": "fhUaBK9sZoc",
       "url": "https://www.youtube.com/watch?v=fhUaBK9sZoc",
       "published": "2026-01-31T10:02:00Z",
@@ -1583,6 +1780,7 @@
     },
     {
       "title": "The Script",
+      "album": "A World Gone Mad",
       "videoId": "mbDRduKMDBg",
       "url": "https://www.youtube.com/watch?v=mbDRduKMDBg",
       "published": "2026-01-31T10:01:57Z",
@@ -1591,6 +1789,7 @@
     },
     {
       "title": "Deep End",
+      "album": "Level 9",
       "videoId": "y8digkJMuVw",
       "url": "https://www.youtube.com/watch?v=y8digkJMuVw",
       "published": "2026-01-31T10:01:56Z",
@@ -1599,6 +1798,7 @@
     },
     {
       "title": "Plugged In",
+      "album": "A World Gone Mad",
       "videoId": "twKM1tNlA-8",
       "url": "https://www.youtube.com/watch?v=twKM1tNlA-8",
       "published": "2026-01-31T10:01:55Z",
@@ -1607,6 +1807,7 @@
     },
     {
       "title": "Wired for Chaos",
+      "album": "A World Gone Mad",
       "videoId": "6Clsta1zLRQ",
       "url": "https://www.youtube.com/watch?v=6Clsta1zLRQ",
       "published": "2026-01-31T10:01:49Z",
@@ -1615,6 +1816,7 @@
     },
     {
       "title": "Nothing to Hide",
+      "album": "Level 9",
       "videoId": "f7iC2QIhIp8",
       "url": "https://www.youtube.com/watch?v=f7iC2QIhIp8",
       "published": "2026-01-31T10:01:46Z",
@@ -1623,6 +1825,7 @@
     },
     {
       "title": "Don't Believe Lies",
+      "album": "A World Gone Mad",
       "videoId": "5NS9LVYNw98",
       "url": "https://www.youtube.com/watch?v=5NS9LVYNw98",
       "published": "2026-01-31T10:01:43Z",
@@ -1631,6 +1834,7 @@
     },
     {
       "title": "Elite Depopulation",
+      "album": "A World Gone Mad",
       "videoId": "T2_8sdWERfg",
       "url": "https://www.youtube.com/watch?v=T2_8sdWERfg",
       "published": "2026-01-31T10:01:40Z",
@@ -1639,6 +1843,7 @@
     },
     {
       "title": "Bloody Blueprints",
+      "album": "A World Gone Mad",
       "videoId": "lluPLRl9cDQ",
       "url": "https://www.youtube.com/watch?v=lluPLRl9cDQ",
       "published": "2026-01-31T10:01:40Z",
@@ -1647,6 +1852,7 @@
     },
     {
       "title": "Go (Sped Up)",
+      "album": "Messiah Mafia Matrix (Enhanced Edition)",
       "videoId": "QXefS95D33w",
       "url": "https://www.youtube.com/watch?v=QXefS95D33w",
       "published": "2026-01-30T10:04:29Z",
@@ -1655,6 +1861,7 @@
     },
     {
       "title": "You're Beat (Ultra Slowed Reverb)",
+      "album": "Messiah Mafia Matrix (Enhanced Edition)",
       "videoId": "66aLldmUEEw",
       "url": "https://www.youtube.com/watch?v=66aLldmUEEw",
       "published": "2026-01-30T10:04:16Z",
@@ -1663,6 +1870,7 @@
     },
     {
       "title": "We Don't Want That (Slow Reverb)",
+      "album": "Messiah Mafia Matrix (Enhanced Edition)",
       "videoId": "VP-qeiPjMpg",
       "url": "https://www.youtube.com/watch?v=VP-qeiPjMpg",
       "published": "2026-01-30T10:04:09Z",
@@ -1671,6 +1879,7 @@
     },
     {
       "title": "Fire of Hell (Slow Reverb)",
+      "album": "Messiah Mafia Matrix (Enhanced Edition)",
       "videoId": "u5dN0IxIBow",
       "url": "https://www.youtube.com/watch?v=u5dN0IxIBow",
       "published": "2026-01-30T10:04:09Z",
@@ -1679,6 +1888,7 @@
     },
     {
       "title": "Help me (Sped Up)",
+      "album": "Messiah Mafia Matrix (Enhanced Edition)",
       "videoId": "VmyCDx7dPjc",
       "url": "https://www.youtube.com/watch?v=VmyCDx7dPjc",
       "published": "2026-01-30T10:04:00Z",
@@ -1687,6 +1897,7 @@
     },
     {
       "title": "Scoped (Sped Up)",
+      "album": "Messiah Mafia Matrix (Enhanced Edition)",
       "videoId": "-Qa6N-Ca2R4",
       "url": "https://www.youtube.com/watch?v=-Qa6N-Ca2R4",
       "published": "2026-01-30T10:03:59Z",
@@ -1695,6 +1906,7 @@
     },
     {
       "title": "Red Dot (Slow Reverb)",
+      "album": "Messiah Mafia Matrix (Enhanced Edition)",
       "videoId": "q7Jo5lCtaSw",
       "url": "https://www.youtube.com/watch?v=q7Jo5lCtaSw",
       "published": "2026-01-30T10:03:50Z",
@@ -1703,6 +1915,7 @@
     },
     {
       "title": "Coming for You (Slowed Reverb)",
+      "album": "Messiah Mafia Matrix (Enhanced Edition)",
       "videoId": "H_Wt34Jfqas",
       "url": "https://www.youtube.com/watch?v=H_Wt34Jfqas",
       "published": "2026-01-30T10:02:56Z",
@@ -1711,6 +1924,7 @@
     },
     {
       "title": "You're Beat (Slowed Reverb)",
+      "album": "Messiah Mafia Matrix (Enhanced Edition)",
       "videoId": "cT15zXMabh8",
       "url": "https://www.youtube.com/watch?v=cT15zXMabh8",
       "published": "2026-01-30T10:02:55Z",
@@ -1719,6 +1933,7 @@
     },
     {
       "title": "Wait (Sped Up)",
+      "album": "Messiah Mafia Matrix (Enhanced Edition)",
       "videoId": "pRhyKC22jqk",
       "url": "https://www.youtube.com/watch?v=pRhyKC22jqk",
       "published": "2026-01-30T10:02:50Z",
@@ -1727,6 +1942,7 @@
     },
     {
       "title": "Shots Fired (Slow Reverb)",
+      "album": "Messiah Mafia Matrix (Enhanced Edition)",
       "videoId": "6EZD0nOPpuU",
       "url": "https://www.youtube.com/watch?v=6EZD0nOPpuU",
       "published": "2026-01-30T10:02:47Z",
@@ -1735,6 +1951,7 @@
     },
     {
       "title": "Hell Fire From Above (Sped Up)",
+      "album": "Messiah Mafia Matrix (Enhanced Edition)",
       "videoId": "CkV4rYdeByg",
       "url": "https://www.youtube.com/watch?v=CkV4rYdeByg",
       "published": "2026-01-30T10:02:42Z",
@@ -1743,6 +1960,7 @@
     },
     {
       "title": "Fighting for Jehovah (Sped Up)",
+      "album": "Messiah Mafia Matrix (Enhanced Edition)",
       "videoId": "mL2LHoLxI9M",
       "url": "https://www.youtube.com/watch?v=mL2LHoLxI9M",
       "published": "2026-01-30T10:02:04Z",
@@ -1751,6 +1969,7 @@
     },
     {
       "title": "Slow Down (Sped Up)",
+      "album": "Messiah Mafia Matrix (Enhanced Edition)",
       "videoId": "NfeTeVbg4Ts",
       "url": "https://www.youtube.com/watch?v=NfeTeVbg4Ts",
       "published": "2026-01-30T10:02:03Z",
@@ -1759,6 +1978,7 @@
     },
     {
       "title": "Crunch (Sped Up)",
+      "album": "Messiah Mafia Matrix (Enhanced Edition)",
       "videoId": "o8nx2VvH2t4",
       "url": "https://www.youtube.com/watch?v=o8nx2VvH2t4",
       "published": "2026-01-30T10:02:03Z",
@@ -1767,6 +1987,7 @@
     },
     {
       "title": "Die For The Lord (Slow Reverb)",
+      "album": "Messiah Mafia Matrix (Enhanced Edition)",
       "videoId": "lfa1wKQrOaI",
       "url": "https://www.youtube.com/watch?v=lfa1wKQrOaI",
       "published": "2026-01-30T10:01:54Z",
@@ -1775,6 +1996,7 @@
     },
     {
       "title": "Fast as I can (Sped Up)",
+      "album": "Messiah Mafia Matrix (Enhanced Edition)",
       "videoId": "RgEG_aJak5w",
       "url": "https://www.youtube.com/watch?v=RgEG_aJak5w",
       "published": "2026-01-30T10:01:51Z",
@@ -1783,6 +2005,7 @@
     },
     {
       "title": "Racing to the End (Sped Up)",
+      "album": "Messiah Mafia Matrix (Enhanced Edition)",
       "videoId": "YR6CH0Lypu0",
       "url": "https://www.youtube.com/watch?v=YR6CH0Lypu0",
       "published": "2026-01-30T10:01:46Z",
@@ -1791,6 +2014,7 @@
     },
     {
       "title": "Crush (Sped Up)",
+      "album": "Messiah Mafia Matrix (Enhanced Edition)",
       "videoId": "jZ0sGN5GW2s",
       "url": "https://www.youtube.com/watch?v=jZ0sGN5GW2s",
       "published": "2026-01-30T10:01:44Z",
@@ -1799,6 +2023,7 @@
     },
     {
       "title": "Slow Down (Bass Boosted)",
+      "album": "Messiah Mafia Matrix (Enhanced Edition)",
       "videoId": "O5t70Y0lEms",
       "url": "https://www.youtube.com/watch?v=O5t70Y0lEms",
       "published": "2026-01-30T10:01:43Z",
@@ -1807,6 +2032,7 @@
     },
     {
       "title": "Clueless Critics",
+      "album": "Clueless Critics",
       "videoId": "Jqu3Ejiyx6M",
       "url": "https://www.youtube.com/watch?v=Jqu3Ejiyx6M",
       "published": "2026-01-23T10:04:56Z",
@@ -1815,6 +2041,7 @@
     },
     {
       "title": "Wait",
+      "album": "Messiah Mafia Matrix",
       "videoId": "t0fnuMjvOY4",
       "url": "https://www.youtube.com/watch?v=t0fnuMjvOY4",
       "published": "2026-01-23T10:04:48Z",
@@ -1823,6 +2050,7 @@
     },
     {
       "title": "Coming for You",
+      "album": "Messiah Mafia Matrix",
       "videoId": "uBkHm3tYmOY",
       "url": "https://www.youtube.com/watch?v=uBkHm3tYmOY",
       "published": "2026-01-23T10:04:17Z",
@@ -1831,6 +2059,7 @@
     },
     {
       "title": "You Can’t Handle Reality",
+      "album": "Clueless Critics",
       "videoId": "HZY4Qijoj4Q",
       "url": "https://www.youtube.com/watch?v=HZY4Qijoj4Q",
       "published": "2026-01-23T10:04:09Z",
@@ -1839,6 +2068,7 @@
     },
     {
       "title": "Die For The Lord",
+      "album": "Messiah Mafia Matrix",
       "videoId": "TqnGyDUAfOs",
       "url": "https://www.youtube.com/watch?v=TqnGyDUAfOs",
       "published": "2026-01-23T10:03:56Z",
@@ -1847,6 +2077,7 @@
     },
     {
       "title": "Slow Down",
+      "album": "Messiah Mafia Matrix",
       "videoId": "3CrPbu84qyo",
       "url": "https://www.youtube.com/watch?v=3CrPbu84qyo",
       "published": "2026-01-23T10:03:52Z",
@@ -1855,6 +2086,7 @@
     },
     {
       "title": "Go",
+      "album": "Messiah Mafia Matrix",
       "videoId": "G6bRUQSg9Ic",
       "url": "https://www.youtube.com/watch?v=G6bRUQSg9Ic",
       "published": "2026-01-23T10:03:39Z",
@@ -1863,6 +2095,7 @@
     },
     {
       "title": "Shots Fired",
+      "album": "Messiah Mafia Matrix",
       "videoId": "lKVbW6LLeRE",
       "url": "https://www.youtube.com/watch?v=lKVbW6LLeRE",
       "published": "2026-01-23T10:03:13Z",
@@ -1871,6 +2104,7 @@
     },
     {
       "title": "Scoped",
+      "album": "Messiah Mafia Matrix",
       "videoId": "SnD49OVGxcU",
       "url": "https://www.youtube.com/watch?v=SnD49OVGxcU",
       "published": "2026-01-23T10:03:01Z",
@@ -1879,6 +2113,7 @@
     },
     {
       "title": "You Can Live Wherever You Want",
+      "album": "Clueless Critics",
       "videoId": "cPwuFPJEovo",
       "url": "https://www.youtube.com/watch?v=cPwuFPJEovo",
       "published": "2026-01-23T10:03:00Z",
@@ -1887,6 +2122,7 @@
     },
     {
       "title": "Hell Fire From Above",
+      "album": "Messiah Mafia Matrix",
       "videoId": "sI55KqCgtDc",
       "url": "https://www.youtube.com/watch?v=sI55KqCgtDc",
       "published": "2026-01-23T10:02:58Z",
@@ -1895,6 +2131,7 @@
     },
     {
       "title": "Reality’s far too Complicated for You",
+      "album": "Clueless Critics",
       "videoId": "3IDIMYH9zLc",
       "url": "https://www.youtube.com/watch?v=3IDIMYH9zLc",
       "published": "2026-01-23T10:02:49Z",
@@ -1903,6 +2140,7 @@
     },
     {
       "title": "Crush",
+      "album": "Messiah Mafia Matrix",
       "videoId": "_1mq8KMSZWc",
       "url": "https://www.youtube.com/watch?v=_1mq8KMSZWc",
       "published": "2026-01-23T10:02:45Z",
@@ -1911,6 +2149,7 @@
     },
     {
       "title": "Help me",
+      "album": "Messiah Mafia Matrix",
       "videoId": "TCurHNz3ChU",
       "url": "https://www.youtube.com/watch?v=TCurHNz3ChU",
       "published": "2026-01-23T10:02:37Z",
@@ -1919,6 +2158,7 @@
     },
     {
       "title": "Loo Loo Land",
+      "album": "Clueless Critics",
       "videoId": "2KYvuOpsplw",
       "url": "https://www.youtube.com/watch?v=2KYvuOpsplw",
       "published": "2026-01-23T10:02:32Z",
@@ -1927,6 +2167,7 @@
     },
     {
       "title": "Fast as I can",
+      "album": "Messiah Mafia Matrix",
       "videoId": "Q9PT2zWpt9E",
       "url": "https://www.youtube.com/watch?v=Q9PT2zWpt9E",
       "published": "2026-01-23T10:02:27Z",
@@ -1935,6 +2176,7 @@
     },
     {
       "title": "You're Beat",
+      "album": "Messiah Mafia Matrix",
       "videoId": "zaooappPHT8",
       "url": "https://www.youtube.com/watch?v=zaooappPHT8",
       "published": "2026-01-23T10:02:21Z",
@@ -1943,6 +2185,7 @@
     },
     {
       "title": "Racing to the End",
+      "album": "Messiah Mafia Matrix",
       "videoId": "6bKUPNdFjYU",
       "url": "https://www.youtube.com/watch?v=6bKUPNdFjYU",
       "published": "2026-01-23T10:02:11Z",
@@ -1951,6 +2194,7 @@
     },
     {
       "title": "Fire of Hell",
+      "album": "Messiah Mafia Matrix",
       "videoId": "8nW9sl_kU90",
       "url": "https://www.youtube.com/watch?v=8nW9sl_kU90",
       "published": "2026-01-23T10:02:03Z",
@@ -1959,6 +2203,7 @@
     },
     {
       "title": "Crunch",
+      "album": "Messiah Mafia Matrix",
       "videoId": "_PmuhKJCusA",
       "url": "https://www.youtube.com/watch?v=_PmuhKJCusA",
       "published": "2026-01-23T10:01:54Z",
@@ -1967,6 +2212,7 @@
     },
     {
       "title": "We Don't Want That",
+      "album": "Messiah Mafia Matrix",
       "videoId": "-3Hwm3EaN8U",
       "url": "https://www.youtube.com/watch?v=-3Hwm3EaN8U",
       "published": "2026-01-23T10:01:48Z",
@@ -1975,6 +2221,7 @@
     },
     {
       "title": "Fighting for Jehovah",
+      "album": "Messiah Mafia Matrix",
       "videoId": "D7dJoAvmfm8",
       "url": "https://www.youtube.com/watch?v=D7dJoAvmfm8",
       "published": "2026-01-23T10:01:47Z",
@@ -1983,6 +2230,7 @@
     },
     {
       "title": "Red Dot",
+      "album": "Messiah Mafia Matrix",
       "videoId": "DjMrzs4sDsw",
       "url": "https://www.youtube.com/watch?v=DjMrzs4sDsw",
       "published": "2026-01-23T10:01:47Z",
@@ -1991,6 +2239,7 @@
     },
     {
       "title": "Conspiracy Overload",
+      "album": "Conspiracy Overload",
       "videoId": "j3j3HPaxhN8",
       "url": "https://www.youtube.com/watch?v=j3j3HPaxhN8",
       "published": "2025-12-31T10:04:52Z",
@@ -1999,6 +2248,7 @@
     },
     {
       "title": "Charlie Kirk",
+      "album": "Conspiracy Overload",
       "videoId": "biCqtXR9pPk",
       "url": "https://www.youtube.com/watch?v=biCqtXR9pPk",
       "published": "2025-12-31T10:04:02Z",
@@ -2007,6 +2257,7 @@
     },
     {
       "title": "9-11",
+      "album": "Conspiracy Overload",
       "videoId": "8saxB3ll39Q",
       "url": "https://www.youtube.com/watch?v=8saxB3ll39Q",
       "published": "2025-12-31T10:03:36Z",
@@ -2015,6 +2266,7 @@
     },
     {
       "title": "Moon Hoax",
+      "album": "Conspiracy Overload",
       "videoId": "1BBRcZEHJas",
       "url": "https://www.youtube.com/watch?v=1BBRcZEHJas",
       "published": "2025-12-31T10:03:22Z",
@@ -2023,6 +2275,7 @@
     },
     {
       "title": "Tricked",
+      "album": "Conspiracy Overload",
       "videoId": "JnqBfF8UVfk",
       "url": "https://www.youtube.com/watch?v=JnqBfF8UVfk",
       "published": "2025-12-31T10:03:21Z",
@@ -2031,6 +2284,7 @@
     },
     {
       "title": "Signals, Shadows, Angles, Beams",
+      "album": "Conspiracy Overload",
       "videoId": "xtYAUK3EKNU",
       "url": "https://www.youtube.com/watch?v=xtYAUK3EKNU",
       "published": "2025-12-31T10:03:17Z",
@@ -2039,6 +2293,7 @@
     },
     {
       "title": "Movie-washing",
+      "album": "Conspiracy Overload",
       "videoId": "OeWVEMLFzeM",
       "url": "https://www.youtube.com/watch?v=OeWVEMLFzeM",
       "published": "2025-12-31T10:03:15Z",
@@ -2047,6 +2302,7 @@
     },
     {
       "title": "Now I Know",
+      "album": "Conspiracy Overload",
       "videoId": "Cw8ICr0d7oo",
       "url": "https://www.youtube.com/watch?v=Cw8ICr0d7oo",
       "published": "2025-12-31T10:02:44Z",
@@ -2055,6 +2311,7 @@
     },
     {
       "title": "Too Easy",
+      "album": "Conspiracy Overload",
       "videoId": "7lJk88JB2Lk",
       "url": "https://www.youtube.com/watch?v=7lJk88JB2Lk",
       "published": "2025-12-31T10:02:36Z",
@@ -2063,6 +2320,7 @@
     },
     {
       "title": "God Help US All",
+      "album": "Conspiracy Overload",
       "videoId": "kRU-f8sY_k8",
       "url": "https://www.youtube.com/watch?v=kRU-f8sY_k8",
       "published": "2025-12-31T10:02:32Z",
@@ -2071,6 +2329,7 @@
     },
     {
       "title": "Predictive Programming",
+      "album": "Conspiracy Overload",
       "videoId": "3E4-C9NGaJQ",
       "url": "https://www.youtube.com/watch?v=3E4-C9NGaJQ",
       "published": "2025-12-31T10:02:31Z",
@@ -2079,6 +2338,7 @@
     },
     {
       "title": "Communism",
+      "album": "Conspiracy Overload",
       "videoId": "-9AmRA77_ww",
       "url": "https://www.youtube.com/watch?v=-9AmRA77_ww",
       "published": "2025-12-31T10:02:30Z",
@@ -2087,6 +2347,7 @@
     },
     {
       "title": "I See It First",
+      "album": "Conspiracy Overload",
       "videoId": "tknRELw7yOg",
       "url": "https://www.youtube.com/watch?v=tknRELw7yOg",
       "published": "2025-12-31T10:02:28Z",
@@ -2095,6 +2356,7 @@
     },
     {
       "title": "Veil of Deception",
+      "album": "Conspiracy Overload",
       "videoId": "XdB1rQsSyps",
       "url": "https://www.youtube.com/watch?v=XdB1rQsSyps",
       "published": "2025-12-31T10:01:53Z",
@@ -2103,6 +2365,7 @@
     },
     {
       "title": "Look",
+      "album": "Conspiracy Overload",
       "videoId": "C0ILBczQ0jA",
       "url": "https://www.youtube.com/watch?v=C0ILBczQ0jA",
       "published": "2025-12-31T10:01:52Z",
@@ -2111,6 +2374,7 @@
     },
     {
       "title": "Told You So",
+      "album": "Conspiracy Overload",
       "videoId": "hIzKxQtgt9k",
       "url": "https://www.youtube.com/watch?v=hIzKxQtgt9k",
       "published": "2025-12-31T10:01:48Z",
@@ -2119,6 +2383,7 @@
     },
     {
       "title": "Vaccine Lies",
+      "album": "Conspiracy Overload",
       "videoId": "WOwGRUoBf50",
       "url": "https://www.youtube.com/watch?v=WOwGRUoBf50",
       "published": "2025-12-31T10:01:46Z",
