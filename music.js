@@ -1,6 +1,9 @@
 document.addEventListener("DOMContentLoaded", async () => {
   const musicGrid = document.getElementById("musicGrid");
-  const latestWrap = document.getElementById("latestRelease");
+  
+
+  const featuredMusic = document.getElementById("featuredMusic");
+const featuredDots = document.getElementById("featuredDots");
 
   const statTracks = document.getElementById("statTracks");
   const statRuntime = document.getElementById("statRuntime");
@@ -36,6 +39,55 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     allItems.sort((a, b) => new Date(b.published) - new Date(a.published));
 
+    let featuredSongs = [];
+
+const newestThumbnail = allItems[0].thumbnail;
+
+featuredSongs = allItems.filter(song =>
+    song.thumbnail === newestThumbnail
+);
+function renderFeaturedMusic() {
+
+    if (!featuredMusic || !featuredSongs.length) return;
+
+    const song = featuredSongs[0];
+
+    featuredMusic.innerHTML = `
+        <a class="featured-card"
+           href="${song.url}"
+           target="_blank"
+           rel="noopener noreferrer">
+
+            <div class="featured-image-wrapper">
+
+                <img
+                    class="featured-image"
+                    src="${song.thumbnail}"
+                    alt="${escapeHtml(song.title)}">
+
+            </div>
+
+            <div class="featured-content">
+
+                <div class="featured-title">
+                    ${escapeHtml(song.title)}
+                </div>
+
+                <div class="featured-description">
+                    ${formatDate(song.published)}
+                </div>
+
+                <div class="featured-read">
+                    Listen on YouTube
+                </div>
+
+            </div>
+
+        </a>
+    `;
+}
+    renderFeaturedMusic();
+    
     const latest = allItems[0];
     const latestDate = latest?.published || "";
 
@@ -47,21 +99,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     if (statRuntime) statRuntime.textContent = formatRuntime(totalSeconds);
     if (statUpdated) statUpdated.textContent = formatDate(latestDate);
 
-    if (latestWrap && latest) {
-      latestWrap.innerHTML = `
-        <a class="latest-card" href="${latest.url}" target="_blank" rel="noopener noreferrer">
-          <div class="latest-thumb-wrap">
-            <img class="latest-thumb" src="${latest.thumbnail}" alt="${escapeHtml(latest.title)}">
-          </div>
-          <div class="latest-content">
-            <h3>${escapeHtml(latest.title)}</h3>
-            <p class="release-date">${formatDate(latestDate)}</p>
-            <span class="watch-button">Listen on YouTube</span>
-          </div>
-        </a>
-      `;
-    }
-
+   
     renderNextBatch();
 
   } catch (err) {
