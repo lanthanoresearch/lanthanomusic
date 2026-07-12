@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   const musicGrid = document.getElementById("musicGrid");
   
 
+  
   const featuredMusic = document.getElementById("featuredMusic");
 const featuredDots = document.getElementById("featuredDots");
 
