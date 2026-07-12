@@ -49,11 +49,16 @@ let swiping = false;
 
 
 
-const newestThumbnail = allItems[0].thumbnail;
+const newestAlbum = allItems[0].album;
 
 featuredSongs = allItems.filter(song =>
-    song.thumbnail === newestThumbnail
+    song.album === newestAlbum
 );
+
+
+
+    
+    
 console.log(featuredSongs.length);
 console.table(featuredSongs);
     
