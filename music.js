@@ -49,63 +49,14 @@ let swiping = false;
 
     allItems.sort((a, b) => new Date(b.published) - new Date(a.published));
 
-    let featuredSongs = [];
+
 
 const newestThumbnail = allItems[0].thumbnail;
 
 featuredSongs = allItems.filter(song =>
     song.thumbnail === newestThumbnail
 );
-function renderFeaturedMusic() {
 
-    if (!featuredMusic || !featuredSongs.length) return;
-
-    const song = featuredSongs[featuredIndex];
-
-    featuredMusic.innerHTML = `
-        <a class="featured-card"
-           href="${song.url}"
-           target="_blank"
-           rel="noopener noreferrer">
-
-           <div class="featured-image-wrapper">
-
-    <button
-        class="featured-arrow featured-left"
-        onclick="previousFeatured(event)">
-    </button>
-
-    <img
-        class="featured-image"
-        src="${song.thumbnail}"
-        alt="${escapeHtml(song.title)}">
-
-    <button
-        class="featured-arrow featured-right"
-        onclick="nextFeaturedManual(event)">
-    </button>
-
-</div>
-
-            <div class="featured-content">
-
-                <div class="featured-title">
-                    ${escapeHtml(song.title)}
-                </div>
-
-                <div class="featured-description">
-                    ${formatDate(song.published)}
-                </div>
-
-                <div class="featured-read">
-                    Listen on YouTube
-                </div>
-
-            </div>
-
-        </a>
-    `;
-}
     renderFeaturedMusic();
     
     const latest = allItems[0];
@@ -132,6 +83,107 @@ function renderFeaturedMusic() {
     if (statRuntime) statRuntime.textContent = "—";
     if (statUpdated) statUpdated.textContent = "—";
   }
+
+  function renderFeaturedMusic() {
+
+
+
+    if (!featuredMusic || !featuredSongs.length) return;
+
+
+
+    const song = featuredSongs[featuredIndex];
+
+
+
+    featuredMusic.innerHTML = `
+
+        <a class="featured-card"
+
+           href="${song.url}"
+
+           target="_blank"
+
+           rel="noopener noreferrer">
+
+
+
+           <div class="featured-image-wrapper">
+
+
+
+    <button
+
+        class="featured-arrow featured-left"
+
+        onclick="previousFeatured(event)">
+
+    </button>
+
+
+
+    <img
+
+        class="featured-image"
+
+        src="${song.thumbnail}"
+
+        alt="${escapeHtml(song.title)}">
+
+
+
+    <button
+
+        class="featured-arrow featured-right"
+
+        onclick="nextFeaturedManual(event)">
+
+    </button>
+
+
+
+</div>
+
+
+
+            <div class="featured-content">
+
+
+
+                <div class="featured-title">
+
+                    ${escapeHtml(song.title)}
+
+                </div>
+
+
+
+                <div class="featured-description">
+
+                    ${formatDate(song.published)}
+
+                </div>
+
+
+
+                <div class="featured-read">
+
+                    Listen on YouTube
+
+                </div>
+
+
+
+            </div>
+
+
+
+        </a>
+
+    `;
+
+}
+  
 function previousFeatured(event){
 
     event.preventDefault();
