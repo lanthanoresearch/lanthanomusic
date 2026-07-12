@@ -336,78 +336,143 @@ footer{
       text-align:center;
     }
 
-    #latestRelease{
-      margin:0 auto 26px;
-      max-width:950px;
-    }
 
-    .latest-card{
-      display:flex;
-      background:#1d1d1d;
-      border:1px solid #333;
-      border-radius:16px;
-      overflow:hidden;
-      transition:.2s ease;
-    }
+    .featured-section{
+  max-width:900px;
+  margin:45px auto 60px;
+}
 
-    .latest-card:hover{
-      background:#252525;
-    }
+.featured-label{
+  text-align:center;
+  color:#888;
+  font-size:1em;
+  margin-bottom:15px;
+  letter-spacing:1px;
+}
 
-    .latest-thumb-wrap{
-      width:42%;
-      min-height:260px;
-      flex-shrink:0;
-      background:#1a1a1a;
-    }
+.featured-card{
+  display:flex;
+  background:#1d1d1d;
+  border:1px solid #333;
+  border-radius:16px;
+  overflow:hidden;
+  transition:.2s ease;
+  height:260px;
+}
 
-    .latest-thumb{
-      width:100%;
-      height:100%;
-      object-fit:cover;
-      display:block;
-    }
+.featured-card:hover{
+  background:#252525;
+}
 
-    .latest-content{
-      flex:1;
-      padding:28px;
-      display:flex;
-      flex-direction:column;
-      justify-content:center;
-    }
+.featured-image-wrapper{
+  position:relative;
+  width:320px;
+  height:100%;
+  overflow:hidden;
+  flex-shrink:0;
+}
 
-    .latest-content h3{
-      margin:0 0 12px 0;
-      font-size:2rem;
-      line-height:1.2;
-    }
+.featured-image{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
 
-    .release-date{
-      color:#aaa;
-      margin:0 0 18px 0;
-    }
+.featured-content{
+  flex:1;
+  padding:25px;
+  display:flex;
+  flex-direction:column;
+}
 
-    .release-desc{
-      color:#cfcfcf;
-      line-height:1.65;
-      margin:0 0 22px 0;
-    }
+.featured-title{
+  width:100%;
+  font-weight:bold;
+  font-size:1.8rem;
+  line-height:1.2;
+  text-align:center;
+  margin:20px 0 18px 0;
+}
 
-    .watch-button{
-      display:inline-block;
-      width:fit-content;
-      padding:12px 18px;
-      background:#2a2a2a;
-      border:1px solid #444;
-      border-radius:10px;
-      color:#fff;
-      font-weight:bold;
-    }
+.featured-description{
+  flex:1;
+  color:#ccc;
+  line-height:1.6;
+  text-align:center;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
 
-    .watch-button:hover{
-      background:#333;
-    }
+.featured-read{
+  margin-top:auto;
+  padding-top:20px;
+  color:white;
+  font-weight:bold;
+  text-align:center;
+}
 
+.featured-dots{
+  text-align:center;
+  margin-top:15px;
+}
+
+.featured-dot{
+  width:10px;
+  height:10px;
+  border-radius:50%;
+  background:#444;
+  display:inline-block;
+  margin:0 5px;
+}
+
+.featured-dot.active{
+  background:white;
+}
+
+.featured-arrow{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  width:46px;
+  height:46px;
+  border:none;
+  border-radius:50%;
+  background:rgba(0,0,0,.55);
+  color:white;
+  font-size:26px;
+  cursor:pointer;
+  z-index:10;
+  transition:.2s;
+}
+
+.featured-arrow:hover{
+  background:rgba(0,0,0,.8);
+}
+
+.featured-left{
+  left:12px;
+}
+
+.featured-right{
+  right:12px;
+}
+
+.featured-left::before{
+  content:"❮";
+  display:inline-block;
+  transform:translate(-2px,-2px);
+}
+
+.featured-right::before{
+  content:"❯";
+  display:inline-block;
+  transform:translate(2px,-2px);
+}
+
+
+    
     .platform-links{
       display:grid;
       grid-template-columns:repeat(2, minmax(0, 1fr));
@@ -507,10 +572,7 @@ footer{
       margin-top:40px;
     }
 
-    @media (orientation: landscape){
-  .latest-card{
-    flex-direction:row;
-  }
+  
 
   .latest-thumb-wrap{
     width:42%;
@@ -526,25 +588,47 @@ footer{
   }
 }
 
-@media (orientation: portrait){
-  .latest-card{
-    flex-direction:column;
-  }
 
-  .latest-thumb-wrap{
-    width:100%;
-    min-height:220px;
-  }
+@media (orientation:portrait){
 
-  .latest-content{
-    padding:20px;
-  }
-
-  .latest-content h3{
-    font-size:1.6rem;
-  }
+.featured-card{
+  flex-direction:column;
+  height:400px;
 }
 
+.featured-image-wrapper{
+  width:100%;
+  height:220px;
+}
+
+.featured-image{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+
+.featured-title{
+  font-size:clamp(1.2rem,5vw,1.7rem);
+  white-space:normal;
+}
+
+}
+
+@media (orientation:landscape){
+
+.featured-card{
+  flex-direction:row;
+}
+
+.featured-image-wrapper{
+  width:320px;
+  height:100%;
+}
+
+}
+
+    
     
     @media (max-width:850px){
 
@@ -641,8 +725,17 @@ footer{
   </div>
 </div>
 
-    <div class="section-eyebrow">Latest Release</div>
-    <div id="latestRelease"></div>
+    <div class="featured-section">
+
+    <div class="featured-label">
+        Latest Release Collection
+    </div>
+
+    <div id="featuredMusic"></div>
+
+    <div id="featuredDots" class="featured-dots"></div>
+
+</div>
 
     <div class="platform-links">
       <a class="platform-link" href="https://music.youtube.com/channel/UC-LsR_7xdkNvIy4a3DtVzdA?si=icZZzfK-n-OUJ2ke" target="_blank" rel="noopener noreferrer">YouTube Music</a>
