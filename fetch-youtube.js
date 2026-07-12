@@ -54,6 +54,13 @@ async function fetchAllUploads(uploadsPlaylistId) {
 
     const pageItems = (data.items || []).map(item => {
       const snippet = item.snippet || {};
+
+
+      console.log("TITLE:", snippet.title);
+console.log("DESCRIPTION:");
+console.log(snippet.description);
+console.log("--------------------------------");
+      
       const contentDetails = item.contentDetails || {};
       const videoId = contentDetails.videoId || snippet.resourceId?.videoId;
 
