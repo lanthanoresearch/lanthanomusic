@@ -15,6 +15,15 @@ const featuredDots = document.getElementById("featuredDots");
   let shownCount = 0;
   let allItems = [];
 
+  let featuredSongs = [];
+let featuredIndex = 0;
+let featuredTimer;
+
+let touchStartX = 0;
+let touchEndX = 0;
+let swiping = false;
+
+  
   try {
     const res = await fetch("music.json", { cache: "no-store" });
     const data = await res.json();
@@ -50,7 +59,7 @@ function renderFeaturedMusic() {
 
     if (!featuredMusic || !featuredSongs.length) return;
 
-    const song = featuredSongs[0];
+    const song = featuredSongs[featuredIndex];
 
     featuredMusic.innerHTML = `
         <a class="featured-card"
@@ -58,14 +67,24 @@ function renderFeaturedMusic() {
            target="_blank"
            rel="noopener noreferrer">
 
-            <div class="featured-image-wrapper">
+           <div class="featured-image-wrapper">
 
-                <img
-                    class="featured-image"
-                    src="${song.thumbnail}"
-                    alt="${escapeHtml(song.title)}">
+    <button
+        class="featured-arrow featured-left"
+        onclick="previousFeatured(event)">
+    </button>
 
-            </div>
+    <img
+        class="featured-image"
+        src="${song.thumbnail}"
+        alt="${escapeHtml(song.title)}">
+
+    <button
+        class="featured-arrow featured-right"
+        onclick="nextFeaturedManual(event)">
+    </button>
+
+</div>
 
             <div class="featured-content">
 
@@ -112,7 +131,37 @@ function renderFeaturedMusic() {
     if (statRuntime) statRuntime.textContent = "—";
     if (statUpdated) statUpdated.textContent = "—";
   }
+function previousFeatured(event){
 
+    event.preventDefault();
+    event.stopPropagation();
+
+    featuredIndex--;
+
+    if(featuredIndex < 0){
+        featuredIndex = featuredSongs.length - 1;
+    }
+
+    renderFeaturedMusic();
+}
+
+function nextFeaturedManual(event){
+
+    event.preventDefault();
+    event.stopPropagation();
+
+    featuredIndex++;
+
+    if(featuredIndex >= featuredSongs.length){
+        featuredIndex = 0;
+    }
+
+    renderFeaturedMusic();
+}
+
+window.previousFeatured = previousFeatured;
+window.nextFeaturedManual = nextFeaturedManual;
+  
   function renderNextBatch() {
     const nextItems = allItems.slice(shownCount, shownCount + PAGE_SIZE);
 
