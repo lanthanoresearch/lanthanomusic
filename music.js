@@ -33,9 +33,7 @@ let swiping = false;
 
     if (!items.length) {
       musicGrid.innerHTML = `<p class="empty-state">No music found yet.</p>`;
-      if (latestWrap) {
-        latestWrap.innerHTML = `<p class="empty-state">No latest release available yet.</p>`;
-      }
+      
       if (statTracks) statTracks.textContent = "0";
       if (statRuntime) statRuntime.textContent = "0m";
       if (statUpdated) statUpdated.textContent = "—";
@@ -56,6 +54,9 @@ const newestThumbnail = allItems[0].thumbnail;
 featuredSongs = allItems.filter(song =>
     song.thumbnail === newestThumbnail
 );
+console.log(featuredSongs.length);
+console.table(featuredSongs);
+    
 
     renderFeaturedMusic();
     
@@ -76,9 +77,7 @@ featuredSongs = allItems.filter(song =>
   } catch (err) {
     console.error("Error loading music.json:", err);
     musicGrid.innerHTML = `<p class="empty-state">Could not load music.</p>`;
-    if (latestWrap) {
-      latestWrap.innerHTML = `<p class="empty-state">Could not load latest release.</p>`;
-    }
+    
     if (statTracks) statTracks.textContent = "—";
     if (statRuntime) statRuntime.textContent = "—";
     if (statUpdated) statUpdated.textContent = "—";
