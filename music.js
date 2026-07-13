@@ -1,6 +1,12 @@
 import Fuse from "./fuse.basic.min.mjs";
 
 
+
+let player;
+let currentVideoId = null;
+
+
+
 document.addEventListener("DOMContentLoaded", async () => {
   const musicGrid = document.getElementById("musicGrid");
   
@@ -621,3 +627,40 @@ function formatRuntime(totalSeconds) {
 
   return `${hours}h ${minutes}m`;
 }
+
+
+
+window.onYouTubeIframeAPIReady = function () {
+
+    player = new YT.Player("youtubePlayer", {
+        height: "0",
+        width: "0",
+
+        playerVars: {
+            autoplay: 1,
+            controls: 0,
+            modestbranding: 1,
+            rel: 0
+        }
+    });
+
+};
+
+
+window.playSong = function(url){
+
+    const videoId = new URL(url).searchParams.get("v");
+
+    if(!videoId){
+        return;
+    }
+
+    currentVideoId = videoId;
+
+    if(player){
+
+        player.loadVideoById(videoId);
+
+    }
+
+};
