@@ -19,6 +19,79 @@
   <style>
 
 
+
+    .music-player-bar{
+    position:fixed;
+    left:0;
+    right:0;
+    bottom:0;
+
+    display:flex;
+    align-items:center;
+    gap:14px;
+
+    padding:12px 16px;
+
+    background:#181818;
+    border-top:1px solid #333;
+
+    z-index:999999;
+}
+
+.music-player-bar[hidden]{
+    display:none;
+}
+
+.player-close{
+    background:none;
+    border:none;
+    color:#fff;
+    font-size:22px;
+    cursor:pointer;
+    padding:0;
+    width:28px;
+    flex-shrink:0;
+}
+
+.player-art{
+    width:56px;
+    height:56px;
+    border-radius:8px;
+    object-fit:cover;
+    flex-shrink:0;
+}
+
+.player-info{
+    flex:1;
+    min-width:0;
+}
+
+.player-title{
+    font-weight:bold;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+
+.player-album{
+    color:#999;
+    font-size:.9rem;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+
+.player-time{
+    color:#aaa;
+    font-size:.9rem;
+    white-space:nowrap;
+}
+
+
+
+
+    
+
     .music-album{
     margin:0;
     color:#ddd;
@@ -1172,7 +1245,37 @@ document
   ?.addEventListener("click", openResearchLink);
 </script>
 
+<div id="musicPlayerBar" class="music-player-bar" hidden>
 
+    <button id="closePlayer" class="player-close">
+        ✕
+    </button>
+
+    <img
+        id="playerArtwork"
+        class="player-art"
+        src=""
+        alt="Album Art">
+
+    <div class="player-info">
+
+        <div id="playerTitle" class="player-title">
+            —
+        </div>
+
+        <div id="playerAlbum" class="player-album">
+            —
+        </div>
+
+    </div>
+
+    <div id="playerTime" class="player-time">
+        0:00 / 0:00
+    </div>
+
+</div>
+
+<div id="youtubePlayer" style="display:none;"></div>
 
   <div id="youtubePlayer" style="display:none;"></div>
 
