@@ -4,7 +4,17 @@ import Fuse from "./fuse.basic.min.mjs";
 
 let player;
 let currentVideoId = null;
+let allItems = [];
 
+let currentSong = null;
+let timerInterval = null;
+
+const playerBar = document.getElementById("musicPlayerBar");
+const playerArtwork = document.getElementById("playerArtwork");
+const playerTitle = document.getElementById("playerTitle");
+const playerAlbum = document.getElementById("playerAlbum");
+const playerTime = document.getElementById("playerTime");
+const closePlayer = document.getElementById("closePlayer");
 
 
 document.addEventListener("DOMContentLoaded", async () => {
@@ -23,7 +33,7 @@ const featuredDots = document.getElementById("featuredDots");
 
   const PAGE_SIZE = 24;
   let shownCount = 0;
-  let allItems = [];
+ 
 
 
 
@@ -646,7 +656,6 @@ window.onYouTubeIframeAPIReady = function () {
 
 };
 
-
 window.playSong = function(url){
 
     const videoId = new URL(url).searchParams.get("v");
@@ -657,10 +666,20 @@ window.playSong = function(url){
 
     currentVideoId = videoId;
 
+    currentSong = allItems.find(song => song.videoId === videoId);
+
+    if(currentSong){
+
+        playerArtwork.src = currentSong.thumbnail;
+        playerTitle.textContent = currentSong.title;
+        playerAlbum.textContent = currentSong.album;
+
+        playerBar.hidden = false;
+
+    }
+
     if(player){
-
         player.loadVideoById(videoId);
-
     }
 
 };
