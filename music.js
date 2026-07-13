@@ -6,6 +6,9 @@ let player;
 let currentVideoId = null;
 let allItems = [];
 
+let isPaused = false;
+
+
 let currentSong = null;
 let timerInterval = null;
 
@@ -15,8 +18,28 @@ const playerTitle = document.getElementById("playerTitle");
 const playerAlbum = document.getElementById("playerAlbum");
 const playerTime = document.getElementById("playerTime");
 const closePlayer = document.getElementById("closePlayer");
-closePlayer.addEventListener("click", closePlayerBar);
 
+const playerPlayPause =
+document.getElementById("playerPlayPause");
+
+closePlayer.addEventListener("click", closePlayerBar);
+playerPlayPause.addEventListener("click", () => {
+
+    if(!player){
+        return;
+    }
+
+    if(isPaused){
+
+        player.playVideo();
+
+    }else{
+
+        player.pauseVideo();
+
+    }
+
+});
 document.addEventListener("DOMContentLoaded", async () => {
   const musicGrid = document.getElementById("musicGrid");
   
@@ -656,15 +679,29 @@ window.onYouTubeIframeAPIReady = function () {
             rel: 0
         },
 
-        events: {
-            onStateChange(event){
+       onStateChange(event){
 
-                if(event.data === YT.PlayerState.ENDED){
-                    closePlayerBar();
-                }
+    if(event.data === YT.PlayerState.PLAYING){
 
-            }
-        }
+        isPaused = false;
+        updatePlayButtons();
+
+    }
+
+    if(event.data === YT.PlayerState.PAUSED){
+
+        isPaused = true;
+        updatePlayButtons();
+
+    }
+
+    if(event.data === YT.PlayerState.ENDED){
+
+        closePlayerBar();
+
+    }
+
+}
 
     });
 
@@ -679,9 +716,13 @@ window.playSong = function(url){
     }
 
     currentVideoId = videoId;
+isPaused = false;
 
     currentSong = allItems.find(song => song.videoId === videoId);
 
+updatePlayButtons();
+
+  
     if(currentSong){
 
         playerArtwork.src = currentSong.thumbnail;
@@ -739,5 +780,44 @@ function closePlayerBar(){
     currentSong = null;
 
     clearInterval(timerInterval);
+  isPaused = false;
+updatePlayButtons();
+
+}
+
+
+
+function updatePlayButtons(){
+
+    document
+        .querySelectorAll(".play-button, .search-play-button")
+        .forEach(button => {
+
+            if(button.dataset.video === currentVideoId){
+
+                if(isPaused){
+
+                    button.textContent = "▶";
+
+                }else{
+
+                    button.textContent = "❚❚";
+
+                }
+
+            }else{
+
+                button.textContent = "▶";
+
+            }
+
+        });
+
+    if(playerPlayPause){
+
+        playerPlayPause.textContent =
+            isPaused ? "▶" : "❚❚";
+
+    }
 
 }
