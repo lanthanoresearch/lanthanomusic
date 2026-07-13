@@ -45,7 +45,25 @@ let swiping = false;
       title: decodeHtmlEntities(item.title || "")
     }));
 
-    allItems.sort((a, b) => new Date(b.published) - new Date(a.published));
+   allItems.sort((a, b) => {
+
+    const dateDiff =
+        new Date(b.published) - new Date(a.published);
+
+    if (dateDiff !== 0) {
+        return dateDiff;
+    }
+
+    const albumCompare =
+        a.album.localeCompare(b.album);
+
+    if (albumCompare !== 0) {
+        return albumCompare;
+    }
+
+    return a.title.localeCompare(b.title);
+
+});
 
 
 
@@ -114,38 +132,24 @@ console.table(featuredSongs);
 
 
 
-           <div class="featured-image-wrapper">
+           ${featuredSongs.length > 1 ? `
+<button
+    class="featured-arrow featured-left"
+    onclick="previousFeatured(event)">
+</button>
+` : ""}
 
+<img
+    class="featured-image"
+    src="${song.thumbnail}"
+    alt="${escapeHtml(song.title)}">
 
-
-    <button
-
-        class="featured-arrow featured-left"
-
-        onclick="previousFeatured(event)">
-
-    </button>
-
-
-
-    <img
-
-        class="featured-image"
-
-        src="${song.thumbnail}"
-
-        alt="${escapeHtml(song.title)}">
-
-
-
-    <button
-
-        class="featured-arrow featured-right"
-
-        onclick="nextFeaturedManual(event)">
-
-    </button>
-
+${featuredSongs.length > 1 ? `
+<button
+    class="featured-arrow featured-right"
+    onclick="nextFeaturedManual(event)">
+</button>
+` : ""}
 
 
 </div>
@@ -235,7 +239,14 @@ startFeaturedRotation();
     
 }
 
-  function renderDots() {
+ function renderDots() {
+
+    if (!featuredDots) return;
+
+    if (featuredSongs.length <= 1) {
+        featuredDots.innerHTML = "";
+        return;
+    }
 
     if (!featuredDots) return;
 
