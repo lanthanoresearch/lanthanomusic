@@ -132,7 +132,9 @@ console.table(featuredSongs);
 
 
 
-           ${featuredSongs.length > 1 ? `
+          <div class="featured-image-wrapper">
+
+${featuredSongs.length > 1 ? `
 <button
     class="featured-arrow featured-left"
     onclick="previousFeatured(event)">
