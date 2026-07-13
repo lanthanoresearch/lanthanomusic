@@ -45,19 +45,18 @@ let swiping = false;
       title: decodeHtmlEntities(item.title || "")
     }));
 
-   allItems.sort((a, b) => {
+  allItems.sort((a, b) => {
 
-    const dateDiff =
-        new Date(b.published) - new Date(a.published);
+    const dayA = a.published.substring(0,10);
+    const dayB = b.published.substring(0,10);
 
-    if (dateDiff !== 0) {
-        return dateDiff;
+    if(dayA !== dayB){
+        return dayB.localeCompare(dayA);
     }
 
-    const albumCompare =
-        a.album.localeCompare(b.album);
+    const albumCompare = a.album.localeCompare(b.album);
 
-    if (albumCompare !== 0) {
+    if(albumCompare !== 0){
         return albumCompare;
     }
 
@@ -211,14 +210,17 @@ link.addEventListener("click", e => {
 card.addEventListener("mouseenter", stopFeaturedRotation);
 card.addEventListener("mouseleave", startFeaturedRotation);
 card.addEventListener("touchstart", e => {
-    touchStartX = e.changedTouches[0].clientX;
+    touchStartX = e.touches[0].clientX;
+    touchEndX = touchStartX;
 });
 
 card.addEventListener("touchmove", e => {
-    touchEndX = e.changedTouches[0].clientX;
-});
+    touchEndX = e.touches[0].clientX;
+}, { passive: true });
 
-card.addEventListener("touchend", handleSwipe);
+card.addEventListener("touchend", () => {
+    handleSwipe();
+});
 }
   
 function previousFeatured(event){
@@ -383,9 +385,11 @@ function isoDurationToSeconds(iso) {
 function handleSwipe(){
 
     const distance = touchEndX - touchStartX;
-touchEndX = touchStartX;
 
-    if(Math.abs(distance) < 40){
+    touchStartX = 0;
+    touchEndX = 0;
+
+    if(Math.abs(distance) < 50){
         return;
     }
 
@@ -415,11 +419,11 @@ touchEndX = touchStartX;
 
     }
 
-    
-renderFeaturedMusic();
-startFeaturedRotation();
-    
+    renderFeaturedMusic();
 
+    if(featuredSongs.length > 1){
+        startFeaturedRotation();
+    }
 }
 
 
