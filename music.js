@@ -221,7 +221,8 @@ ${featuredSongs.length > 1 ? `
 
     <button
         class="play-button featured-play"
-        onclick="event.preventDefault(); playSong('${song.url}');">
+        onclick="event.preventDefault(); playSong('${item.url}');">
+      
 
         ▶ Play
 
@@ -428,7 +429,7 @@ function handleSwipe() {
         onclick="
             event.preventDefault();
             event.stopPropagation();
-            playSong('${song.url}');
+            playSong('${item.url}');
         ">
 
         ▶ Play
@@ -534,7 +535,7 @@ searchBox.addEventListener("input", () => {
         onclick="
             event.preventDefault();
             event.stopPropagation();
-            playSong('${song.url}');
+            playSong('${item.url}');
         ">
 
         ▶
