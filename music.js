@@ -211,18 +211,15 @@ card.addEventListener("mouseenter", stopFeaturedRotation);
 card.addEventListener("mouseleave", startFeaturedRotation);
 
     
-  card.addEventListener("touchstart", e => {
-    touchStartX = e.touches[0].clientX;
-    touchEndX = touchStartX;
-}, { passive: true });
+ card.addEventListener("touchstart", e => {
+    touchStartX = e.changedTouches[0].clientX;
+});
 
-card.addEventListener("touchmove", e => {
-    touchEndX = e.touches[0].clientX;
-}, { passive: true });
-
-card.addEventListener("touchend", () => {
+card.addEventListener("touchend", e => {
+    touchEndX = e.changedTouches[0].clientX;
     handleSwipe();
 });
+    
 }
   
 function previousFeatured(event){
@@ -308,6 +305,60 @@ startFeaturedRotation();
 
 window.previousFeatured = previousFeatured;
 window.nextFeaturedManual = nextFeaturedManual;
+
+
+
+
+
+
+function handleSwipe() {
+
+    const distance = touchEndX - touchStartX;
+
+    if (Math.abs(distance) < 40) {
+        return;
+    }
+
+    swiping = true;
+
+    setTimeout(() => {
+        swiping = false;
+    }, 250);
+
+    stopFeaturedRotation();
+
+    if (distance > 0) {
+
+        featuredIndex--;
+
+        if (featuredIndex < 0) {
+            featuredIndex = featuredSongs.length - 1;
+        }
+
+    } else {
+
+        featuredIndex++;
+
+        if (featuredIndex >= featuredSongs.length) {
+            featuredIndex = 0;
+        }
+
+    }
+
+    renderFeaturedMusic();
+
+    if (featuredSongs.length > 1) {
+        startFeaturedRotation();
+    }
+
+    touchStartX = 0;
+    touchEndX = 0;
+}
+
+
+
+  
+
   
   function renderNextBatch() {
     const nextItems = allItems.slice(shownCount, shownCount + PAGE_SIZE);
@@ -384,45 +435,7 @@ function isoDurationToSeconds(iso) {
 }
 
 
-function handleSwipe(){
 
-    const distance = touchEndX - touchStartX;
-
-    if (Math.abs(distance) < 40) {
-        return;
-    }
-
-    swiping = true;
-
-    setTimeout(() => {
-        swiping = false;
-    }, 250);
-
-    stopFeaturedRotation();
-
-    if (distance > 0) {
-        featuredIndex--;
-
-        if (featuredIndex < 0) {
-            featuredIndex = featuredSongs.length - 1;
-        }
-    } else {
-        featuredIndex++;
-
-        if (featuredIndex >= featuredSongs.length) {
-            featuredIndex = 0;
-        }
-    }
-
-    renderFeaturedMusic();
-
-    if (featuredSongs.length > 1) {
-        startFeaturedRotation();
-    }
-
-    touchStartX = 0;
-    touchEndX = 0;
-}
 
 
 function formatRuntime(totalSeconds) {
