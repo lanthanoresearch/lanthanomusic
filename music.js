@@ -171,9 +171,9 @@ ${featuredSongs.length > 1 ? `
 
                 <div class="featured-description">
 
-    <div style="font-size:1.1rem;">
-        ${escapeHtml(song.album)}
-    </div>
+   <div class="featured-album">
+    ${escapeHtml(song.album)}
+</div>
 
     <div style="color:#999;">
         Released ${formatDate(song.published)}
