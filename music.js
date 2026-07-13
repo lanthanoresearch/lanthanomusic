@@ -199,7 +199,7 @@ ${featuredSongs.length > 1 ? `
 
     `;
     renderDots();
-const card = featuredMusic.querySelector(".featured-image-wrapper");
+const card = featuredMusic.querySelector(".featured-card");
     const link = featuredMusic.querySelector(".featured-card");
 
 link.addEventListener("click", e => {
@@ -210,28 +210,15 @@ link.addEventListener("click", e => {
 card.addEventListener("mouseenter", stopFeaturedRotation);
 card.addEventListener("mouseleave", startFeaturedRotation);
 card.addEventListener("touchstart", e => {
-    touchStartX = e.touches[0].clientX;
-    touchEndX = touchStartX;
-    swiping = false;
-}, { passive: true });
+    touchStartX = e.changedTouches[0].clientX;
+});
 
-card.addEventListener("touchmove", e => {
-    touchEndX = e.touches[0].clientX;
 
-    if (Math.abs(touchEndX - touchStartX) > 25) {
-        swiping = true;
-    }
-}, { passive: true });
 
 card.addEventListener("touchend", e => {
-
-    if (swiping) {
-        e.preventDefault();
-    }
-
+    touchEndX = e.changedTouches[0].clientX;
     handleSwipe();
-
-}, { passive: false });
+});
 }
   
 function previousFeatured(event){
@@ -397,10 +384,7 @@ function handleSwipe(){
 
     const distance = touchEndX - touchStartX;
 
-    touchStartX = 0;
-    touchEndX = 0;
-
-    if(Math.abs(distance) < 50){
+    if(Math.abs(distance) < 40){
         return;
     }
 
@@ -431,10 +415,7 @@ function handleSwipe(){
     }
 
     renderFeaturedMusic();
-
-    if(featuredSongs.length > 1){
-        startFeaturedRotation();
-    }
+    startFeaturedRotation();
 }
 
 
