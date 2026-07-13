@@ -227,9 +227,7 @@ ${featuredSongs.length > 1 ? `
 
     </button>
 
-    <div style="margin-top:12px;">
-        Listen on YouTube
-    </div>
+  
 
 </div>
 
