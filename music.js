@@ -219,9 +219,19 @@ ${featuredSongs.length > 1 ? `
 
                 <div class="featured-read">
 
-                    Listen on YouTube
+    <button
+        class="play-button featured-play"
+        onclick="event.preventDefault(); playSong('${song.url}');">
 
-                </div>
+        ▶ Play
+
+    </button>
+
+    <div style="margin-top:12px;">
+        Listen on YouTube
+    </div>
+
+</div>
 
 
 
