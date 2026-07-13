@@ -208,10 +208,11 @@ card.addEventListener("touchstart", e => {
     touchStartX = e.changedTouches[0].clientX;
 });
 
-card.addEventListener("touchend", e => {
+card.addEventListener("touchmove", e => {
     touchEndX = e.changedTouches[0].clientX;
-    handleSwipe();
 });
+
+card.addEventListener("touchend", handleSwipe);
 }
   
 function previousFeatured(event){
@@ -369,6 +370,7 @@ function isoDurationToSeconds(iso) {
 function handleSwipe(){
 
     const distance = touchEndX - touchStartX;
+touchEndX = touchStartX;
 
     if(Math.abs(distance) < 40){
         return;
