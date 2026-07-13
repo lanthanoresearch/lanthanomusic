@@ -221,7 +221,7 @@ ${featuredSongs.length > 1 ? `
 
     <button
         class="play-button featured-play"
-        onclick="event.preventDefault(); playSong('${item.url}');">
+        onclick="event.preventDefault(); playSong('${song.url}');">
       
 
         ▶ Play
@@ -535,7 +535,7 @@ searchBox.addEventListener("input", () => {
         onclick="
             event.preventDefault();
             event.stopPropagation();
-            playSong('${item.url}');
+            playSong('${song.url}');
         ">
 
         ▶
