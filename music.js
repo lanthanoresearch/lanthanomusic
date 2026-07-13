@@ -282,6 +282,7 @@ ${featuredSongs.length > 1 ? `
 
     `;
     renderDots();
+      updatePlayButtons();
 const card = featuredMusic.querySelector(".featured-card");
     const link = featuredMusic.querySelector(".featured-card");
 
@@ -592,7 +593,7 @@ searchBox.addEventListener("input", () => {
     }).join("");
 
     searchResults.style.display = "block";
-
+updatePlayButtons();
 });
 
 
@@ -790,34 +791,53 @@ updatePlayButtons();
 function updatePlayButtons(){
 
     document
-        .querySelectorAll(".play-button, .search-play-button")
+        .querySelectorAll(".play-button")
         .forEach(button => {
 
             if(button.dataset.video === currentVideoId){
 
                 if(isPaused){
 
-                    button.textContent = "▶";
+                    button.innerHTML = "▶ Play";
 
                 }else{
 
-                    button.textContent = "❚❚";
+                    button.innerHTML = "❚❚ Pause";
 
                 }
 
             }else{
 
-                button.textContent = "▶";
+                button.innerHTML = "▶ Play";
 
             }
 
         });
 
-    if(playerPlayPause){
+    document
+        .querySelectorAll(".search-play-button")
+        .forEach(button => {
 
-        playerPlayPause.textContent =
-            isPaused ? "▶" : "❚❚";
+            if(button.dataset.video === currentVideoId){
 
-    }
+                if(isPaused){
 
+                    button.innerHTML = "▶";
+
+                }else{
+
+                    button.innerHTML = "❚❚";
+
+                }
+
+            }else{
+
+                button.innerHTML = "▶";
+
+            }
+
+        });
+
+    playerPlayPause.textContent =
+        isPaused ? "▶" : "❚❚";
 }
