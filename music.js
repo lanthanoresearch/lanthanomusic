@@ -199,8 +199,8 @@ ${featuredSongs.length > 1 ? `
 
     `;
     renderDots();
-const card = featuredMusic.querySelector(".featured-card");
-    const link = featuredMusic.querySelector("a");
+const card = featuredMusic.querySelector(".featured-image-wrapper");
+    const link = featuredMusic.querySelector(".featured-card");
 
 link.addEventListener("click", e => {
     if (swiping) {
@@ -212,15 +212,26 @@ card.addEventListener("mouseleave", startFeaturedRotation);
 card.addEventListener("touchstart", e => {
     touchStartX = e.touches[0].clientX;
     touchEndX = touchStartX;
-});
+    swiping = false;
+}, { passive: true });
 
 card.addEventListener("touchmove", e => {
     touchEndX = e.touches[0].clientX;
+
+    if (Math.abs(touchEndX - touchStartX) > 25) {
+        swiping = true;
+    }
 }, { passive: true });
 
-card.addEventListener("touchend", () => {
+card.addEventListener("touchend", e => {
+
+    if (swiping) {
+        e.preventDefault();
+    }
+
     handleSwipe();
-});
+
+}, { passive: false });
 }
   
 function previousFeatured(event){
