@@ -236,7 +236,8 @@ ${featuredSongs.length > 1 ? `
                 <div class="featured-read">
 
     <button
-        class="play-button featured-play"
+    class="play-button featured-play"
+    data-video="${song.videoId}"
         onclick="event.preventDefault(); playSong('${song.url}');">
       
 
@@ -440,8 +441,9 @@ function handleSwipe() {
         ${formatDate(item.published)}
     </p>
 
-    <button
-        class="play-button"
+   <button
+    class="play-button"
+    data-video="${item.videoId}"
         onclick="
             event.preventDefault();
             event.stopPropagation();
@@ -546,8 +548,9 @@ searchBox.addEventListener("input", () => {
 
     </div>
 
-    <button
-        class="search-play-button"
+  <button
+    class="search-play-button"
+    data-video="${song.videoId}"
         onclick="
             event.preventDefault();
             event.stopPropagation();
