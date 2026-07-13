@@ -1,3 +1,6 @@
+import Fuse from "./fuse.basic.min.mjs";
+
+
 document.addEventListener("DOMContentLoaded", async () => {
   const musicGrid = document.getElementById("musicGrid");
   
@@ -16,6 +19,15 @@ const featuredDots = document.getElementById("featuredDots");
   let shownCount = 0;
   let allItems = [];
 
+
+
+  const searchBox = document.getElementById("searchBox");
+const searchResults = document.getElementById("searchResults");
+
+let fuse;
+
+
+  
   let featuredSongs = [];
 let featuredIndex = 0;
 let featuredTimer;
@@ -65,6 +77,28 @@ let swiping = false;
 });
 
 
+fuse = new Fuse(allItems, {
+    includeMatches: true,
+    threshold: 0.35,
+    ignoreLocation: true,
+    minMatchCharLength: 2,
+    keys: [
+        {
+            name: "title",
+            weight: 10
+        },
+        {
+            name: "album",
+            weight: 4
+        }
+    ]
+});
+
+searchBox.disabled = false;
+searchBox.placeholder = "Search all music...";
+
+
+    
 
 const newestAlbum = allItems[0].album;
 
@@ -396,6 +430,83 @@ function handleSwipe() {
     button.addEventListener("click", renderNextBatch);
     musicGrid.insertAdjacentElement("afterend", button);
   }
+
+
+  
+searchBox.addEventListener("input", () => {
+
+    const query = searchBox.value.trim();
+
+    if (query.length < 2) {
+
+        searchResults.style.display = "none";
+        return;
+
+    }
+
+    const results = fuse.search(query).slice(0, 10);
+
+    if (!results.length) {
+
+        searchResults.innerHTML =
+            `<div class="search-empty">
+                No songs found.
+            </div>`;
+
+        searchResults.style.display = "block";
+        return;
+    }
+
+    searchResults.innerHTML = results.map(result => {
+
+        const song = result.item;
+
+        return `
+            <a
+                class="search-result"
+                href="${song.url}"
+                target="_blank"
+                rel="noopener noreferrer">
+
+                <img
+                    class="search-thumb"
+                    src="${song.thumbnail}"
+                    alt="${escapeHtml(song.title)}">
+
+                <div>
+
+                    <div class="search-title">
+                        ${escapeHtml(song.title)}
+                    </div>
+
+                    <div class="search-source">
+                        ${escapeHtml(song.album)}
+                        •
+                        ${formatDate(song.published)}
+                    </div>
+
+                </div>
+
+            </a>
+        `;
+
+    }).join("");
+
+    searchResults.style.display = "block";
+
+});
+
+
+  document.addEventListener("click", e => {
+
+    if (!document.querySelector(".search-wrapper").contains(e.target)) {
+
+        searchResults.style.display = "none";
+
+    }
+
+});
+  
 });
 
 function formatDate(dateString) {
