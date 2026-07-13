@@ -498,19 +498,41 @@ searchBox.addEventListener("input", () => {
                     src="${song.thumbnail}"
                     alt="${escapeHtml(song.title)}">
 
-                <div>
+               <div style="
+    flex:1;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:12px;
+">
 
-                    <div class="search-title">
-                        ${escapeHtml(song.title)}
-                    </div>
+    <div style="min-width:0;">
 
-                    <div class="search-source">
-                        ${escapeHtml(song.album)}
-                        •
-                        ${formatDate(song.published)}
-                    </div>
+        <div class="search-title">
+            ${escapeHtml(song.title)}
+        </div>
 
-                </div>
+        <div class="search-source">
+            ${escapeHtml(song.album)}
+            •
+            ${formatDate(song.published)}
+        </div>
+
+    </div>
+
+    <button
+        class="search-play-button"
+        onclick="
+            event.preventDefault();
+            event.stopPropagation();
+            playSong('${song.url}');
+        ">
+
+        ▶
+
+    </button>
+
+</div>
 
             </a>
         `;
