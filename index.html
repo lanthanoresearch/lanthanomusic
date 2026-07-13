@@ -73,7 +73,6 @@
 }
 .music-meta .play-button{
     margin-top:auto;
-    transform:translateY(12px);
 }
     .search-play-button{
     width:42px;
@@ -703,7 +702,7 @@ user-select: none;
       }
     }
 
-   .music-card{
+  .music-card{
     background:#1d1d1d;
     border:1px solid #333;
     border-radius:14px;
@@ -712,8 +711,6 @@ user-select: none;
 
     display:flex;
     flex-direction:column;
-
-    min-height:320px;
 }
 
     .music-card:hover{
@@ -737,13 +734,15 @@ user-select: none;
 }
 
     .music-meta h3{
-      margin:0 0 10px 0;
-      font-size:1.05rem;
-      line-height:1.35;
-    }
+    margin:0 0 10px;
+    font-size:1.05rem;
+    line-height:1.35;
 
-  .music-meta p{
-    margin:0;
+    min-height:2.7em;   /* reserves room for two lines */
+}
+
+ .music-meta p{
+    margin:0 0 18px;
     color:#999;
     font-size:.95rem;
 }
