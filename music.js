@@ -164,9 +164,15 @@ console.table(featuredSongs);
 
                 <div class="featured-description">
 
-                    ${formatDate(song.published)}
+    <div style="font-size:1.1rem;">
+        ${escapeHtml(song.album)}
+    </div>
 
-                </div>
+    <div style="color:#999;">
+        Released ${formatDate(song.published)}
+    </div>
+
+</div>
 
 
 
@@ -193,6 +199,8 @@ function previousFeatured(event){
     event.preventDefault();
     event.stopPropagation();
 
+    stopFeaturedRotation();
+
     featuredIndex--;
 
     if(featuredIndex < 0){
@@ -200,12 +208,51 @@ function previousFeatured(event){
     }
 
     renderFeaturedMusic();
+    renderDots();
+
+    startFeaturedRotation();
+}
+
+  function renderDots() {
+
+    if (!featuredDots) return;
+
+    featuredDots.innerHTML = featuredSongs
+        .map((_, i) =>
+            `<span class="featured-dot${i === featuredIndex ? " active" : ""}"></span>`
+        )
+        .join("");
+}
+
+function nextFeatured() {
+
+    featuredIndex++;
+
+    if (featuredIndex >= featuredSongs.length) {
+        featuredIndex = 0;
+    }
+
+    renderFeaturedMusic();
+    renderDots();
+}
+
+function startFeaturedRotation() {
+
+    clearInterval(featuredTimer);
+
+    featuredTimer = setInterval(nextFeatured, 8000);
+}
+
+function stopFeaturedRotation() {
+    clearInterval(featuredTimer);
 }
 
 function nextFeaturedManual(event){
 
     event.preventDefault();
     event.stopPropagation();
+
+    stopFeaturedRotation();
 
     featuredIndex++;
 
@@ -214,6 +261,9 @@ function nextFeaturedManual(event){
     }
 
     renderFeaturedMusic();
+    renderDots();
+
+    startFeaturedRotation();
 }
 
 window.previousFeatured = previousFeatured;
