@@ -64,7 +64,9 @@ console.table(featuredSongs);
     
 
     renderFeaturedMusic();
-    
+    if (featuredSongs.length > 1) {
+    startFeaturedRotation();
+    }
     const latest = allItems[0];
     const latestDate = latest?.published || "";
 
@@ -191,7 +193,25 @@ console.table(featuredSongs);
         </a>
 
     `;
+    renderDots();
+const card = featuredMusic.querySelector(".featured-card");
+    const link = featuredMusic.querySelector("a");
 
+link.addEventListener("click", e => {
+    if (swiping) {
+        e.preventDefault();
+    }
+});
+card.addEventListener("mouseenter", stopFeaturedRotation);
+card.addEventListener("mouseleave", startFeaturedRotation);
+card.addEventListener("touchstart", e => {
+    touchStartX = e.changedTouches[0].clientX;
+});
+
+card.addEventListener("touchend", e => {
+    touchEndX = e.changedTouches[0].clientX;
+    handleSwipe();
+});
 }
   
 function previousFeatured(event){
@@ -207,10 +227,11 @@ function previousFeatured(event){
         featuredIndex = featuredSongs.length - 1;
     }
 
-    renderFeaturedMusic();
-    renderDots();
+    
 
-    startFeaturedRotation();
+  renderFeaturedMusic();
+startFeaturedRotation();
+    
 }
 
   function renderDots() {
@@ -233,14 +254,16 @@ function nextFeatured() {
     }
 
     renderFeaturedMusic();
-    renderDots();
+  
+
 }
 
-function startFeaturedRotation() {
+function startFeaturedRotation(){
 
-    clearInterval(featuredTimer);
+    stopFeaturedRotation();
 
-    featuredTimer = setInterval(nextFeatured, 8000);
+    featuredTimer = setInterval(nextFeatured,8000);
+
 }
 
 function stopFeaturedRotation() {
@@ -261,9 +284,8 @@ function nextFeaturedManual(event){
     }
 
     renderFeaturedMusic();
-    renderDots();
-
-    startFeaturedRotation();
+startFeaturedRotation();
+    
 }
 
 window.previousFeatured = previousFeatured;
@@ -342,6 +364,49 @@ function isoDurationToSeconds(iso) {
 
   return hours * 3600 + minutes * 60 + seconds;
 }
+
+
+function handleSwipe(){
+
+    const distance = touchEndX - touchStartX;
+
+    if(Math.abs(distance) < 40){
+        return;
+    }
+
+    swiping = true;
+
+    setTimeout(() => {
+        swiping = false;
+    }, 250);
+
+    stopFeaturedRotation();
+
+    if(distance > 0){
+
+        featuredIndex--;
+
+        if(featuredIndex < 0){
+            featuredIndex = featuredSongs.length - 1;
+        }
+
+    }else{
+
+        featuredIndex++;
+
+        if(featuredIndex >= featuredSongs.length){
+            featuredIndex = 0;
+        }
+
+    }
+
+    
+renderFeaturedMusic();
+startFeaturedRotation();
+    
+
+}
+
 
 function formatRuntime(totalSeconds) {
   const totalMinutes = Math.floor(totalSeconds / 60);
