@@ -381,35 +381,52 @@ footer{
 
 .featured-content{
     flex:1;
+    height:100%;
     padding:25px;
+    box-sizing:border-box;
+
     display:flex;
     flex-direction:column;
 }
 
 .featured-title{
     width:100%;
+
     font-weight:bold;
     font-size:1.8rem;
     line-height:1.2;
-    text-align:center;
-    margin:0 0 18px 0;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    height:2.4em;
+
+    margin:0;
 
     white-space:nowrap;
     overflow:hidden;
     text-overflow:ellipsis;
+
+    text-align:center;
 }
 
 .featured-description{
     flex:1;
-    color:#ccc;
-    line-height:1.6;
-    text-align:center;
+
     display:flex;
     flex-direction:column;
-    justify-content:flex-start;
+    justify-content:center;
+    align-items:center;
+
     gap:8px;
+
+    color:#ccc;
+    text-align:center;
+    line-height:1.6;
 }
 
+    
 .featured-read{
     margin-top:auto;
     padding-top:20px;
@@ -604,9 +621,6 @@ footer{
 
 .featured-title{
   font-size:clamp(1.2rem,5vw,1.7rem);
-  white-space:nowrap;
-  overflow:hidden;
-  text-overflow:ellipsis;
 }
 
 }
