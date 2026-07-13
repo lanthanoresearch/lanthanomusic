@@ -15,7 +15,7 @@ const playerTitle = document.getElementById("playerTitle");
 const playerAlbum = document.getElementById("playerAlbum");
 const playerTime = document.getElementById("playerTime");
 const closePlayer = document.getElementById("closePlayer");
-
+closePlayer.addEventListener("click", closePlayerBar);
 
 document.addEventListener("DOMContentLoaded", async () => {
   const musicGrid = document.getElementById("musicGrid");
@@ -651,7 +651,18 @@ window.onYouTubeIframeAPIReady = function () {
             controls: 0,
             modestbranding: 1,
             rel: 0
+        },
+
+        events: {
+            onStateChange(event){
+
+                if(event.data === YT.PlayerState.ENDED){
+                    closePlayerBar();
+                }
+
+            }
         }
+
     });
 
 };
@@ -680,6 +691,50 @@ window.playSong = function(url){
 
     if(player){
         player.loadVideoById(videoId);
+      clearInterval(timerInterval);
+
+timerInterval = setInterval(() => {
+
+    if(!player || typeof player.getCurrentTime !== "function"){
+        return;
+    }
+
+    const current = player.getCurrentTime();
+    const duration = player.getDuration();
+
+    playerTime.textContent =
+        formatClock(current) +
+        " / " +
+        formatClock(duration);
+
+}, 500);
     }
 
 };
+
+function formatClock(seconds){
+
+    seconds = Math.floor(seconds);
+
+    const minutes = Math.floor(seconds / 60);
+    const secs = seconds % 60;
+
+    return `${minutes}:${String(secs).padStart(2,"0")}`;
+
+}
+
+
+function closePlayerBar(){
+
+    if(player){
+        player.stopVideo();
+    }
+
+    playerBar.hidden = true;
+
+    currentVideoId = null;
+    currentSong = null;
+
+    clearInterval(timerInterval);
+
+}
