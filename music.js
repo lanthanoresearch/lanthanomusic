@@ -400,10 +400,25 @@ function handleSwipe() {
     const html = nextItems.map(item => `
       <a class="music-card" href="${item.url}" target="_blank" rel="noopener noreferrer">
         <img class="music-thumb" src="${item.thumbnail}" alt="${escapeHtml(item.title)}">
-        <div class="music-meta">
-          <h3>${escapeHtml(item.title)}</h3>
-          <p>${formatDate(item.published)}</p>
-        </div>
+       
+
+
+<div class="music-meta">
+    <h3>${escapeHtml(item.title)}</h3>
+
+    <p>${formatDate(item.published)}</p>
+
+    <button
+        class="play-button"
+        onclick="playSong('${item.url}')">
+
+        ▶ Play
+
+    </button>
+</div>
+
+
+        
       </a>
     `).join("");
 
