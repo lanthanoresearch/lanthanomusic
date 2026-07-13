@@ -19,8 +19,45 @@
   <link rel="icon" type="image/png" href="file_0000000082c071f582b85259d9acf7a0.png">
 
   <style>
+.section-title{
+    text-align:center;
+    font-size:1.35rem;
+    font-weight:bold;
+    margin:50px 0 18px;
+    color:#fff;
+}
 
 
+
+    .section-heading{
+    text-align:center;
+    font-size:2rem;
+    font-weight:bold;
+    margin:70px 0 30px;
+    color:#fff;
+}
+
+
+    
+.play-button{
+    width:100%;
+    margin-top:14px;
+    padding:10px 14px;
+    border:none;
+    border-radius:8px;
+    background:#2a2a2a;
+    color:#fff;
+    cursor:pointer;
+    font-weight:bold;
+    transition:.2s;
+}
+
+.play-button:hover{
+    background:#3a3a3a;
+}
+
+
+    
 .search-wrapper{
     position:relative;
     max-width:800px;
@@ -38,6 +75,9 @@
     font-size:18px;
 }
 
+
+
+    
 #searchBox:focus{
     outline:none;
     border-color:#666;
@@ -412,7 +452,7 @@ footer{
       color:#888;
       font-size:.95rem;
       letter-spacing:1px;
-      text-transform:uppercase;
+      text-transform:none;
       margin-bottom:10px;
       text-align:center;
     }
@@ -895,8 +935,11 @@ user-select: none;
     <div id="searchResults"></div>
 
 </div>
-    
+    <div class="section-title">
+    Find Lanthano on
+</div>
     <div class="platform-links">
+      
       <a class="platform-link" href="https://music.youtube.com/channel/UC-LsR_7xdkNvIy4a3DtVzdA?si=icZZzfK-n-OUJ2ke" target="_blank" rel="noopener noreferrer">YouTube Music</a>
       <a class="platform-link" href="https://m.youtube.com/channel/UC-LsR_7xdkNvIy4a3DtVzdA" target="_blank" rel="noopener noreferrer">YouTube</a>
       <a class="platform-link" href="https://open.spotify.com/artist/24VwcCehwH5BOeVQRfVYM4?si=jQarGxsOS6GgdQkjxdYy1w" target="_blank" rel="noopener noreferrer">Spotify</a>
@@ -907,7 +950,9 @@ user-select: none;
 
 
     
-   <div class="section-eyebrow">Recent Music</div>
+  <h2 class="section-heading">
+    All Songs
+</h2>
 
 <div id="musicGrid" class="music-grid"></div>
 
