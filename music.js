@@ -209,14 +209,18 @@ link.addEventListener("click", e => {
 });
 card.addEventListener("mouseenter", stopFeaturedRotation);
 card.addEventListener("mouseleave", startFeaturedRotation);
-card.addEventListener("touchstart", e => {
-    touchStartX = e.changedTouches[0].clientX;
-});
 
+    
+  card.addEventListener("touchstart", e => {
+    touchStartX = e.touches[0].clientX;
+    touchEndX = touchStartX;
+}, { passive: true });
 
+card.addEventListener("touchmove", e => {
+    touchEndX = e.touches[0].clientX;
+}, { passive: true });
 
-card.addEventListener("touchend", e => {
-    touchEndX = e.changedTouches[0].clientX;
+card.addEventListener("touchend", () => {
     handleSwipe();
 });
 }
@@ -384,7 +388,7 @@ function handleSwipe(){
 
     const distance = touchEndX - touchStartX;
 
-    if(Math.abs(distance) < 40){
+    if (Math.abs(distance) < 40) {
         return;
     }
 
@@ -396,26 +400,28 @@ function handleSwipe(){
 
     stopFeaturedRotation();
 
-    if(distance > 0){
-
+    if (distance > 0) {
         featuredIndex--;
 
-        if(featuredIndex < 0){
+        if (featuredIndex < 0) {
             featuredIndex = featuredSongs.length - 1;
         }
-
-    }else{
-
+    } else {
         featuredIndex++;
 
-        if(featuredIndex >= featuredSongs.length){
+        if (featuredIndex >= featuredSongs.length) {
             featuredIndex = 0;
         }
-
     }
 
     renderFeaturedMusic();
-    startFeaturedRotation();
+
+    if (featuredSongs.length > 1) {
+        startFeaturedRotation();
+    }
+
+    touchStartX = 0;
+    touchEndX = 0;
 }
 
 
