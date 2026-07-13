@@ -412,19 +412,30 @@ function handleSwipe() {
 
 
 <div class="music-meta">
+
     <h3>${escapeHtml(item.title)}</h3>
 
-    <p>${formatDate(item.published)}</p>
+    <p class="music-album">
+        ${escapeHtml(item.album)}
+    </p>
+
+    <p class="music-date">
+        ${formatDate(item.published)}
+    </p>
 
     <button
         class="play-button"
-        onclick="playSong('${item.url}')">
+        onclick="
+            event.preventDefault();
+            event.stopPropagation();
+            playSong('${song.url}');
+        ">
 
         ▶ Play
 
     </button>
-</div>
 
+</div>
 
         
       </a>
