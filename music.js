@@ -22,6 +22,9 @@ const closePlayer = document.getElementById("closePlayer");
 const playerPlayPause =
 document.getElementById("playerPlayPause");
 
+const playerRestart =
+document.getElementById("playerRestart");
+
 closePlayer.addEventListener("click", closePlayerBar);
 playerPlayPause.addEventListener("click", () => {
 
@@ -43,6 +46,17 @@ playerPlayPause.addEventListener("click", () => {
         player.playVideo();
 
     }
+
+});
+
+playerRestart.addEventListener("click", () => {
+
+    if(!player || !currentVideoId){
+        return;
+    }
+
+    player.seekTo(0, true);
+    player.playVideo();
 
 });
 
@@ -748,12 +762,34 @@ window.playSong = function(url){
         return;
     }
 
-    currentVideoId = videoId;
-isPaused = false;
+   if(player && currentVideoId === videoId){
 
-    currentSong = allItems.find(song => song.videoId === videoId);
+    const state = player.getPlayerState();
+
+    if(state === YT.PlayerState.PLAYING){
+
+        player.pauseVideo();
+
+    }else{
+
+        player.playVideo();
+
+    }
+
+    return;
+
+}
 
 updatePlayButtons();
+
+if(searchBox.value.trim().length >= 2){
+
+    searchBox.dispatchEvent(
+        new Event("input")
+    );
+
+}
+    
 
   
     if(currentSong){
@@ -766,6 +802,16 @@ updatePlayButtons();
 
     }
 
+    currentVideoId = videoId;
+
+isPaused = false;
+
+currentSong =
+    allItems.find(song => song.videoId === videoId);
+
+updatePlayButtons();
+
+    
     if(player){
         player.loadVideoById(videoId);
       
