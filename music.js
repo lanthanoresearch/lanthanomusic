@@ -762,21 +762,50 @@ window.playSong = function(url){
         return;
     }
 
-   if(player && currentVideoId === videoId){
+  if(player && currentVideoId === videoId){
 
     const state = player.getPlayerState();
 
     if(state === YT.PlayerState.PLAYING){
 
         player.pauseVideo();
+        isPaused = true;
 
     }else{
 
         player.playVideo();
+        isPaused = false;
+
+    }
+
+    updatePlayButtons();
+
+    if(searchBox.value.trim().length >= 2){
+
+        searchBox.dispatchEvent(
+            new Event("input")
+        );
 
     }
 
     return;
+
+}
+
+currentVideoId = videoId;
+
+isPaused = false;
+
+currentSong =
+    allItems.find(song => song.videoId === videoId);
+
+if(currentSong){
+
+    playerArtwork.src = currentSong.thumbnail;
+    playerTitle.textContent = currentSong.title;
+    playerAlbum.textContent = currentSong.album;
+
+    playerBar.hidden = false;
 
 }
 
@@ -790,27 +819,6 @@ if(searchBox.value.trim().length >= 2){
 
 }
     
-
-  
-    if(currentSong){
-
-        playerArtwork.src = currentSong.thumbnail;
-        playerTitle.textContent = currentSong.title;
-        playerAlbum.textContent = currentSong.album;
-
-        playerBar.hidden = false;
-
-    }
-
-    currentVideoId = videoId;
-
-isPaused = false;
-
-currentSong =
-    allItems.find(song => song.videoId === videoId);
-
-updatePlayButtons();
-
     
     if(player){
         player.loadVideoById(videoId);
