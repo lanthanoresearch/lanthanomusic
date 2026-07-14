@@ -928,7 +928,7 @@ window.addEventListener("scroll", () => {
         hero.offsetTop +
         hero.offsetHeight;
 
-    if(window.scrollY < heroBottom - 50){
+   if(window.scrollY < hero.offsetHeight - 10){
 
         playerBar.classList.add("hero-hidden");
 
