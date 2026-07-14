@@ -29,17 +29,23 @@ playerPlayPause.addEventListener("click", () => {
         return;
     }
 
-    if(isPaused){
+    const state = player.getPlayerState();
 
-        player.playVideo();
-
-    }else{
+    if(state === YT.PlayerState.PLAYING){
 
         player.pauseVideo();
+
+    }else if(
+        state === YT.PlayerState.PAUSED ||
+        state === YT.PlayerState.CUED
+    ){
+
+        player.playVideo();
 
     }
 
 });
+
 document.addEventListener("DOMContentLoaded", async () => {
   const musicGrid = document.getElementById("musicGrid");
   
