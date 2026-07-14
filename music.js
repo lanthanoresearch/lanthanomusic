@@ -709,7 +709,14 @@ player = new YT.Player("youtubePlayer", {
         onStateChange(event) {
 
             console.log("State:", event.data);
+if(event.data === YT.PlayerState.BUFFERING){
 
+    playerPlayPause.innerHTML =
+        '<div class="loading-spinner"></div>';
+
+    return;
+
+}
             if(event.data === YT.PlayerState.PLAYING){
 
                 isPaused = false;
