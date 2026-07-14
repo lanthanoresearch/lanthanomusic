@@ -806,7 +806,7 @@ if(currentSong){
     playerAlbum.textContent = currentSong.album;
 
     playerBar.hidden = false;
-
+playerBar.style.display = "flex";
 }
 
 updatePlayButtons();
@@ -846,7 +846,7 @@ function closePlayerBar(){
     }
 
     playerBar.hidden = true;
-
+playerBar.style.display = "flex";
     currentVideoId = null;
     currentSong = null;
 
@@ -912,3 +912,33 @@ function updatePlayButtons(){
     playerPlayPause.textContent =
         isPaused ? "▶" : "❚❚";
 }
+
+
+
+
+const hero = document.querySelector(".hero");
+
+window.addEventListener("scroll", () => {
+
+    if(playerBar.hidden){
+        return;
+    }
+
+    const heroBottom =
+        hero.offsetTop +
+        hero.offsetHeight;
+
+    if(window.scrollY < heroBottom - 50){
+
+        playerBar.classList.add("hero-hidden");
+
+    }else{
+
+        playerBar.classList.remove("hero-hidden");
+
+    }
+
+});
+
+
+
