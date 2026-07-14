@@ -805,13 +805,9 @@ if(currentSong){
     playerTitle.textContent = currentSong.title;
     playerAlbum.textContent = currentSong.album;
 
-    playerBar.hidden = false;
+  playerBar.hidden = false;
 
-if (window.scrollY < hero.offsetHeight - 10) {
-    playerBar.classList.add("hero-hidden");
-} else {
-    playerBar.classList.remove("hero-hidden");
-}
+updatePlayerVisibility();
 }
 
 updatePlayButtons();
@@ -851,7 +847,7 @@ function closePlayerBar(){
     }
 
     playerBar.hidden = true;
-
+updatePlayerVisibility();
     currentVideoId = null;
     currentSong = null;
 
@@ -922,28 +918,31 @@ function updatePlayButtons(){
 
 
 const hero = document.querySelector(".hero");
+const topButton = document.getElementById("topButton");
 
-window.addEventListener("scroll", () => {
+window.addEventListener("scroll", updatePlayerVisibility);
+
+function updatePlayerVisibility(){
 
     if(playerBar.hidden){
+
+        topButton.style.bottom = "20px";
         return;
+
     }
 
-    const heroBottom =
-        hero.offsetTop +
-        hero.offsetHeight;
-
-   if(window.scrollY < hero.offsetHeight - 10){
+    if(window.scrollY < hero.offsetHeight - 10){
 
         playerBar.classList.add("hero-hidden");
+        topButton.style.bottom = "20px";
 
     }else{
 
         playerBar.classList.remove("hero-hidden");
+        topButton.style.bottom = "92px";
 
     }
 
-});
-
+}
 
 
