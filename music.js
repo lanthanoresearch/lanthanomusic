@@ -806,7 +806,12 @@ if(currentSong){
     playerAlbum.textContent = currentSong.album;
 
     playerBar.hidden = false;
-playerBar.style.display = "flex";
+
+if (window.scrollY < hero.offsetHeight - 10) {
+    playerBar.classList.add("hero-hidden");
+} else {
+    playerBar.classList.remove("hero-hidden");
+}
 }
 
 updatePlayButtons();
@@ -846,7 +851,7 @@ function closePlayerBar(){
     }
 
     playerBar.hidden = true;
-playerBar.style.display = "flex";
+
     currentVideoId = null;
     currentSong = null;
 
