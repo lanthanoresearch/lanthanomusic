@@ -788,13 +788,7 @@ window.playSong = function(url){
 
     updatePlayButtons();
 
-    if(searchBox.value.trim().length >= 2){
-
-        searchBox.dispatchEvent(
-            new Event("input")
-        );
-
-    }
+    
 
     return;
 
@@ -820,13 +814,7 @@ updatePlayerVisibility();
 
 updatePlayButtons();
 
-if(searchBox.value.trim().length >= 2){
 
-    searchBox.dispatchEvent(
-        new Event("input")
-    );
-
-}
     
     
     if(player){
