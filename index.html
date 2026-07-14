@@ -38,8 +38,23 @@
     z-index:999999;
 }
 
-.music-player-bar[hidden]{
-    display:none;
+.music-player-bar{
+
+    opacity:1;
+    transform:translateY(0);
+
+    transition:
+        opacity .25s ease,
+        transform .25s ease;
+
+}
+
+.music-player-bar.hero-hidden{
+
+    opacity:0;
+    transform:translateY(100%);
+    pointer-events:none;
+
 }
 
 .player-close{
