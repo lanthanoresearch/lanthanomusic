@@ -669,42 +669,68 @@ function formatRuntime(totalSeconds) {
 
 window.onYouTubeIframeAPIReady = function () {
 
-    player = new YT.Player("youtubePlayer", {
-        height: "0",
-        width: "0",
+player = new YT.Player("youtubePlayer", {
 
-        playerVars: {
-            autoplay: 1,
-            controls: 0,
-            modestbranding: 1,
-            rel: 0
+    videoId: "",
+
+    playerVars: {
+        autoplay: 1,
+        controls: 0,
+        modestbranding: 1,
+        rel: 0
+    },
+
+    events: {
+
+        onReady() {
+            console.log("Player Ready");
         },
 
-       onStateChange(event){
+        onStateChange(event) {
 
-    if(event.data === YT.PlayerState.PLAYING){
+            console.log("State:", event.data);
 
-        isPaused = false;
-        updatePlayButtons();
+            if(event.data === YT.PlayerState.PLAYING){
+
+                isPaused = false;
+                updatePlayButtons();
+
+                clearInterval(timerInterval);
+
+                timerInterval = setInterval(() => {
+
+                    const current = player.getCurrentTime();
+                    const duration = player.getDuration();
+
+                    console.log(current, duration);
+
+                    playerTime.textContent =
+                        formatClock(current) +
+                        " / " +
+                        formatClock(duration);
+
+                }, 250);
+
+            }
+
+            if(event.data === YT.PlayerState.PAUSED){
+
+                isPaused = true;
+                updatePlayButtons();
+
+            }
+
+            if(event.data === YT.PlayerState.ENDED){
+
+                closePlayerBar();
+
+            }
+
+        }
 
     }
 
-    if(event.data === YT.PlayerState.PAUSED){
-
-        isPaused = true;
-        updatePlayButtons();
-
-    }
-
-    if(event.data === YT.PlayerState.ENDED){
-
-        closePlayerBar();
-
-    }
-
-}
-
-    });
+});
 
 };
 
@@ -736,23 +762,7 @@ updatePlayButtons();
 
     if(player){
         player.loadVideoById(videoId);
-      clearInterval(timerInterval);
-
-timerInterval = setInterval(() => {
-
-    if(!player || typeof player.getCurrentTime !== "function"){
-        return;
-    }
-
-    const current = player.getCurrentTime();
-    const duration = player.getDuration();
-
-    playerTime.textContent =
-        formatClock(current) +
-        " / " +
-        formatClock(duration);
-
-}, 500);
+      
     }
 
 };
@@ -781,6 +791,7 @@ function closePlayerBar(){
     currentSong = null;
 
     clearInterval(timerInterval);
+    playerTime.textContent = "0:00 / 0:00";
   isPaused = false;
 updatePlayButtons();
 
