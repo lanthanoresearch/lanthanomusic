@@ -18,7 +18,28 @@
 
   <style>
 
+.loading-spinner{
 
+    width:16px;
+    height:16px;
+
+    border:2px solid rgba(255,255,255,.25);
+    border-top-color:#fff;
+    border-radius:50%;
+
+    animation:playerSpin .8s linear infinite;
+
+    margin:auto;
+
+}
+
+@keyframes playerSpin{
+
+    to{
+        transform:rotate(360deg);
+    }
+
+}
 
     .music-player-bar{
     position:fixed;
