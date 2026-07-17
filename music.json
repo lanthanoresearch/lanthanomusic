@@ -2,9 +2,27 @@
   "artist": "Lanthano",
   "channelId": "UC-LsR_7xdkNvIy4a3DtVzdA",
   "uploadsPlaylistId": "UU-LsR_7xdkNvIy4a3DtVzdA",
-  "updated": "2026-07-17T07:36:03.272Z",
-  "total": 265,
+  "updated": "2026-07-17T16:39:40.549Z",
+  "total": 267,
   "items": [
+    {
+      "title": "I Once Thought Like You",
+      "album": "Messed Up History",
+      "videoId": "p3nL-_V-uzQ",
+      "url": "https://www.youtube.com/watch?v=p3nL-_V-uzQ",
+      "published": "2026-07-17T10:05:30Z",
+      "thumbnail": "https://i.ytimg.com/vi/p3nL-_V-uzQ/maxresdefault.jpg",
+      "duration": "PT5M59S"
+    },
+    {
+      "title": "It Sure Ain't 2002",
+      "album": "Messed Up History",
+      "videoId": "biUsIBd_OA4",
+      "url": "https://www.youtube.com/watch?v=biUsIBd_OA4",
+      "published": "2026-07-17T10:04:35Z",
+      "thumbnail": "https://i.ytimg.com/vi/biUsIBd_OA4/maxresdefault.jpg",
+      "duration": "PT4M43S"
+    },
     {
       "title": "Videt",
       "album": "In Gehenna",
