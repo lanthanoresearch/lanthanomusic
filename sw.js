@@ -1,19 +1,14 @@
 const CACHE_NAME = "lanthano-music-v1";
 
-const APP_SHELL = [
-  "/",
-  "/index.html",
-  "/music.js",
-  "/music.json",
-  "/manifest.webmanifest",
-  "/file_000000000c40722f92b1fe6758cb4855.png",
-  "/file_00000000c49c720ca711dcea689d14dd.png",
-  "/file_00000000eadc720c974c32164d0af640.png"
+// Only cache the hero images.
+const CACHED_IMAGES = [
+  "/hero wide.png",
+  "/hero tall.png"
 ];
 
 self.addEventListener("install", event => {
   event.waitUntil(
-    caches.open(CACHE_NAME).then(cache => cache.addAll(APP_SHELL))
+    caches.open(CACHE_NAME).then(cache => cache.addAll(CACHED_IMAGES))
   );
   self.skipWaiting();
 });
@@ -22,32 +17,48 @@ self.addEventListener("activate", event => {
   event.waitUntil(
     caches.keys().then(keys =>
       Promise.all(
-        keys.map(key => {
-          if (key !== CACHE_NAME) {
-            return caches.delete(key);
-          }
-        })
+        keys
+          .filter(key => key !== CACHE_NAME)
+          .map(key => caches.delete(key))
       )
     )
   );
+
   self.clients.claim();
 });
 
 self.addEventListener("fetch", event => {
+  // Only handle GET requests.
   if (event.request.method !== "GET") return;
+
+  const url = new URL(event.request.url);
+
+  // Ignore requests that aren't from this site.
+  if (url.origin !== self.location.origin) return;
+
+  // Only cache the hero images.
+  if (!CACHED_IMAGES.includes(url.pathname)) return;
 
   event.respondWith(
     caches.match(event.request).then(cached => {
-      return (
-        cached ||
-        fetch(event.request).then(response => {
-          const responseClone = response.clone();
-          caches.open(CACHE_NAME).then(cache => {
-            cache.put(event.request, responseClone);
-          });
+      if (cached) {
+        return cached;
+      }
+
+      return fetch(event.request).then(response => {
+        // Don't cache bad responses.
+        if (!response || response.status !== 200) {
           return response;
-        }).catch(() => cached)
-      );
+        }
+
+        const responseClone = response.clone();
+
+        caches.open(CACHE_NAME).then(cache => {
+          cache.put(event.request, responseClone);
+        });
+
+        return response;
+      });
     })
   );
 });
