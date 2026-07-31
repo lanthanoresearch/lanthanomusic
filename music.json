@@ -2,9 +2,27 @@
   "artist": "Lanthano",
   "channelId": "UC-LsR_7xdkNvIy4a3DtVzdA",
   "uploadsPlaylistId": "UU-LsR_7xdkNvIy4a3DtVzdA",
-  "updated": "2026-07-31T09:15:56.209Z",
-  "total": 267,
+  "updated": "2026-07-31T14:33:07.225Z",
+  "total": 269,
   "items": [
+    {
+      "title": "True Israel",
+      "album": "The Goyim",
+      "videoId": "Zxi7av2E8gQ",
+      "url": "https://www.youtube.com/watch?v=Zxi7av2E8gQ",
+      "published": "2026-07-31T10:03:24Z",
+      "thumbnail": "https://i.ytimg.com/vi/Zxi7av2E8gQ/maxresdefault.jpg",
+      "duration": "PT2M48S"
+    },
+    {
+      "title": "The Goyim",
+      "album": "The Goyim",
+      "videoId": "2T0ESg3I9eA",
+      "url": "https://www.youtube.com/watch?v=2T0ESg3I9eA",
+      "published": "2026-07-31T10:02:19Z",
+      "thumbnail": "https://i.ytimg.com/vi/2T0ESg3I9eA/maxresdefault.jpg",
+      "duration": "PT3M35S"
+    },
     {
       "title": "I Once Thought Like You",
       "album": "Messed Up History",
