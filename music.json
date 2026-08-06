@@ -2,9 +2,18 @@
   "artist": "Lanthano",
   "channelId": "UC-LsR_7xdkNvIy4a3DtVzdA",
   "uploadsPlaylistId": "UU-LsR_7xdkNvIy4a3DtVzdA",
-  "updated": "2026-08-06T09:04:44.654Z",
-  "total": 269,
+  "updated": "2026-08-06T14:33:46.063Z",
+  "total": 270,
   "items": [
+    {
+      "title": "I don't know",
+      "album": "I don't know",
+      "videoId": "kL-fgUe_UVo",
+      "url": "https://www.youtube.com/watch?v=kL-fgUe_UVo",
+      "published": "2026-08-06T10:02:07Z",
+      "thumbnail": "https://i.ytimg.com/vi/kL-fgUe_UVo/maxresdefault.jpg",
+      "duration": "PT8M"
+    },
     {
       "title": "True Israel",
       "album": "The Goyim",
