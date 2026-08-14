@@ -2,9 +2,36 @@
   "artist": "Lanthano",
   "channelId": "UC-LsR_7xdkNvIy4a3DtVzdA",
   "uploadsPlaylistId": "UU-LsR_7xdkNvIy4a3DtVzdA",
-  "updated": "2026-08-14T07:48:57.171Z",
-  "total": 270,
+  "updated": "2026-08-14T13:41:00.228Z",
+  "total": 273,
   "items": [
+    {
+      "title": "Bootstraps",
+      "album": "AI Psychosis",
+      "videoId": "ACb0aSRbirE",
+      "url": "https://www.youtube.com/watch?v=ACb0aSRbirE",
+      "published": "2026-08-14T10:04:08Z",
+      "thumbnail": "https://i.ytimg.com/vi/ACb0aSRbirE/maxresdefault.jpg",
+      "duration": "PT3M28S"
+    },
+    {
+      "title": "AI Psychosis",
+      "album": "AI Psychosis",
+      "videoId": "mdNc4iuc8HQ",
+      "url": "https://www.youtube.com/watch?v=mdNc4iuc8HQ",
+      "published": "2026-08-14T10:03:57Z",
+      "thumbnail": "https://i.ytimg.com/vi/mdNc4iuc8HQ/maxresdefault.jpg",
+      "duration": "PT4M30S"
+    },
+    {
+      "title": "It's a Tool",
+      "album": "AI Psychosis",
+      "videoId": "Fw9v4oH49vo",
+      "url": "https://www.youtube.com/watch?v=Fw9v4oH49vo",
+      "published": "2026-08-14T10:02:44Z",
+      "thumbnail": "https://i.ytimg.com/vi/Fw9v4oH49vo/maxresdefault.jpg",
+      "duration": "PT3M15S"
+    },
     {
       "title": "I don't know",
       "album": "I don't know",
