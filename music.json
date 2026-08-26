@@ -2,9 +2,27 @@
   "artist": "Lanthano",
   "channelId": "UC-LsR_7xdkNvIy4a3DtVzdA",
   "uploadsPlaylistId": "UU-LsR_7xdkNvIy4a3DtVzdA",
-  "updated": "2026-08-26T07:07:18.603Z",
-  "total": 273,
+  "updated": "2026-08-26T13:15:41.886Z",
+  "total": 275,
   "items": [
+    {
+      "title": "The Same",
+      "album": "Unholy World",
+      "videoId": "HaMIbOadTOE",
+      "url": "https://www.youtube.com/watch?v=HaMIbOadTOE",
+      "published": "2026-08-26T10:03:54Z",
+      "thumbnail": "https://i.ytimg.com/vi/HaMIbOadTOE/maxresdefault.jpg",
+      "duration": "PT3M46S"
+    },
+    {
+      "title": "Unholy World",
+      "album": "Unholy World",
+      "videoId": "JoxdTLbZtf4",
+      "url": "https://www.youtube.com/watch?v=JoxdTLbZtf4",
+      "published": "2026-08-26T10:01:17Z",
+      "thumbnail": "https://i.ytimg.com/vi/JoxdTLbZtf4/maxresdefault.jpg",
+      "duration": "PT3M55S"
+    },
     {
       "title": "Bootstraps",
       "album": "AI Psychosis",
