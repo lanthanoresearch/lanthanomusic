@@ -2,9 +2,18 @@
   "artist": "Lanthano",
   "channelId": "UC-LsR_7xdkNvIy4a3DtVzdA",
   "uploadsPlaylistId": "UU-LsR_7xdkNvIy4a3DtVzdA",
-  "updated": "2026-08-31T05:31:53.401Z",
-  "total": 275,
+  "updated": "2026-08-31T13:46:22.538Z",
+  "total": 276,
   "items": [
+    {
+      "title": "That Old Strip Club",
+      "album": "That Old Strip Club",
+      "videoId": "iOrxoi_8sVQ",
+      "url": "https://www.youtube.com/watch?v=iOrxoi_8sVQ",
+      "published": "2026-08-31T10:02:26Z",
+      "thumbnail": "https://i.ytimg.com/vi/iOrxoi_8sVQ/maxresdefault.jpg",
+      "duration": "PT3M10S"
+    },
     {
       "title": "The Same",
       "album": "Unholy World",
